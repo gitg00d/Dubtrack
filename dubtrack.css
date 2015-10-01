@@ -1,7 +1,13 @@
 .main-page-container {
-  padding-top: .7em;
-  padding-bottom: 0;
+	padding-top: .7em;
+	padding-bottom: 0;
 }
 #main-room .right_section {
-	right: 43%;
+	right: 0px;
+	float: left;
+	position: initial;
+}
+#main-room .left_section {
+	position: initial;
+	float: right;
 }
