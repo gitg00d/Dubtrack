@@ -11,7 +11,7 @@
   right: 0;
   margin-right: 0px !important;
   float: right !important;
-  height: calc(100% - 36px);
+  height: calc(100% - 2.4em);
 }
 #chat .room-user-counter {
   padding-top: .75em !important;
