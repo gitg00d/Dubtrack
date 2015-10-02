@@ -1,17 +1,5 @@
-.main-page-container {
-	padding-top: .7em;
-	padding-bottom: 0;
-}
-#main-room .right_section {
-	right: 0px;
+.fullscreenLeft {
+	width: 60%;
 	float: left;
-	position: initial;
-}
-#main-room .left_section {
-	position: initial;
-	float: right;
-}
-#chat .chat-container ul.chat-main li.user-zhvvmrwvr7vrkvg8yt8x .activity-row .text p a.username {
-	color: #00ABFF;
-	font-weight: bold;
+	height: auto;
 }
