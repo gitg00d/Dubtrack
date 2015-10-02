@@ -11,16 +11,16 @@
   right: 0;
   margin-right: 0px !important;
   float: right !important;
-  height: calc(100% - 2.4em);
+  height: calc(100% - 4.9em);
 }
 #chat .room-user-counter {
   padding-top: .75em !important;
 }
-#chat .chat-container .ps-container {
-  height: 113% !important; /* Maybe not cool :( */
+#chat .chat-messages .ps-container {
+  height: inherit !important;
 }
 #chat .chat-container, #chat {
-  height: inherit;
+  height: 100%;
 }
 
 /* Netux -> orange, bold */
