@@ -4,3 +4,10 @@
   color: #FFCA00;
   font-weight: bold;
 }
+#main-room {
+	margin-top: 3px;
+}
+#main-room .right_section {
+	right: 0;
+	margin-right: 0px !important;
+}
