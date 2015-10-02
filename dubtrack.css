@@ -11,3 +11,9 @@
   right: 0;
   margin-right: 0px !important;
 }
+#main-room .left_section {
+  margin-top: 2em;
+}
+#chat .room-user-counter {
+	padding-top: .7em;
+}
