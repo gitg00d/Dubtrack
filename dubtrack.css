@@ -19,7 +19,7 @@
 #chat .chat-container ps-container {
   height: 113% !important; /* Maybe not cool :( */
 }
-#chat .chat-container, #chat section {
+#chat .chat-container, #chat {
   height: inherit;
 }
 
