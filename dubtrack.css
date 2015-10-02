@@ -1,4 +1,5 @@
-@import url("https://rawgit.com/MegaBraydn/ElsaBot/master/dubtrack.css"); /* Transparent background chat + NB3 room staff chat colors */
+/* Transparent background chat + NB3 room staff chat colors */
+@import url("https://rawgit.com/MegaBraydn/ElsaBot/master/dubtrack.css");
 
 #main-room {
   margin-top: 3px;
