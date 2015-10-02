@@ -16,10 +16,10 @@
   padding-top: .75em !important;
 }
 #chat .chat-container ps-container {
-	height: 113% !important; /* Maybe not cool :( */
+  height: 113% !important; /* Maybe not cool :( */
 }
 #chat .chat-container, #chat section {
-	height: inherit;
+  height: inherit;
 }
 
 /* Netux -> orange, bold */
