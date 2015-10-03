@@ -1,27 +1,18 @@
 /* Transparent background chat + NB3 room staff chat colors */
 @import url("https://rawgit.com/MegaBraydn/ElsaBot/master/dubtrack.css");
 
-#main-room {
-  margin-top: 3px;
-}
-#main-room .left_section {
-  margin-top: 2em;
-}
+#main-room { margin-top: 3px; }
+#main-room .left_section { margin-top: 2em; }
+#main-room .left_section .fullscreen-left { magin-top: 0; }
 #main-room .right_section {
   right: 0;
   margin-right: 0px !important;
   float: right !important;
   height: calc(100% - 4.9em);
 }
-#chat .room-user-counter {
-  padding-top: .75em !important;
-}
-#chat .chat-container .chat-messages {
-  height: inherit !important;
-}
-#chat .chat-container, #chat {
-  height: 100%;
-}
+#chat .room-user-counter { padding-top: .75em !important; }
+#chat .chat-container .chat-messages { height: inherit !important; }
+#chat .chat-container, #chat { height: 100%; }
 
 /* Netux -> orange, bold */
 #chat .chat-container ul.chat-main li.user-560b4a33d9057a0300cc2fa0 .activity-row .text p a.username, #chat .chat-container ul.chat-main li.user-560b4a33d9057a0300cc2fa0 .activity-row .text p a.username:hover, #chat .chat-container ul.chat-main li.user-560b4a33d9057a0300cc2fa0 .activity-row .text p a.username:visited {
