@@ -1,5 +1,5 @@
 /* Transparent background chat + NB3 room staff chat colors */
-@import url("https://rawgit.com/MegaBraydn/ElsaBot/master/dubtrack.css");
+@import url("https://nightbloo.github.io/dubtrack/dubtrack.css");
 
 /* Chat completly to the right */
 #main-room { margin: 3px 0  0 calc(398px / 2) !important; }
