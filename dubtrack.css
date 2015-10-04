@@ -2,7 +2,7 @@
 @import url("https://rawgit.com/MegaBraydn/ElsaBot/master/dubtrack.css");
 
 /* Chat completly to the right */
-#main-room { margin: 3px 0 0 calc(398px / 2) !important; }
+#main-room { margin: 3px, 0,  0, calc(398px / 2) !important; }
 #main-room .right_section {
   right: 0;
   margin-right: 0px !important;
@@ -16,7 +16,8 @@
 #chat .chat-container ul.chat-main li .activity-row { width: calc(20.5em - 40px); }
 .fullscreenLeft { magin-top: 0 !important; } /* Fix video fullscreen issue (not really ;c) */
 
-/* Video plug.dj-like */
+/* Video next to chat */
+#main-room { float: right; }
 #main-room .left_section {
   margin-top: 0;
   margin-right: 400px;
