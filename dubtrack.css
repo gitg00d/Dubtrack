@@ -1,21 +1,23 @@
 /* Transparent background chat + NB3 room staff chat colors */
 @import url("https://rawgit.com/MegaBraydn/ElsaBot/master/dubtrack.css");
 
+/* Chat completly to the right */
 #main-room { margin-top: 3px; }
 #main-room .left_section { margin-top: 2em; }
-.fullscreenLeft { magin-top: 0 !important; }
+#main-room .left_section .fullscreenLeft { magin-top: 0 !important; }
 #main-room .right_section {
   right: 0;
   margin-right: 0px !important;
   float: right !important;
   height: calc(100% - 4.9em);
+  width: 400px !important;
 }
 #chat .room-user-counter { padding-top: .75em !important; }
 #chat .chat-container .chat-messages { height: inherit !important; }
 #chat .chat-container, #chat { height: 100%; }
 
+/* Chat scrollbar more visible */
+.ps-container .ps-scrollbar-x, .ps-container .ps-scrollbar-y, .ps-container .ps-scrollbar-x-rail:hover .ps-scrollbar-x, .ps-container .ps-scrollbar-y-rail:hover .ps-scrollbar-y { background-color: #B1B1B1 }
+
 /* Netux -> orange, bold */
-#chat .chat-container ul.chat-main li.user-560b4a33d9057a0300cc2fa0 .activity-row .text p a.username, #chat .chat-container ul.chat-main li.user-560b4a33d9057a0300cc2fa0 .activity-row .text p a.username:hover, #chat .chat-container ul.chat-main li.user-560b4a33d9057a0300cc2fa0 .activity-row .text p a.username:visited {
-  color: #FFCA00;
-  font-weight: bold;
-}
+#chat .chat-container ul.chat-main li.user-560b4a33d9057a0300cc2fa0 .activity-row .text p a.username, #chat .chat-container ul.chat-main li.user-560b4a33d9057a0300cc2fa0 .activity-row .text p a.username:hover, #chat .chat-container ul.chat-main li.user-560b4a33d9057a0300cc2fa0 .activity-row .text p a.username:visited { color: #FFCA00; }
