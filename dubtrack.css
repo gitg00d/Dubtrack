@@ -27,7 +27,7 @@
 #main_player .player_container { height: 100%; }
 #main_player .player_container .hideVideo-el {
   display: none;
-  calc(100% - 9em)
+  width: calc(100% - 9em);
 }
 
 /* Miscellaneous */
