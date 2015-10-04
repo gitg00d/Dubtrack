@@ -17,7 +17,7 @@
 .fullscreenLeft { magin-top: 0 !important; } /* Fix video fullscreen issue (not really ;c) */
 
 /* Video fixes */
-#main-room .left_section { margin-top: calc(100vh / 2 - 4.9em - .4em - 390px / 2); } /* Center it */
+#main-room .left_section { margin-top: 0; } /* Center it */
 #main_player .player_container { height: 100%; } /* Higher fix */
 #main_player .player_container .hideVideo-el { display: none; } /* Hide "Hide Video" Option */
 .ytp-watermark { display: none !important; } /* Hide Youtube Watermark */
