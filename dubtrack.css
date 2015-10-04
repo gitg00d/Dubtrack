@@ -19,7 +19,7 @@
 /* Video plug.dj-like */
 #main-room .left_section {
   margin-top: 0;
-  margin-left: calc(16.5hw);
+  margin-left: calc(16.5vw);
   width: 40%;
   float: left;
 }
