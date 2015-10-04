@@ -18,7 +18,7 @@
 .fullscreenLeft { magin-top: 0 !important; } /* Fix video fullscreen issue (not really ;c) */
 
 /* Miscellaneous */
-#main_player .player_container { width: 100%; } /* Right section higher fix */
+#main_player .player_container { height: 100%; } /* Right section higher fix */
 #main_player .player_container .hideVideo-el { display: none; } /* Hide "Hide Video" Option */
 .ps-container .ps-scrollbar-x, .ps-container .ps-scrollbar-y, .ps-container .ps-scrollbar-x-rail:hover .ps-scrollbar-x, .ps-container .ps-scrollbar-y-rail:hover .ps-scrollbar-y { background-color: #B1B1B1 } /* Chat scrollbar more visible */
 #chat .chat-container ul.chat-main li.user-560b4a33d9057a0300cc2fa0 .activity-row .text p a.username, #chat .chat-container ul.chat-main li.user-560b4a33d9057a0300cc2fa0 .activity-row .text p a.username:hover, #chat .chat-container ul.chat-main li.user-560b4a33d9057a0300cc2fa0 .activity-row .text p a.username:visited { color: #FFCA00; } /* Netux -> orange */
