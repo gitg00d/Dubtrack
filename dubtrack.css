@@ -17,6 +17,10 @@
 #chat .chat-container ul.chat-main li .activity-row { width: calc(20.5em - 40px); }
 .fullscreenLeft { magin-top: 0 !important; }
 
+/* Hide "Hide Video" Option */
+#main_player .player_container .hideVideo-el { display: none; }
+#main_player .player_container:hover .hideVideo-el { display: show; }
+
 /* Chat scrollbar more visible */
 .ps-container .ps-scrollbar-x, .ps-container .ps-scrollbar-y, .ps-container .ps-scrollbar-x-rail:hover .ps-scrollbar-x, .ps-container .ps-scrollbar-y-rail:hover .ps-scrollbar-y { background-color: #B1B1B1 }
 
