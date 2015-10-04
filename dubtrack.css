@@ -2,7 +2,7 @@
 @import url("https://rawgit.com/MegaBraydn/ElsaBot/master/dubtrack.css");
 
 /* Chat completly to the right */
-#main-room { margin: 3px, 0,  0, calc(398px / 2) !important; }
+#main-room { margin: 3px 0  0 calc(398px / 2) !important; }
 #main-room .right_section {
   right: 0;
   margin-right: 0px !important;
