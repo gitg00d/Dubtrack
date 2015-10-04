@@ -31,6 +31,7 @@
 }
 
 /* Miscellaneous */
+#main_player .player_sharing span.durationRemaining { margin: 6px 3px 3px 3px !important; }
 .ytp-watermark { display: none !important; } /* Hide Youtube Watermark */
 .html5-video-content .video-annotations { display: none !important; } /* Hide annotations */
 .ps-container .ps-scrollbar-x, .ps-container .ps-scrollbar-y, .ps-container .ps-scrollbar-x-rail:hover .ps-scrollbar-x, .ps-container .ps-scrollbar-y-rail:hover .ps-scrollbar-y { background-color: #B1B1B1 } /* Chat scrollbar more visible */
