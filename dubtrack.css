@@ -3,7 +3,7 @@
 
 #main-room { margin-top: 3px; }
 #main-room .left_section { margin-top: 2em; }
-#main-room .left_section .fullscreen-left { magin-top: 0; }
+#main-room .left_section .fullscreenLeft { magin-top: 0; }
 #main-room .right_section {
   right: 0;
   margin-right: 0px !important;
