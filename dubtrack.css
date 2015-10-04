@@ -2,7 +2,7 @@
 @import url("https://rawgit.com/MegaBraydn/ElsaBot/master/dubtrack.css");
 
 /* Chat completly to the right */
-#main-room { margin-top: 3px; }
+#main-room { margin: 0 0 0 199px !important; }
 #main-room .right_section {
   right: 0;
   margin-right: 0px !important;
@@ -17,7 +17,7 @@
 .fullscreenLeft { magin-top: 0 !important; } /* Fix video fullscreen issue (not really ;c) */
 
 /* Video fixes */
-#main-room .left_section { margin-top: 0; margin-left: 7em; } /* Video on top, centered */
+#main-room .left_section { margin-top: 0; margin-left: 0; } /* Video on top, centered */
 #main_player .player_container { height: 100%; } /* Higher fix */
 #main_player .player_container .hideVideo-el { display: none; } /* Hide "Hide Video" Option */
 .ytp-watermark { display: none !important; } /* Hide Youtube Watermark */
