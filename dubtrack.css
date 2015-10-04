@@ -2,7 +2,7 @@
 @import url("https://rawgit.com/MegaBraydn/ElsaBot/master/dubtrack.css");
 
 /* Chat completly to the right */
-#main-room { margin: 3px 0 0 199px !important; }
+#main-room { margin: 3px 0 0 calc(398px / 2) !important; }
 #main-room .right_section {
   right: 0;
   margin-right: 0px !important;
@@ -19,8 +19,9 @@
 /* Video plug.dj-like */
 #main-room .left_section {
   margin-top: 0;
-  margin-left: calc(100vw - 75em);
+  margin-right: calc(100vw - 400px - 33.33%);
   width: 40%;
+  float: right;
 }
 #main_player .player_container { height: 100%; }
 #main_player .player_container .hideVideo-el {
