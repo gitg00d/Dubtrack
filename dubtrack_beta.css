@@ -2,7 +2,7 @@
 @import url("https://nightbloo.github.io/dubtrack/dubtrack.css");
 
 /* Chat completly to the right */
-#main-room { margin: 3px 0 0 0; }
+#main-room { margin: 0; }
 #main-room .right_section {
   right: 0;
   margin-right: 0px !important;
@@ -31,7 +31,8 @@
 #main_player .player_container .loading { width: 33%; }
 #main_player .player_container .hideVideo-el  {
   left: initial;
-  right: 0; 
+  right: 0;
+  padding-top: 6px;
 }
 
 /* Miscellaneous */
