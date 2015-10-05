@@ -1,8 +1,25 @@
 /* Transparent background chat + NB3 room staff chat colors */
 @import url("https://nightbloo.github.io/dubtrack/dubtrack.css");
 
+/* Video next to chat */
+#main-room { float: right; }
+#main-room .left_section {
+  margin-top: 0;
+  margin-right: 400px;
+  width: 40%;
+  float: right;
+}
+#main_player .player_container { height: 100%; }
+#main_player .player_container .hideVideo-el { display: none; }
+#main_player .player_container .loading { width: 33%; }
+#main_player .player_container .hideVideo-el  {
+  left: initial;
+  right: 0;
+  padding-top: 6px;
+}
+
 /* Chat completly to the right */
-#main-room { margin: 0; }
+#main-room { margin: 3px 0 0 0; }
 #main-room .right_section {
   right: 0;
   margin-right: 0px !important;
@@ -15,25 +32,6 @@
 #chat .chat-container, #chat { height: 100%; }
 #chat .chat-container ul.chat-main li .activity-row { width: calc(20.5em - 40px); }
 .fullscreenLeft { magin-top: 0 !important; } /* Fix video fullscreen issue (not really ;c) */
-
-/* Video next to chat */
-#main-room { float: right; }
-#main-room .left_section {
-  margin-top: 0;
-  margin-right: 400px;
-  width: 40%;
-  float: right;
-}
-#main_player .player_container { height: 100%; }
-#main_player .player_container .hideVideo-el { display: none; }
-
-/* Video buttons fix */
-#main_player .player_container .loading { width: 33%; }
-#main_player .player_container .hideVideo-el  {
-  left: initial;
-  right: 0;
-  padding-top: 6px;
-}
 
 /* Miscellaneous */
 .ytp-watermark { display: none !important; } /* Hide Youtube Watermark */
