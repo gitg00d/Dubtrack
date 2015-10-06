@@ -1,5 +1,6 @@
 /* Transparent background chat + NB3 room staff chat colors */
 @import url("https://nightbloo.github.io/dubtrack/dubtrack.css");
+@import url("https://rawgit.com/Netox005/Test/master/dubtrack_chatright.css");
 
 /* Video next to chat */
 #main-room { float: right; }
@@ -9,7 +10,8 @@
   width: 40%;
   float: right;
 }
-#main_player .player_container { height: 100%; }
+#main_player { padding: 0.5em .4em .5em .5em }
+#main_player .player_container { height: 14.8em; }
 #main_player .player_container .hideVideo-el { display: none; }
 #main_player .player_container .loading { width: 33%; }
 #main_player .player_container .hideVideo-el  {
@@ -18,24 +20,9 @@
   padding-top: 6px;
 }
 
-/* Chat completly to the right */
-#main-room { margin: 3px 0 0 0; }
-#main-room .right_section {
-  right: 0;
-  margin-right: 0px !important;
-  float: right !important;
-  height: calc(100vh - 4.9em);
-  width: 400px !important;
-}
-#chat .chat-tools .room-user-counter { padding-top: .75em !important; }
-#chat .chat-container .chat-messages { height: inherit !important; }
-#chat .chat-container, #chat { height: 100%; }
-#chat .chat-container ul.chat-main li .activity-row { width: calc(20.5em - 40px); }
-.fullscreenLeft { magin-top: 0 !important; } /* Fix video fullscreen issue (not really ;c) */
-
 /* Miscellaneous */
+.durationRemaining { margin: 6px 4px 4px 4px !important; } /* Time until booth Fix */
 .ytp-watermark { display: none !important; } /* Hide Youtube Watermark */
 .html5-video-content .video-annotations { display: none !important; } /* Hide annotations */
 .ps-container .ps-scrollbar-x, .ps-container .ps-scrollbar-y, .ps-container .ps-scrollbar-x-rail:hover .ps-scrollbar-x, .ps-container .ps-scrollbar-y-rail:hover .ps-scrollbar-y { background-color: #B1B1B1 } /* Chat scrollbar more visible */
-#chat .chat-container ul.chat-main li.user-560b4a33d9057a0300cc2fa0 .activity-row .text p a.username, #chat .chat-container ul.chat-main li.user-560b4a33d9057a0300cc2fa0 .activity-row .text p a.username:hover, #chat .chat-container ul.chat-main li.user-560b4a33d9057a0300cc2fa0 .activity-row .text p a.username:visited { color: #FFCA00; } /* Netux -> orange */
-#chat .chat-container ul.chat-main li.user-55ffe2e0196f170300cc1037 .activity-row .text p a.username, #chat .chat-container ul.chat-main li.user-55ffe2e0196f170300cc1037 .activity-row .text p a.username:hover, #chat .chat-container ul.chat-main li.user-55ffe2e0196f170300cc1037 .activity-row .text p a.username:visited{ color: #006400 !important; } /* Snaky -> dark green */
+#chat .chat-container ul.chat-main li.user-560b4a33d9057a0300cc2fa0.current-chat-user .activity-row .text p a.username, #chat .chat-container ul.chat-main li.user-560b4a33d9057a0300cc2fa0.current-chat-user .activity-row .text p a.username:hover, #chat .chat-container ul.chat-main li.user-560b4a33d9057a0300cc2fa0.current-chat-user .activity-row .text p a.username:visited { color: #FFCA00; } /* Netux -> orange */
