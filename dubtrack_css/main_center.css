@@ -7,7 +7,7 @@
 /* Video next to chat */
 #main-room:not(.fullscreenParent) .left_section {
   position: fixed;
-  left: calc(50% - 60% / 2 - 400px / 2);
+  left: calc(50% - 40% / 2 - 400px / 2);
   width: 40%;
 }
 #main-room:not(.fullscreenParent) #main_player .player_container { height: calc(100vh - 33vh); }
