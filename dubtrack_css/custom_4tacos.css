@@ -7,6 +7,6 @@
   position: fixed;
   left: calc(50% - 60% / 2 - 400px / 2);
 }
-#main_player .player_container { left: calc(100vh - 33vh); }
+#main_player .player_container { height: calc(100vh - 33vh); }
 
 /* Requested by @tacotacotacotaco */
