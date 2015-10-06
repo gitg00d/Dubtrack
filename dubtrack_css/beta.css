@@ -1,6 +1,6 @@
 /* Transparent background chat + NB3 room staff chat colors */
 @import url("https://nightbloo.github.io/dubtrack/dubtrack.css");
-@import url("https://rawgit.com/Netox005/Test/master/dubtrack_chatright.css");
+@import url("https://rawgit.com/Netox005/Test/master/dubtrack_css/chatright.css");
 
 /* Video next to chat */
 #main-room { float: right; }
