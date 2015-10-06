@@ -8,7 +8,6 @@
 #main-room:not(.fullscreenParent) { float: right; }
 #main-room:not(.fullscreenParent) .left_section {
   margin-top: 0;
-  margin-right: 400px;
   width: 40%;
   float: right;
 }
