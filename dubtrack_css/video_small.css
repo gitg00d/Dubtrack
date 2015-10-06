@@ -1,0 +1,8 @@
+/* COMPLEMENTARY FILE, should be imported into another .css file */
+
+#main-room:not(.fullscreenParent) .left_section {
+  position: fixed;
+  width: 40%;
+}
+#main-room:not(.fullscreenParent) #main_player { padding: 0.5em .4em .5em .5em }
+#main-room:not(.fullscreenParent) #main_player .player_container { height: 14.8em; }
