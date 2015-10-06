@@ -4,7 +4,7 @@ var video = $(".left_section");
 video.css("position", "fixed");
 var mousePress = false, wasMoved = false;
 var lastMousePos = { x: -1, y: -1 };
-$(document).mousemove(function(e) {
+$(document).on("mousemove", function(e) {
     if(!wasMoved) return;
 
     var sqrPos = square.position();
@@ -15,17 +15,17 @@ $(document).mousemove(function(e) {
 
     lastMousePos.x = e.pageX;
     lastMousePos.y = e.pageY;
-})
-video.mousemove(function(e) {
+});
+video.on("mousemove", function(e) {
     if(!mousePress) return;
     wasMoved = true;
 });
-video.mousedown(function(e) {
+video.on("mousedown", function(e) {
     mousePress = true;
     lastMousePos.x = e.pageX;
     lastMousePos.y = e.pageY;
 });
-$(document).mouseup(function(e) {
+$(document).on("mouseup", function(e) {
     mousePress = false;
     wasMoved = false;
 });
