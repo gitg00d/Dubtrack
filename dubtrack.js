@@ -7,8 +7,8 @@ var lastMousePos = { x: -1, y: -1 };
 $(document).on("mousemove", function(e) {
     if(!wasMoved) return;
 
-    var sqrPos = square.position();
-    var x = sqrPos.left + (e.pageX - lastMousePos.x) y = sqrPos.top + (e.pageY - lastMousePos.y);
+    var vidPos = video.position();
+    var x = vidPos.left + (e.pageX - lastMousePos.x) y = vidPos.top + (e.pageY - lastMousePos.y);
 
     video.css("left", x + "px");
     video.css("top", y + "px");
