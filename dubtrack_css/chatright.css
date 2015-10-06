@@ -1,4 +1,5 @@
-/* Chat completly to the right */
+/* COMPLEMENTARY FILE, should be imported into another .css file */
+
 #main-room { margin: 3px 0 0 0; }
 #main-room .right_section {
   right: 0;
@@ -11,7 +12,3 @@
 #chat .chat-container .chat-messages { height: inherit !important; }
 #chat .chat-container, #chat { height: 100%; }
 #chat .chat-container ul.chat-main li .activity-row { width: calc(20.5em - 40px); }
-.fullscreenLeft { magin-top: 0 !important; } /* Fix video fullscreen issue (not really ;c) */
-
-/* Miscellaneous */
-.ps-container .ps-scrollbar-x, .ps-container .ps-scrollbar-y, .ps-container .ps-scrollbar-x-rail:hover .ps-scrollbar-x, .ps-container .ps-scrollbar-y-rail:hover .ps-scrollbar-y { background-color: #B1B1B1 } /* Chat scrollbar more visible */
