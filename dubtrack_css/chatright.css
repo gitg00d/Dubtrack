@@ -1,14 +1,14 @@
 /* COMPLEMENTARY FILE, should be imported into another .css file */
 
-#main-room { margin: 3px 0 0 0; }
-#main-room .right_section {
+#main-room:not(.fullscreenParent) { margin: 3px 0 0 0; }
+#main-room:not(.fullscreenParent) .right_section {
   right: 0;
   margin-right: 0px !important;
   float: right !important;
   height: calc(100vh - 4.9em);
   width: 400px !important;
 }
-#chat .chat-tools .room-user-counter { padding-top: .75em !important; }
-#chat .chat-container .chat-messages { height: inherit !important; }
-#chat .chat-container, #chat { height: 100%; }
-#chat .chat-container ul.chat-main li .activity-row { width: calc(20.5em - 40px); }
+#main-room:not(.fullscreenParent) #chat .chat-tools .room-user-counter { padding-top: .75em !important; }
+#main-room:not(.fullscreenParent)#chat .chat-container .chat-messages { height: inherit !important; }
+#main-room:not(.fullscreenParent)#chat .chat-container, #chat { height: 100%; }
+#main-room:not(.fullscreenParent)#chat .chat-container ul.chat-main li .activity-row { width: calc(20.5em - 40px); }
