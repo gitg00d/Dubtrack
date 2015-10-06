@@ -35,7 +35,7 @@
 .fullscreenLeft { magin-top: 0 !important; } /* Fix video fullscreen issue (not really ;c) */
 
 /* Miscellaneous */
-.durationRemaining { margin: 6px 4px 4px 4px !important; } /* Time until booth Fix */
+.durationRemaining { margin: 6px 4px 4px 0 !important; } /* Time until booth Fix */
 .ytp-watermark { display: none !important; } /* Hide Youtube Watermark */
 .html5-video-content .video-annotations { display: none !important; } /* Hide annotations */
 .ps-container .ps-scrollbar-x, .ps-container .ps-scrollbar-y, .ps-container .ps-scrollbar-x-rail:hover .ps-scrollbar-x, .ps-container .ps-scrollbar-y-rail:hover .ps-scrollbar-y { background-color: #B1B1B1 } /* Chat scrollbar more visible */
