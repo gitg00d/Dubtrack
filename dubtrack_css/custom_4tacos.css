@@ -1,22 +1,9 @@
 /* Transparent background chat + NB3 room staff chat colors */
 @import url("https://nightbloo.github.io/dubtrack/dubtrack.css");
+@import url("https://rawgit.com/Netox005/Test/master/dubtrack_css/chatright.css");
 
 /* Video centered */
 #main-room .left_section {
   position: fixed;
   left: calc(50% - 60% / 2 - 400px / 2);
 }
-
-/* Chat completly to the right */
-#main-room { margin: 3px 0 0 199px; }
-#main-room .right_section {
-  right: 0;
-  margin-right: 0px !important;
-  float: right !important;
-  height: calc(100vh - 4.9em);
-  width: 400px !important;
-}
-#chat .chat-tools .room-user-counter { padding-top: .75em !important; }
-#chat .chat-container .chat-messages { height: inherit !important; }
-#chat .chat-container, #chat { height: 100%; }
-#chat .chat-container ul.chat-main li .activity-row { width: calc(20.5em - 40px); }
