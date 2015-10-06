@@ -3,10 +3,10 @@
 @import url("https://rawgit.com/Netox005/Test/master/dubtrack_css/chatright.css"); /* Chat completly to the right */
 
 /* Video centered */
-#main-room .left_section {
+#main-room:not(.fullscreenParent) .left_section {
   position: fixed;
   left: calc(50% - 60% / 2 - 400px / 2);
 }
-#main_player .player_container { height: calc(100vh - 33vh); }
+#main-room:not(.fullscreenParent) #main_player .player_container { height: calc(100vh - 33vh); }
 
 /* Requested by @tacotacotacotaco */
