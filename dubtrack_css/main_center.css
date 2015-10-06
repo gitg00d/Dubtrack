@@ -3,6 +3,7 @@
 /* Imports */
 @import url("https://nightbloo.github.io/dubtrack/dubtrack.css"); /* Transparent background chat + NB3 room staff chat colors */
 @import url("https://rawgit.com/Netox005/Test/master/dubtrack_css/chatright.css"); /* Chat completly to the right */
+@import url("https://rawgit.com/Netox005/Test/master/dubtrack_css/chat_right.css"); /* Chat completly to the right */
 
 /* Video next to chat */
 #main-room:not(.fullscreenParent) .left_section {
