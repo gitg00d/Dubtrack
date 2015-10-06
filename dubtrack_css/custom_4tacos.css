@@ -1,9 +1,11 @@
-/* Transparent background chat + NB3 room staff chat colors */
-@import url("https://nightbloo.github.io/dubtrack/dubtrack.css");
-@import url("https://rawgit.com/Netox005/Test/master/dubtrack_css/chatright.css");
+/* Imports */
+@import url("https://nightbloo.github.io/dubtrack/dubtrack.css"); /* Transparent background chat + NB3 room staff chat colors */
+@import url("https://rawgit.com/Netox005/Test/master/dubtrack_css/chatright.css"); /* Chat completly to the right */
 
 /* Video centered */
 #main-room .left_section {
   position: fixed;
   left: calc(50% - 60% / 2 - 400px / 2);
 }
+
+/* Requested by @tacotacotacotaco */
