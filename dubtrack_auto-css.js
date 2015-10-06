@@ -1,1 +1,2 @@
-$("head").append('<link rel="stylesheet" type="text/css" href="https://rawgit.com/Netox005/Test/master/dubtrack/main.css">');
+        $("head").append('<style src="https://rawgit.com/Netox005/Test/master/dubtrack.css"/>');
+        $(".user-header-menu").append('<li><button style="font-size: 1em;height: 32px;margin-right: 16px;border-radius: 0.1875em;">Test</button></li>');
