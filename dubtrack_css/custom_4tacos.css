@@ -5,7 +5,8 @@
 /* Video centered */
 #main-room .left_section {
   position: fixed;
-  left: calc(100vh - 33vh);
+  left: calc(50% - 60% / 2 - 400px / 2);
 }
+#main_player .player_container { left: calc(100vh - 33vh); }
 
 /* Requested by @tacotacotacotaco */
