@@ -1,4 +1,4 @@
-/* Nightblue3 room css (Transparent Chat and staff chat tags) */
+/* Transparent background chat + NB3 room staff chat colors */
 @import url("https://nightbloo.github.io/dubtrack/dubtrack.css");
 
 /* Video centered */
@@ -6,7 +6,6 @@
   position: fixed;
   left: calc(50% - 60% / 2 - 400px / 2);
 }
-#main_player .player_container { height: auto; }
 
 /* Chat completly to the right */
 #main-room { margin: 3px 0 0 199px; }
