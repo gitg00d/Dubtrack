@@ -9,17 +9,15 @@ $("#main-menu-left").css("z-index", 999998); // hü3
 var video = $(".left_section"), vidEditBtn = $("#vidEditBtn"), vidEditDiv = $("#vidEditDiv");
 var editMode = false;
 
-vidEditDiv.css("left", video.offset().left);
-vidEditDiv.css("top", video.offset().top);
-vidEditDiv.width(video.outerWidth());
-vidEditDiv.height(video.outerHeight());
-
 function videoEdit(e) {
+    vidEditDiv.css("left", video.offset().left);
+    vidEditDiv.css("top", video.offset().top);
+    vidEditDiv.width(video.outerWidth());
+    vidEditDiv.height(video.outerHeight());
+
     if(editMode) $(document).click();
 
-    $("#vidEditBtn").css("box-shadow", editMode ? "inherit" : "inset 0 -2px green !important");
-    //$("#vidEditBtn").css("background", editMode ? "inherit" : "white");
-    //$("#vidEditBtn").css("color", editMode ? "inherit" : "black");
+    $("#vidEditBtn").css("box-shadow", editMode ? "inherit" : "inset 0 -2px lightgreen !important");
     vidEditDiv.css("display", editMode ? "none" : "block");
 
     editMode = !editMode;
