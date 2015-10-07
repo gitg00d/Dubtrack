@@ -6,6 +6,8 @@ $("#main-room").append('<div id="vidEditDiv" style="background:rgba(255, 190, 0,
 
 $("#main-menu-left").css("z-index", 999998); // hü3
 
+console.log(window.location.href);
+
 var video = $(".left_section"), vidEditBtn = $("#vidEditBtn"), vidEditDiv = $("#vidEditDiv");
 var editMode = false;
 
@@ -17,11 +19,12 @@ function videoEdit(e) {
 
     if(editMode) $(document).click();
 
-    $("#vidEditBtn").css("box-shadow", editMode ? "inherit" : "inset 0 -2px lightgreen");
+    $("#vidEditBtn").css("box-shadow", editMode ? "" : "inset 0 -2px lightgreen");
     vidEditDiv.css("display", editMode ? "none" : "block");
 
     editMode = !editMode;
-    console.log("editMode = " + editMode);
+    if(window.location.href.indexOf("https://www.dubtrack.fm") === 0) console.log("editMode = " + editMode);
+
 }
 
 /* Drag */
@@ -36,8 +39,8 @@ $(document).mousemove(function(e) {
 
     if(x < 0) x = 0;
     if(y < 0) y = 0;
-    if(x > $(document).width() - video.outerWidth()) x = $(document).width() - video.outerWidth();
-    if(y > $(document).height() - video.outerHeight()) x = $(document).height() - video.outerHeight();
+    if(x > $(window).width() - video.outerWidth()) x = $(window).width() - video.outerWidth();
+    if(y > $(window).height() - video.outerHeight()) x = $(window).height() - video.outerHeight();
 
     video.css("left", x + "px");
     video.css("top", y + "px");
