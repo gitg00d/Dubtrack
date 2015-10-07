@@ -1,11 +1,27 @@
 $("head").append('<style src="https://rawgit.com/Netox005/Test/master/dubtrack.css"/>');
+
 $("head").append('<style>.left_section:not(fullscreenLeft){position:fixed!important;cursor:pointer;webkit-user-select:none;user-select:none;-moz-user-select:none;-ms-user-select:none;}</style>');
-$(".user-header-menu").prepend('<li><button style="font-size: 1em;height: 32px;margin-right: 16px;border-radius: 0.1875em;">Video Drag Mode</button></li>');
+$(".user-header-menu").prepend('<li><button id="vidEditBtn" style="font-size: 1em;height: 32px;margin-right: 16px;border-radius: 0.1875em;" onclick="videoEdit()">Video Edit</button></li>');
 
 var video = $(".left_section");
+var editMode = false;
+
+function videoEdit(e) {
+    if(editMode) {
+        $(document).click();
+        $("#vidEditBtn").css("background", "white");
+        $("#vidEditBtn").css("color", "black");
+    } else {
+        $("#vidEditBtn").css("background", "inherit");
+        $("#vidEditBtn").css("color", "inherit");
+    }
+    editMode = !editMode;
+}
+
+/* Drag */
 var mousePress = false, wasMoved = false;
 var lastMousePos = { x: -1, y: -1 };
-$(document).on("mousemove", function(e) {
+$(document).mousemove(function(e) {
     if(!wasMoved) return;
 
     var vidPos = video.position();
@@ -17,16 +33,16 @@ $(document).on("mousemove", function(e) {
     lastMousePos.x = e.pageX;
     lastMousePos.y = e.pageY;
 });
-video.on("mousemove", function(e) {
+video.mousemove(function(e) {
     if(!mousePress) return;
     wasMoved = true;
 });
-video.on("mousedown", function(e) {
+video.mousedown(function(e) {
     mousePress = true;
     lastMousePos.x = e.pageX;
     lastMousePos.y = e.pageY;
 });
-$(document).on("mouseup", function(e) {
+$(document).mouseup(function(e) {
     mousePress = false;
     wasMoved = false;
 });
