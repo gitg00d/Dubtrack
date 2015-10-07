@@ -1,7 +1,7 @@
 $("head").append('<style src="https://rawgit.com/Netox005/Test/master/dubtrack.css"/>');
 
 $("head").append('<style>.no-selection,#vidEditDiv{webkit-user-select:none;user-select:none;-moz-user-select:none;-ms-user-select:none;}.left_section:not(fullscreenLeft),#vidEditDiv{position:fixed!important;}#vidEditDiv{cursor:pointer;}</style>');
-$(".user-header-menu").prepend('<li><button id="vidEditBtn" style="font-size:1em;height:32px;margin-right:16px;border-radius:0.1875em;z-index:999998;" onclick="videoEdit()">Video Edit</button></li>');
+$(".user-header-menu").prepend('<li><button id="vidEditBtn" style="font-size:.75em;height:32px;margin-right:16px;border-radius:0.1875em;z-index:999998;" onclick="videoEdit()">Video Pane Editor</button></li>');
 $("#main-room").append('<div id="vidEditDiv" style="background:rgba(255, 190, 0, 0.7);top:0;left:0;display:none;"></div>')
 
 $("#main-menu-left").css("z-index", 999998); // hü3
@@ -17,8 +17,9 @@ vidEditDiv.height(video.outerHeight());
 function videoEdit(e) {
     if(editMode) $(document).click();
 
-    $("#vidEditBtn").css("background", editMode ? "inherit" : "white");
-    $("#vidEditBtn").css("color", editMode ? "inherit" : "black");
+    $("#vidEditBtn").css("box-shadow", editMode ? "inherit" : "inset 0 -2px green !important");
+    //$("#vidEditBtn").css("background", editMode ? "inherit" : "white");
+    //$("#vidEditBtn").css("color", editMode ? "inherit" : "black");
     vidEditDiv.css("display", editMode ? "none" : "block");
 
     editMode = !editMode;
