@@ -1,11 +1,14 @@
 /* COMPLEMENTARY FILE, should be imported into another .css file */
 
+/* Main function */
 #main-room:not(.fullscreenParent) .left_section {
   margin-top: 0;
   width: 40%;
 }
 #main-room:not(.fullscreenParent) #main_player { padding: 0.5em .4em .5em .5em }
 #main-room:not(.fullscreenParent) #main_player .player_container { height: 14.8em; }
-#main-room:not(.fullscreenParent) #main_player .player_container .loading { font-size: 1em; }
+
+/* Buttons Fix */
+#main-room:not(.fullscreenParent) #main_player .player_container .loading { width: 33%; font-size: 1em; }
 #main-room:not(.fullscreenParent) #main_player .player_container .hideVideo-el { left: initial; top: initial; right: 0; bottom: 0; display: none; }
 #main-room:not(.fullscreenParent) #main_player .player_container:hover .hideVideo-el { display: block; }
