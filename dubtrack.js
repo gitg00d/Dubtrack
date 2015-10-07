@@ -15,8 +15,8 @@ vidEditDiv.height(video.outerHeight());
 function videoEdit(e) {
     if(editMode) $(document).click();
 
-    $("#vidEditBtn").css("background", editMode ? "white" : "inherit");
-    $("#vidEditBtn").css("color", editMode ? "black" : "inherit");
+    $("#vidEditBtn").css("background", !editMode ? "white" : "inherit");
+    $("#vidEditBtn").css("color", !editMode ? "black" : "inherit");
     vidEditDiv.css("display", editMode ? "none" : "block");
 
     editMode = !editMode;
