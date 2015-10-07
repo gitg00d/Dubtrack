@@ -2,7 +2,7 @@ $("head").append('<style src="https://rawgit.com/Netox005/Test/master/dubtrack.c
 
 $("head").append('<style>.left_section:not(fullscreenLeft),#vidEditDiv{position:fixed!important;}#vidEditDiv{cursor:pointer;webkit-user-select:none;user-select:none;-moz-user-select:none;-ms-user-select:none;}</style>');
 $(".user-header-menu").prepend('<li><button id="vidEditBtn" style="font-size: 1em;height: 32px;margin-right: 16px;border-radius: 0.1875em;" onclick="videoEdit()">Video Edit</button></li>');
-$(".main-room").append('<div id="vidEditDiv" style="background:rgba(255, 190, 0, 0.7);top:0;left:0;display:none;"></div>')
+$("#main-room").append('<div id="vidEditDiv" style="background:rgba(255, 190, 0, 0.7);top:0;left:0;display:none;"></div>')
 
 var video = $(".left_section"), vidEditBtn = $("#vidEditBtn"), vidEditDiv = $("#vidEditDiv");
 var editMode = false;
