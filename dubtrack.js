@@ -1,5 +1,5 @@
 $("head").append('<style src="https://rawgit.com/Netox005/Test/master/dubtrack.css"/>');
-$("head").append('<style>.left_section:not(fullscreenLeft){position:fixed;cursor:pointer;webkit-user-select:none;user-select:none;-moz-user-select:none;-ms-user-select:none;}</style>');
+$("head").append('<style>.left_section:not(fullscreenLeft){position:fixed!important;cursor:pointer;webkit-user-select:none;user-select:none;-moz-user-select:none;-ms-user-select:none;}</style>');
 $(".user-header-menu").prepend('<li><button style="font-size: 1em;height: 32px;margin-right: 16px;border-radius: 0.1875em;">Video Drag Mode</button></li>');
 
 var video = $(".left_section");
