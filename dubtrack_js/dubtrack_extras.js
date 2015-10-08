@@ -1,17 +1,19 @@
 $("head").append('<style>#player-controller ul li.remove-if-iframe.display-block{border-right: 0;}li.volume-button a span.icon-volume-down:before{padding-right: 5.5px;}li.volume-button a span.icon-volume-off:before{padding-right: 9.6094px;}.noanim.volume.remove-if-iframe.display-block{border-right-width: 0;}.volume-button{cursor:pointer;-webkit-user-select:none; user-select:none; -moz-user-select:none; -ms-user-select:none;}</style>');
-$("#player-controller .left ul .volume").after('<li class="volume-button"><a onclick="volumeBtn()"><span class="' + volumeClass() + '"></span></a></li>');
+$("#player-controller .left ul .volume").after('<li class="volume-button"><a onclick="volumeBtn()"><span></span></a></li>');
 
 var volSpan = $(".volume-button a span"), lastVolume = getVolume(), volUpdate = true;
 
 $("#volume-div a").bind('style', function() { console.log("test"); volSpan.attr("class", volumeClass()); });
 
-setInterval(function() {
+setInterval(updateVolumeClass, 100);
+
+function updateVolumeClass() {
     if(!volUpdate) {
         volUpdate = true;
         return;
     }
-    volSpan.attr("class", volumeClass()); 
-}, 100);
+    volSpan.attr("class", volumeClass());
+}
 
 function volumeBtn() {
     var isZero = getVolume() === 0;
@@ -19,10 +21,11 @@ function volumeBtn() {
 
     $("#volume-div div").css("left", isZero ? lastVolume : "0%");
     $("#volume-div a").css("left", isZero ? lastVolume : "0%");
-    
+
     Dubtrack.room.player.setVolume(isZero ? lastVolume : 0);       // Dunno the difference
-    Dubtrack.room.player.setVolumeRemote(isZero ? lastVolume : 0); // Dunno the difference
-    
+    //Dubtrack.room.player.setVolumeRemote(isZero ? lastVolume : 0); // Dunno the difference
+
+    volSpan.attr("class", volumeClass());
     volUpdate = false;
 }
 
