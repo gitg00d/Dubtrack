@@ -8,9 +8,12 @@
 /* Video next to chat */
 #main-room:not(.fullscreenParent) { float: right; }
 #main-room:not(.fullscreenParent) .left_section {
+  position: fixed;
   right: 400px;
   float: right;
+  left: calc(50% - 40% / 2 - 400px / 2);
 }
+#main-room:not(.fullscreenParent) #main_player .player_container { height: calc(66vh); }
 
 /* Miscellaneous */
 #main-room:not(.fullscreenParent) .durationRemaining { margin: 6px 4px 4px 0 !important; } /* Time until booth fix */
