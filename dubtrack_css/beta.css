@@ -1,4 +1,4 @@
-/* Beta of main file, for testing purposes and very unstable */
+/* Main file (NB3 room) */
 
 /* Imports */
 @import url("https://nightbloo.github.io/dubtrack/dubtrack.css"); /* Transparent background chat + NB3 room staff chat colors */
@@ -8,14 +8,26 @@
 /* Video next to chat */
 #main-room:not(.fullscreenParent) { float: right; }
 #main-room:not(.fullscreenParent) .left_section {
-  position: fixed;
   right: 400px;
   float: right;
-  left: calc(50% - 40% / 2 - 400px / 2);
 }
-#main-room:not(.fullscreenParent) #main_player .player_container { height: calc(66vh); }
+
+/* Updub/Downdub/Grab custom icons */
+#player-controller ul li.remove-if-iframe.display-block:nth-of-type(1) { background-image: url('https://raw.githubusercontent.com/nightbloo/nightbloo.github.io/master/plug/icons/grab.png'); }
+#player-controller ul li.remove-if-iframe.display-block:nth-of-type(2) { background-image: url('https://raw.githubusercontent.com/nightbloo/nightbloo.github.io/master/plug/icons/woot.png'); }
+#player-controller ul li.remove-if-iframe.display-block:nth-of-type(4) { background-image: url('https://raw.githubusercontent.com/nightbloo/nightbloo.github.io/master/plug/icons/meh.png'); }
+#player-controller ul li.remove-if-iframe.display-block {
+  background-size: cover;
+  width: 44.7969px;
+  height: 41.375px;
+}
+#player-controller ul li a.dubup:hover, #player-controller ul li a.dubup.voted { background-color: rgba(0, 255, 255, 0.15); }
+#player-controller ul li a.dubup:hover, #player-controller ul li a.dubdown.voted { background-color: rgba(255, 0, 255, 0.15); }
+#player-controller ul li a span.icon-arrow-up:before, #player-controller ul li a span.icon-arrow-down:before { content: " "; }
+#player-controller ul li a.dubup, #player-controller ul li a.dubdown { height: 100%; }
 
 /* Miscellaneous */
+#volume-div .ui-slider-range-min { height: 125%; background-color: #5A005A; } /* Volume bar slider range fix */
 #main-room:not(.fullscreenParent) .durationRemaining { margin: 6px 4px 4px 0 !important; } /* Time until booth fix */
 .ps-container .ps-scrollbar-x, .ps-container .ps-scrollbar-y, .ps-container .ps-scrollbar-x-rail:hover .ps-scrollbar-x, .ps-container .ps-scrollbar-y-rail:hover .ps-scrollbar-y { background-color: #B1B1B1 } /* Chat scrollbar more visible */
 #chat .chat-container ul.chat-main li.user-560b4a33d9057a0300cc2fa0.current-chat-user .activity-row .text p a.username, #chat .chat-container ul.chat-main li.user-560b4a33d9057a0300cc2fa0.current-chat-user .activity-row .text p a.username:hover, #chat .chat-container ul.chat-main li.user-560b4a33d9057a0300cc2fa0.current-chat-user .activity-row .text p a.username:visited { color: #FFCA00; } /* Netux -> orange */
