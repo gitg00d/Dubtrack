@@ -4,6 +4,7 @@
 @import url("https://nightbloo.github.io/dubtrack/dubtrack.css"); /* Transparent background chat + NB3 room staff chat colors */
 @import url("https://rawgit.com/Netox005/Test/master/dubtrack_css/chatright.css"); /* Chat completly to the right */
 @import url("https://rawgit.com/Netox005/Test/master/dubtrack_css/videosmall.css"); /* Small video */
+@import url("https://rawgit.com/Netox005/Test/master/dubtrack_css/voteicons.css"); /* Vote icons (NB3 style) */
 
 /* Video centered */
 #main-room:not(.fullscreenParent) { float: right; }
