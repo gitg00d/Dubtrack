@@ -8,7 +8,7 @@
   width: 44.7969px;
   height: 41.375px;
 }
-#player-controller ul li a.dubup:hover, #player-controller ul li a.dubup.voted, #player-controller ul li.add-to-playlist a:hover { background-color: rgba(0, 255, 255, 0.15); }
-#player-controller ul li a.dubdown:hover, #player-controller ul li a.dubdown.voted { background-color: rgba(255, 0, 255, 0.15); }
+#player-controller ul li a.dubup:hover, #player-controller ul li a.dubup.voted { background-color: rgba(0, 255, 255, 0.15); }
+#player-controller ul li a.dubdown:hover, #player-controller ul li a.dubdown.voted, #player-controller ul li.add-to-playlist a:hover { background-color: rgba(255, 0, 255, 0.15); }
 #player-controller ul li a span.icon-arrow-up:before, #player-controller ul li a span.icon-arrow-down:before, #player-controller ul li.add-to-playlist span:before { content: " "; }
 #player-controller ul li a.dubup, #player-controller ul li a.dubdown, #player-controller ul li.add-to-playlist a { height: 100%; }
