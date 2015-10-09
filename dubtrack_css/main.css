@@ -4,6 +4,7 @@
 @import url("https://nightbloo.github.io/dubtrack/dubtrack.css"); /* Transparent background chat + NB3 room staff chat colors */
 @import url("https://rawgit.com/Netox005/Test/master/dubtrack_css/chatright.css"); /* Chat completly to the right */
 @import url("https://rawgit.com/Netox005/Test/master/dubtrack_css/videosmall.css"); /* Small video */
+@import url("https://rawgit.com/Netox005/Test/master/dubtrack_css/voteicons.css"); /* Vote icons (NB3 style) */
 
 /* Video next to chat */
 #main-room:not(.fullscreenParent) { float: right; }
@@ -13,7 +14,6 @@
 }
 
 /* Miscellaneous */
-#chat .chat-container ul.chat-main li .image_row > img { border-radius: 2px; } /* Chat images as round squares */
 #volume-div .ui-slider-range-min { height: 125%; background-color: #5A005A; } /* Volume bar slider range fix */
 #main-room:not(.fullscreenParent) .durationRemaining { margin: 6px 4px 4px 0 !important; } /* Time until booth fix */
 .ps-container .ps-scrollbar-x, .ps-container .ps-scrollbar-y, .ps-container .ps-scrollbar-x-rail:hover .ps-scrollbar-x, .ps-container .ps-scrollbar-y-rail:hover .ps-scrollbar-y { background-color: #B1B1B1 } /* Chat scrollbar more visible */
