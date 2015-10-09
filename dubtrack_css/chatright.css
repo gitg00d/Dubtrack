@@ -1,5 +1,6 @@
 /* COMPLEMENTARY FILE, should be imported into another .css file */
 
+/* Main function */
 #main-room:not(.fullscreenParent) { margin: 3px 0 0 0; }
 #main-room:not(.fullscreenParent) .right_section {
   right: 0;
@@ -12,3 +13,6 @@
 #main-room:not(.fullscreenParent) #chat .chat-container .chat-messages { height: inherit !important; }
 #main-room:not(.fullscreenParent) #chat .chat-container, #chat { height: 100%; }
 #main-room:not(.fullscreenParent) #chat .chat-container ul.chat-main li .activity-row { width: calc(20.5em - 40px); }
+
+/* Room Users List fix */
+#main-room:not(.fullscreenParent) #main_avatar_room #main-user-list-room { height: calc(100vh - 10em) !important; }
