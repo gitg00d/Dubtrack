@@ -6,13 +6,15 @@ $("#player-controller .left ul .volume").after('<li class="volume-button"><a onc
 var currentUser = Dubtrack.session.get('username');
 var volSpan, lastVolume = getVolume(), volUpdate = true;
 var chat, chatLog = false;
+var totalDubs, localUpdubs = 0, localDowndubs = 0;
 function dbe_init() {
     chat = $("section#chat  .chat-container .chat-messages.ps-container .chat-main");
     volSpan = $(".volume-button a span");
+    totalDubs = $("#maindubtotal.dubTotal");
     console.log("Dubtrack-Extras -> INITIALIZED");
 }
-dbe_init();
 $(document).ready(dbe_init);
+$(document).ready();
 
 /* Volume button */
 $("#volume-div a").bind('style', function() { volSpan.attr("class", volumeClass()); });
@@ -30,8 +32,8 @@ function volumeBtn() {
     var isZero = getVolume() === 0;
     if(!isZero) lastVolume = getVolume();
 
-    $("#volume-div div").css("left", isZero ? lastVolume : "0%");
-    $("#volume-div a").css("left", isZero ? lastVolume : "0%");
+    $("#volume-div div").css("width", (isZero ? lastVolume : 0) + '%');
+    $("#volume-div a").css("left", (isZero ? lastVolume : 0) + '%');
 
     Dubtrack.room.player.setVolume(isZero ? lastVolume : 0);         // Dunno the difference
     //Dubtrack.room.player.setVolumeRemote(isZero ? lastVolume : 0); // Dunno the difference
@@ -58,6 +60,11 @@ Dubtrack.Events.bind('realtime:room_playlist-dub', function(data) {
     if(data.user.username === currentUser) return;
     
     console.log(data.user.username + " -> " + data.dubtype + "ed.");
+    
+    if(data.dubtype === 'updub') localUpdubs++;
+    else if(data.dubtype == 'downdub') localDowndubs++;
+    totalDubs.attr("title", "+" + localUpdubs + " updubs | -" + localDowndubs + " downdubs");
+    
     if(chatLog)
         chat.append('<li class="chat-system-loading"><a href="#" class="username user-' + data.user.userInfo.userid + '">@' + data.user.username + '</a> <span class="chat-' + data.dubtype + 'ed">' + data.dubtype + 'ed</span> your song!</li>');
 });
@@ -78,4 +85,11 @@ Dubtrack.Events.bind('realtime:user-leave', function(data) {
     console.log(data.user.username + " -> left the room");
     if(chatLog)
         chat.append('<li class="chat-system-loading"><a href="#" class="username user-' + data.user.userInfo.userid + '">@' + data.user.username + '</a> left the room.</li>');
+});
+
+/* On song change (?) */
+Dubtrack.Events.bind('realtime:room_playlist-update', function(data) {
+    localUpdubs = 0;
+    localDowndubs = 0;
+    totalDubs.attr("title", "+" + localUpdubs + " updubs | -" + localDowndubs + " downdubs");
 });
