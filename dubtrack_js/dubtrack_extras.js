@@ -11,6 +11,7 @@ function dbe_init() {
     chat = $("section#chat  .chat-container .chat-messages.ps-container .chat-main");
     volSpan = $(".volume-button a span");
     totalDubs = $("#maindubtotal.dubTotal");
+    totalDubs.attr("title", constructTotalDubsTitle);
     console.log("Dubtrack-Extras -> INITIALIZED");
 }
 $(document).ready(dbe_init);
@@ -55,19 +56,21 @@ function getVolume() {
     return parseInt(str.substring(0, str.length - 1));
 }
 
+function constructTotalDubsTitle() {
+    var result = "";
+    if(localUpdubs > 0) result += '+';
+    result += localUpdubs + " updub";
+    if(localUpdubs === 1) result += 's';
+    result += " | ";
+    if(localDowndubs > 0) result += '+';
+    result += localDowndubs + " updub";
+    if(localDowndubs === 1) result += 's';
+    return result;
+}
+
 /* On updub/downdub */
 Dubtrack.Events.bind('realtime:room_playlist-dub', function(data) {
-    $(".dubstotal").attr("title", function() {
-        var result = "";
-        if(localUpdubs > 0) result += '+';
-        result += localUpdubs + " updub";
-        if(localUpdubs === 1) result += 's';
-        result += " | ";
-        if(localDowndubs > 0) result += '+';
-        result += localDowndubs + " updub";
-        if(localDowndubs === 1) result += 's';
-        return result;
-    });
+    $(".dubstotal").attr("title", constructTotalDubsTitle);
     
     if(data.user.username === currentUser) return;
     
@@ -101,5 +104,5 @@ Dubtrack.Events.bind('realtime:user-leave', function(data) {
 $('.currentSong').bind('DOMSubtreeModified', function(data) {
     localUpdubs = 0;
     localDowndubs = 0;
-    totalDubs.attr("title", "0 updubs | 0 downdubs");
+    totalDubs.attr("title", constructTotalDubsTitle);
 });
