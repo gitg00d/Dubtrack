@@ -10,7 +10,7 @@ var totalDubs, localUpdubs = 0, localDowndubs = 0;
 function dbe_init() {
     chat = $("section#chat  .chat-container .chat-messages.ps-container .chat-main");
     volSpan = $(".volume-button a span");
-    totalDubs = $("#maindubtotal.dubtotal");
+    totalDubs = $("#maindubtotal.dubstotal");
     localUpdubs = parseInt(totalDubs.text());
     totalDubs.attr("title", constructTotalDubsTitle);
     console.log("Dubtrack-Extras -> INITIALIZED");
