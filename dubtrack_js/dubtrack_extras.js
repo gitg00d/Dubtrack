@@ -60,13 +60,22 @@ Dubtrack.Events.bind('realtime:room_playlist-dub', function(data) {
     if(data.user.username === currentUser) return;
     
     console.log(data.user.username + " -> " + data.dubtype + "ed.");
-    
-    if(data.dubtype === 'updub') localUpdubs++;
-    else if(data.dubtype == 'downdub') localDowndubs++;
-    totalDubs.attr("title", "+" + localUpdubs + " updubs | -" + localDowndubs + " downdubs");
-    
     if(chatLog)
         chat.append('<li class="chat-system-loading"><a href="#" class="username user-' + data.user.userInfo.userid + '">@' + data.user.username + '</a> <span class="chat-' + data.dubtype + 'ed">' + data.dubtype + 'ed</span> your song!</li>');
+
+        if(data.dubtype === 'updub') localUpdubs++;
+    else if(data.dubtype == 'downdub') localDowndubs++;
+    $(".dubstotal").attr("title", function() {
+        var result = "";
+        if(localUpdubs > 0) result += '+';
+        result += localUpdubs + " updub";
+        if(localUpdubs === 1) result += 's';
+        result += " | ";
+        if(localDowndubs > 0) result += '+';
+        result += localDowndubs + " updub";
+        if(localDowndubs === 1) result += 's';
+        return result;
+    });
 });
 
 /* On user join */
@@ -91,5 +100,5 @@ Dubtrack.Events.bind('realtime:user-leave', function(data) {
 Dubtrack.Events.bind('realtime:room_playlist-update', function(data) {
     localUpdubs = 0;
     localDowndubs = 0;
-    totalDubs.attr("title", "+" + localUpdubs + " updubs | -" + localDowndubs + " downdubs");
+    totalDubs.attr("title", "0 updubs | 0 downdubs");
 });
