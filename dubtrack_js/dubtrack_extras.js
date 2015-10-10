@@ -97,8 +97,8 @@ Dubtrack.Events.bind('realtime:user-leave', function(data) {
         chat.append('<li class="chat-system-loading"><a href="#" class="username user-' + data.user.userInfo.userid + '">@' + data.user.username + '</a> left the room.</li>');
 });
 
-/* On song change (?) */
-Dubtrack.Events.bind('realtime:room_playlist-update', function(data) {
+/* On song change afaik */
+$('.currentSong').bind('DOMSubtreeModified', function(data) {
     localUpdubs = 0;
     localDowndubs = 0;
     totalDubs.attr("title", "0 updubs | 0 downdubs");
