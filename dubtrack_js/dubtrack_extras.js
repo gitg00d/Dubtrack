@@ -3,6 +3,7 @@ $("head").append('<style>.chat-updubed{color:cyan;}.chat-downdubed{color:magenta
 
 $("#player-controller .left ul .volume").after('<li class="volume-button"><a onclick="volumeBtn()"><span></span></a></li>');
 
+var currentUser = Dubtrack.session.get('username');
 var volSpan, lastVolume = getVolume(), volUpdate = true;
 var chat, chatLog = false;
 function dbe_init() {
@@ -54,6 +55,8 @@ function getVolume() {
 
 /* On updub/downdub */
 Dubtrack.Events.bind('realtime:room_playlist-dub', function(data) {
+    if(data.user.username === currentUser) return;
+    
     console.log(data.user.username + " -> " + data.dubtype + "ed.");
     if(chatLog)
         chat.append('<li class="chat-system-loading"><a href="#" class="username user-' + data.user.userInfo.userid + '">@' + data.user.username + '</a> <span class="chat-' + data.dubtype + 'ed">' + data.dubtype + 'ed</span> your song!</li>');
@@ -61,6 +64,8 @@ Dubtrack.Events.bind('realtime:room_playlist-dub', function(data) {
 
 /* On user join */
 Dubtrack.Events.bind('realtime:user-join', function(data) {
+    if(data.user.username === currentUser) return;
+    
     console.log(data.user.username + " -> joined the room");
     if(chatLog)
         chat.append('<li class="chat-system-loading"><a href="#" class="username user-' + data.user.userInfo.userid + '">@' + data.user.username + '</a> joined the room.</li>');
@@ -68,6 +73,8 @@ Dubtrack.Events.bind('realtime:user-join', function(data) {
 
 /* On user leave */
 Dubtrack.Events.bind('realtime:user-leave', function(data) {
+    if(data.user.username === currentUser) return;
+    
     console.log(data.user.username + " -> left the room");
     if(chatLog)
         chat.append('<li class="chat-system-loading"><a href="#" class="username user-' + data.user.userInfo.userid + '">@' + data.user.username + '</a> left the room.</li>');
