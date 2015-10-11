@@ -4,7 +4,7 @@ $("head").append('<style>.chat-updubed{color:cyan;}.chat-downdubed{color:magenta
 $("#player-controller .left ul .volume").after('<li class="volume-button"><a onclick="volumeBtn()"><span></span></a></li>');
 
 var currentUser = Dubtrack.session.get('username');
-var volSpan, lastVolume, volUpdate = true;
+var volSpan, lastVolume, volUpdate = false;
 var chat, chatLog = false;
 var totalDubs, localUpdubs = 0, localDowndubs = 0;
 function dbe_init() {
@@ -12,6 +12,7 @@ function dbe_init() {
     
     volSpan = $(".volume-button a span");
     lastVolume = getVolume();
+    volUpdate = true;
     $("#volume-div a").bind('style', function() { volSpan.attr("class", volumeClass()); });
     
     totalDubs = $("#maindubtotal.dubstotal");
