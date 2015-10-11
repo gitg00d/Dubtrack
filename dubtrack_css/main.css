@@ -14,6 +14,7 @@
 }
 
 /* Miscellaneous */
+.userCustomB { top: 3em !important; } /* Background fix */
 #chat .chat-container ul.chat-main li .image_row > img { border-radius: 2px; } /* Chat images as round squares */
 #volume-div .ui-slider-range-min { height: 125%; background-color: #5A005A; } /* Volume bar slider range fix */
 #main-room:not(.fullscreenParent) .durationRemaining { margin: 6px 4px 4px 0 !important; } /* Time until booth fix */
