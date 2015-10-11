@@ -109,5 +109,5 @@ Dubtrack.Events.bind('realtime:user-leave', function(data) {
 $('.currentSong').bind('DOMSubtreeModified', function(data) {
     localUpdubs = 0;
     localDowndubs = 0;
-    totalDubs.attr("title", constructTotalDubsTitle);
+    if(totalDubs !== null) totalDubs.attr("title", constructTotalDubsTitle);
 });
