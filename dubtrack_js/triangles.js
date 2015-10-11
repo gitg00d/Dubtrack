@@ -1,9 +1,9 @@
-var target = null, to = null, triangles_init = true;
+var triangles_target = null, triangles_to = null, triangles_init = true;
 
 function initTriangle() {
-    if(to !== null) clearTimeout(to);
-    if(triangles_init && target !== null) {
-        var width = rnd(25, 300), tr = $('<div class="triangle"></div>').appendTo(target);
+    if(triangles_to !== null) clearTimeout(to);
+    if(triangles_init && triangles_target !== null) {
+        var width = rnd(25, 300), tr = $('<div class="triangle"></div>').appendTo(triangles_to);
         tr.css("border-bottom-width", width + 'px');
         tr.css("border-left-width", (width / 2) + 'px');
         tr.css("border-right-width", (width / 2) + 'px');
@@ -14,7 +14,7 @@ function initTriangle() {
         tr.animate({ top: -width + 'px' }, rnd(250, 2000), "linear", function() { tr.remove(); });
         console.log(tr);
     }
-    to = window.setTimeout(initTriangle, rnd(50, 150));
+    triangles_to = window.setTimeout(initTriangle, rnd(50, 150));
 }
 initTriangle();
 
