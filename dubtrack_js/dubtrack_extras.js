@@ -78,7 +78,7 @@ Dubtrack.Events.bind('realtime:room_playlist-dub', function(data) {
     
     if(data.user.username === currentUser) return;
     
-    console.log(data.user.username + " -> " + data.dubtype + "ed.");
+    //console.log(data.user.username + " -> " + data.dubtype + "ed.");
     if(chatLog)
         chat.append('<li class="chat-system-loading"><a href="#" class="username user-' + data.user.userInfo.userid + '">@' + data.user.username + '</a> <span class="chat-' + data.dubtype + 'ed">' + data.dubtype + 'ed</span> your song!</li>');
 
@@ -90,7 +90,7 @@ Dubtrack.Events.bind('realtime:room_playlist-dub', function(data) {
 Dubtrack.Events.bind('realtime:user-join', function(data) {
     if(data.user.username === currentUser) return;
     
-    console.log(data.user.username + " -> joined the room");
+    //console.log(data.user.username + " -> joined the room");
     if(chatLog)
         chat.append('<li class="chat-system-loading"><a href="#" class="username user-' + data.user.userInfo.userid + '">@' + data.user.username + '</a> joined the room.</li>');
 });
@@ -99,7 +99,7 @@ Dubtrack.Events.bind('realtime:user-join', function(data) {
 Dubtrack.Events.bind('realtime:user-leave', function(data) {
     if(data.user.username === currentUser) return;
     
-    console.log(data.user.username + " -> left the room");
+    //console.log(data.user.username + " -> left the room");
     if(chatLog)
         chat.append('<li class="chat-system-loading"><a href="#" class="username user-' + data.user.userInfo.userid + '">@' + data.user.username + '</a> left the room.</li>');
 });
