@@ -4,23 +4,26 @@ $("head").append('<style>.chat-updubed{color:cyan;}.chat-downdubed{color:magenta
 $("#player-controller .left ul .volume").after('<li class="volume-button"><a onclick="volumeBtn()"><span></span></a></li>');
 
 var currentUser = Dubtrack.session.get('username');
-var volSpan, lastVolume = getVolume(), volUpdate = true;
+var volSpan, lastVolume, volUpdate = true;
 var chat, chatLog = false;
 var totalDubs, localUpdubs = 0, localDowndubs = 0;
 function dbe_init() {
     chat = $("section#chat  .chat-container .chat-messages.ps-container .chat-main");
+    
     volSpan = $(".volume-button a span");
+    lastVolume = getVolume();
+    $("#volume-div a").bind('style', function() { volSpan.attr("class", volumeClass()); });
+    
     totalDubs = $("#maindubtotal.dubstotal");
     localUpdubs = parseInt(totalDubs.text());
     totalDubs.attr("title", constructTotalDubsTitle);
+    
     console.log("Dubtrack-Extras -> INITIALIZED");
 }
 $(document).ready(dbe_init);
 $(document).ready();
 
 /* Volume button */
-$("#volume-div a").bind('style', function() { volSpan.attr("class", volumeClass()); });
-
 function updateVolumeClass() {
     if(!volUpdate) {
         volUpdate = true;
@@ -61,11 +64,11 @@ function constructTotalDubsTitle() {
     var result = "";
     if(localUpdubs > 0) result += '+';
     result += localUpdubs + " updub";
-    if(localUpdubs === 1) result += 's';
+    if(localUpdubs !== 1) result += 's';
     result += " | ";
-    if(localDowndubs > 0) result += '+';
-    result += localDowndubs + " updub";
-    if(localDowndubs === 1) result += 's';
+    if(localDowndubs > 0) result += '-';
+    result += localDowndubs + " downdub";
+    if(localDowndubs !== 1) result += 's';
     return result;
 }
 
