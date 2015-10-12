@@ -78,14 +78,15 @@ function constructTotalDubsTitle() {
 /* On updub/downdub */
 Dubtrack.Events.bind('realtime:room_playlist-dub', function(data) {
     var isUpdub = data.dubtype === 'updub', isCurrentUser = data.user.username === currentUser;
-    var chatLogHTML = '<li class="chat-system-loading"><a href="#" class="username user-' + data.user.userInfo.userid + '">@' + data.user.username + '</a> <span class="chat-plus-users"></span> <span class="chat-' + data.dubtype + 'ed">' + data.dubtype + 'ed</span> this track</li>';
-
+    var chatLogHTML = '<li class="chat-system-loading"><a class="username user-' + data.user.userInfo.userid + '" onclick="Dubtrack.helpers.displayUser("' + data.user.userInfo.userid + '", this); class="cursor-pointer">@' + data.user.username + '</a> <span class="chat-plus-users"></span> <span class="chat-' + data.dubtype + 'ed">' + data.dubtype + 'ed</span> this track</li>';
+    var to;
+    
     if(isUpdub) {
         localUpdubs++;
         if(chatLog.updub && !isCurrentUser) {
             if(lastUpdubLog === null) {
                 lastUpdubLog = $(chatLogHTML).appendTo(chat);
-                var to = window.setInterval(function() {
+                to = window.setInterval(function() {
                     lastUpdubLog = null;
                     lastUpdubLogTotal = 0;
                     clearTimeout(to);
@@ -98,9 +99,9 @@ Dubtrack.Events.bind('realtime:room_playlist-dub', function(data) {
     } else {
         localDowndubs++;
         if(chatLog.downdub && !isCurrentUser) {
-            if(lastUpdubLog === null) {
+            if(lastDowndubLog === null) {
                 lastDowndubLog = $(chatLogHTML).appendTo(chat);
-                var to = window.setInterval(function() {
+                to = window.setInterval(function() {
                     lastDowndubLog = null;
                     lastDowndubLogTotal = 0;
                     clearTimeout(to);
