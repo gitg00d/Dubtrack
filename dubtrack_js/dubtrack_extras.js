@@ -1,5 +1,5 @@
 $("head").append('<style>#player-controller ul li.remove-if-iframe.display-block{border-right: 0;}li.volume-button a span.icon-volume-down:before{padding-right: 5.5px;}li.volume-button a span.icon-volume-off:before{padding-right: 9.6094px;}.noanim.volume.remove-if-iframe.display-block{border-right-width: 0;}.volume-button{cursor:pointer;-webkit-user-select:none; user-select:none; -moz-user-select:none; -ms-user-select:none;}</style>');
-$("head").append('<style>.chat-updubed{color: cyan;}.chat-downdubed{color: magenta;}.chat-plus-users{top: -.5em;color: white;position: relative;font-size: .8em;}</style>');
+$("head").append('<style>.chat-updubed{color: cyan;}.chat-downdubed{color: rgb(255,0,128);}.chat-plus-users{top: -.5em;color: white;position: relative;font-size: .8em;}</style>');
 
 $("#player-controller .left ul .volume").after('<li class="volume-button"><a onclick="volumeBtn()"><span></span></a></li>');
 
@@ -7,8 +7,7 @@ var currentUser;
 var volSpan, lastVolume, volUpdate = false;
 var chat, chatLog = { join: false, leave: false, updub: true, downdub: true };
 var totalDubs, localUpdubs = 0, localDowndubs = 0;
-var lastUpdubLog = null, lastUpdubLogTotal = 0;
-var lastDowndubLog = null, lastDowndubLogTotal = 0;
+var lastUpdubLog = null, lastUpdubLogTotal = 0, lastDowndubLog = null, lastDowndubLogTotal = 0;
 function dbe_init() {
     if(Dubtrack.session) currentUser = Dubtrack.session.get('username');
 
@@ -78,19 +77,21 @@ function constructTotalDubsTitle() {
 /* On updub/downdub */
 Dubtrack.Events.bind('realtime:room_playlist-dub', function(data) {
     var isUpdub = data.dubtype === 'updub', isCurrentUser = data.user.username === currentUser;
-    var chatLogHTML = '<li class="chat-system-loading"><a class="username user-' + data.user.userInfo.userid + '" onclick="Dubtrack.helpers.displayUser("' + data.user.userInfo.userid + '", this); class="cursor-pointer">@' + data.user.username + '</a> <span class="chat-plus-users"></span> <span class="chat-' + data.dubtype + 'ed">' + data.dubtype + 'ed</span> this track</li>';
+    var chatLogHTML = '<li class="chat-system-loading"><a href="#" class="username user-' + data.user.userInfo.userid + '" onclick="Dubtrack.helpers.displayUser(\'' + data.user.userInfo.userid + '\', this);" class="cursor-pointer">@' + (isCurrentUser ? 'you' : data.user.username) + '</a> <span class="chat-plus-users"></span> <span class="chat-' + data.dubtype + 'ed">' + data.dubtype + 'ed</span> this track</li>';
     var to;
-    
+
     if(isUpdub) {
         localUpdubs++;
-        if(chatLog.updub && !isCurrentUser) {
+        if(chatLog.updub/* && !isCurrentUser*/) {
             if(lastUpdubLog === null) {
                 lastUpdubLog = $(chatLogHTML).appendTo(chat);
+                /*
                 to = window.setInterval(function() {
                     lastUpdubLog = null;
                     lastUpdubLogTotal = 0;
                     clearTimeout(to);
                 }, 1000);
+                */
             } else {
                 lastUpdubLogTotal++;
                 lastUpdubLog.children(".chat-plus-users").text('+' + lastUpdubLogTotal);
@@ -98,14 +99,16 @@ Dubtrack.Events.bind('realtime:room_playlist-dub', function(data) {
         }
     } else {
         localDowndubs++;
-        if(chatLog.downdub && !isCurrentUser) {
+        if(chatLog.downdub/* && !isCurrentUser*/) {
             if(lastDowndubLog === null) {
                 lastDowndubLog = $(chatLogHTML).appendTo(chat);
+                /*
                 to = window.setInterval(function() {
                     lastDowndubLog = null;
                     lastDowndubLogTotal = 0;
                     clearTimeout(to);
                 }, 1000);
+                */
             } else {
                 lastDowndubLogTotal++;
                 lastDowndubLog.children(".chat-plus-users").text('+' + lastDowndubLogTotal);
@@ -133,6 +136,14 @@ Dubtrack.Events.bind('realtime:user-leave', function(data) {
     //console.log(data.user.username + " -> left the room");
     if(chatLog.leave)
         chat.append('<li class="chat-system-loading"><a href="#" class="username user-' + data.user.userInfo.userid + '">@' + data.user.username + '</a> left the room.</li>');
+});
+
+/* On chat message recieve */
+Dubtrack.Events.bind('realtime:chat-message', function(data) {
+    lastUpdubLog = null;
+    lastUpdubLogTotal = 0;
+    lastDowndubLog = null;
+    lastDowndubLogTotal = 0;
 });
 
 /* On song change afaik */
