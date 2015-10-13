@@ -13,7 +13,6 @@ function dbe_init() {
     if(Dubtrack.session) {
         currentUser = Dubtrack.session.get('username');
         currentUserID = Dubtrack.session.attributes.userInfo.userid;
-        console.log(getUsernameById('560b4a33d9057a0300cc2fa0'));
     }
 
     chat = $("section#chat  .chat-container .chat-messages.ps-container .chat-main");
@@ -24,10 +23,16 @@ function dbe_init() {
     $("#volume-div a").bind('style', function() { volSpan.attr("class", volumeClass()); });
 
     totalDubs = $("#maindubtotal.dubstotal");
-    localUpdubs = parseInt(totalDubs.text());
+    if(Dubtrack.room.player !== undefined && Dubtrack.room.player.activeSong.attributes.song !== null) {
+        currentDJUsername = getUsernameById(Dubtrack.room.player.activeSong.attributes.song.userid);
+        localUpdubs = Dubtrack.room.player.activeSong.attributes.song.updubs;
+        localDowndubs = Dubtrack.room.player.activeSong.attributes.song.downdub;
+    } else {
+        if(parseInt(totalDubs.text()) < 0) localDowndubs = parseInt(totalDubs.text());
+        else localUpdubs = parseInt(totalDubs.text());
+    }
+    //localUpdubs = parseInt(totalDubs.text());
     totalDubs.attr("title", constructTotalDubsTitle);
-
-    currentDJUsername = getUsernameById(Dubtrack.room.player.activeSong.attributes.song.userid);
 
     console.log("Dubtrack-Extras -> INITIALIZED");
 }
@@ -103,10 +108,7 @@ function getUsernameById(id) {
 
 function updateCurrentDJUsername(callback) {
     var player = Dubtrack.room.player;
-    if(player === null || player === undefined) return;
-    if(player.activeSong === null) return;
-    if(player.activeSong.attributes === null) return;
-    if(player.activeSong.attributes.song === null) return;
+    if(player === null || player === undefined || player.activeSong === null || player.activeSong.attributes.song === null) return;
     currentDJUsername = getUsernameById(Dubtrack.room.player.activeSong.attributes.song.userid);
     /*
     Dubtrack.helpers.sendRequest(
@@ -123,10 +125,10 @@ Dubtrack.Events.bind('realtime:room_playlist-dub', function(data) {
     if(currentDJUsername === null)
         updateCurrentDJUsername();
 
-    var dataUser = data.user, playerAttr = Dubtrack.room.player.activeSong.attributes;
-    var isUpdub = data.dubtype === 'updub', isCurrentUser = data.user.username === currentUser, isUserDJ = playerAttr === undefined ? false : (playerAttr.song.userid === currentUserID);
+    var dataUser = data.user, songAttr = Dubtrack.room.player.activeSong.attributes;
+    var isUpdub = data.dubtype === 'updub', isCurrentUser = data.user.username === currentUser, isUserDJ = songAttr === undefined ? false : (songAttr.song.userid === currentUserID);
     var chatLogUser = '<a href="#" class="username user-' + dataUser.userInfo.userid + '" onclick="Dubtrack.helpers.displayUser(\'' + dataUser.userInfo.userid + '\', this);" class="cursor-pointer">@' + (isCurrentUser ? 'you' : dataUser.username) + '</a>',
-        chatLogHTML = '<li class="chat-system-loading">' + chatLogUser + ' <span id="all-usernames" style="display: none;"></span><span class="chat-plus-users cursor-pointer" style="display: initial;" onclick="showUsersWhoDubed($(this).parent());"></span> <span class="chat-' + data.dubtype + 'ed">' + data.dubtype + 'ed</span> <span title="' + (playerAttr === undefined ? $(".currentSong").text() : ('[' + playerAttr.songInfo.name + '] played by [' + currentDJUsername + ']')) + '">' + (isUserDJ ? 'your' : 'this') + ' track</span></li>';
+        chatLogHTML = '<li class="chat-system-loading">' + chatLogUser + ' <span id="all-usernames" style="display: none;"></span><span class="chat-plus-users cursor-pointer" style="display: initial;" onclick="showUsersWhoDubed($(this).parent());"></span> <span class="chat-' + data.dubtype + 'ed">' + data.dubtype + 'ed</span> <span title="' + (songAttr === undefined ? $(".currentSong").text() : ('[' + songAttr.songInfo.name + '] played by [' + currentDJUsername + ']')) + '">' + (isUserDJ ? 'your' : 'this') + ' track</span></li>';
 
     var _localDubs = isUpdub ? localUpdubs : localDowndubs, _lastDubLog = isUpdub ? lastUpdubLog : lastDowndubLog, _lastDubLogTotal = isUpdub ? lastUpdubLogTotal : lastDowndubLogTotal, chatLogDub = isUpdub ? chatLog.updub : chatLog.downdub;
 
@@ -149,14 +151,17 @@ Dubtrack.Events.bind('realtime:room_playlist-dub', function(data) {
     }
 
     if(isUpdub) {
-        localUpdubs = _localDubs;
+        //localUpdubs = _localDubs;
         lastUpdubLog = _lastDubLog;
         lastUpdubLogTotal = _lastDubLogTotal;
     } else {
-        localDowndubs = _localDubs;
+        //localDowndubs = _localDubs;
         lastDowndubLog = _lastDubLog;
         lastDowndubLogTotal = _lastDubLogTotal;
     }
+
+    localUpdubs = songAttr.song.updubs;
+    localDowndubs = songAttr.song.downdubs;
 
     //console.log(data.user.username + " -> " + data.dubtype + "ed.");
     $(".dubstotal").attr("title", constructTotalDubsTitle);
