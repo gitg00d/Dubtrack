@@ -9,6 +9,10 @@
 #main-room:not(.fullscreenParent) #main_player .player_container { height: 14.8em; }
 
 /* Buttons Fix */
+#main-room:not(.fullscreenParent) .durationRemaining {
+  margin: 0 !important;
+  width: calc(100% - 225.25px);
+}
 #main-room:not(.fullscreenParent) #main_player .player_container .loading { width: 33%; font-size: 90%; }
 #main-room:not(.fullscreenParent) #main_player .player_container .hideVideo-el { left: initial; top: initial; right: 0; bottom: 0; display: none; }
 #main-room:not(.fullscreenParent) #main_player .player_container:hover .hideVideo-el { display: block; }
