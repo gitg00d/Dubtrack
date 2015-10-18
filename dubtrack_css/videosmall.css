@@ -12,6 +12,7 @@
 #main-room:not(.fullscreenParent) .durationRemaining {
   margin: 0 !important;
   width: calc(100% - 225.25px);
+  font-size: .75em;
 }
 #main-room:not(.fullscreenParent) #main_player .player_container .loading { width: 33%; font-size: 90%; }
 #main-room:not(.fullscreenParent) #main_player .player_container .hideVideo-el { left: initial; top: initial; right: 0; bottom: 0; display: none; }
