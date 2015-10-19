@@ -130,7 +130,6 @@ var dte_init = setInterval(function() {
                     if(_lastDubLog === null) {
                         _lastDubLog = $(chatLogHTML).appendTo(chat);
                         Dubtrack.room.chat.lastItemEl = null;
-                        console.log('a');
                     } else {
                         _lastDubLogTotal++;
                         _lastDubLog.children("#all-usernames").html(_lastDubLog.children("#all-usernames").html().replace(' and', ','));
