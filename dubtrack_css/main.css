@@ -23,7 +23,8 @@
 /* Chat Mods */
 #chat .chat-container ul.chat-main li.user-56083b920cd1cc03003fe8e2 .activity-row .text p a.username, #chat .chat-container ul.chat-main li.user-56083b920cd1cc03003fe8e2 .activity-row .text p a.username:hover, #chat .chat-container ul.chat-main li.user-56083b920cd1cc03003fe8e2 .activity-row .text p a.username:visited, /* larry1123 */
 #chat .chat-container ul.chat-main li.user-55fface51564a403003f5103 .activity-row .text p a.username, #chat .chat-container ul.chat-main li.user-55fface51564a403003f5103 .activity-row .text p a.username:hover, #chat .chat-container ul.chat-main li.user-55fface51564a403003f5103 .activity-row .text p a.username:visited, /* toucan */
-#chat .chat-container ul.chat-main li.user-55ffae82196f170300cc0d62 .activity-row .text p a.username, #chat .chat-container ul.chat-main li.user-55ffae82196f170300cc0d62 .activity-row .text p a.username:hover, #chat .chat-container ul.chat-main li.user-55ffae82196f170300cc0d62 .activity-row .text p a.username:visited, /* s4 */
+#chat .chat-container ul.chat-main li.user-55ffae82196f170300cc0d62 .activity-row .text p a.username, #chat .chat-container ul.chat-main li.user-55ffae82196f170300cc0d62 .activity-row .text p a.username:hover, #chat .chat-container ul.chat-main li.user-55ffae82196f170300cc0d62 .activity-row .text p a.username:visited /* s4 */
 { color: #DF5E5E; }
+
 #chat li.user-56083b920cd1cc03003fe8e2 p a.username::before, #chat li.user-55fface51564a403003f5103 p a.username::before, #chat li.user-55ffae82196f170300cc0d62 p a.username::before
 { content: "Mod"; font-size: .7em; background: darkmagenta; margin-right:  3px; color: white; text-align: center; line-height: 20px; border-radius: 40%; padding: 0px 4px; box-shadow: 0 0 5px #333333; }
