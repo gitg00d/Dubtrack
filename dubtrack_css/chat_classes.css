@@ -1,0 +1,9 @@
+@import url("https://rawgit.com/Netox005/Test/master/dubtrack_css/main.css");
+
+.isDefault .username { color: cyan; }
+.isResident-dj .username { color: #7BB5FF; }
+.isVip .username { color: #FF8800; }
+.isMod .username { color: #DF5E5E; }
+.isManager .username { color: #D61B1B; }
+.isCo-owner .username { color: #6A00DD; }
+.isAdmin .username { color: #F0F000; }
