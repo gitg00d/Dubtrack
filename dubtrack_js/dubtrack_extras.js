@@ -187,7 +187,7 @@ var dte_init = setInterval(function() {
             
             	    if(user) {
                       var role = user.get('roleid') === null || user.get('roleid') === undefined ? 'default' : user.get('roleid').type;
-                      if(Dubtrack.helpers.isDubtrackAdmin(data.user.userInfo.userid)) role = 'admin';
+                      if(Dubtrack.helpers.isDubtrackAdmin(uId)) role = 'admin';
                       el.addClass('is' + (role.charAt(0).toUpperCase() + role.slice(1)));
                     }
            	}
