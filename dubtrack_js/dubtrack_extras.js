@@ -1,5 +1,5 @@
 // Variables
-var DTE_API = { // todo
+var DTE_API = { // TODO
     init: function() {
 
     },
@@ -177,6 +177,21 @@ var dte_init = setInterval(function() {
             if(chatOptions.leave)
                 chat.append('<li class="chat-system-loading"><a href="#" class="username user-' + data.user.userInfo.userid + '">@' + data.user.username + '</a> left the room.</li>');
         });
+        
+        var chatElList = $('.chat-main').children();
+            for(var i = 0; i < chatElList.length; i++) {
+        	var el = $(chatElList[i]);
+          	if(el.attr('class').substring(0, 'user-'.length) === 'user-') {
+            	    var uId = el.attr('class').split('-')[1], // userid
+                        user = getUserById(uId);
+            
+            	    if(user) {
+                      var role = user.get('roleid') === null || user.get('roleid') === undefined ? 'default' : user.get('roleid').type;
+                      if(Dubtrack.helpers.isDubtrackAdmin(data.user.userInfo.userid)) role = 'admin';
+                      el.addClass('is' + (role.charAt(0).toUpperCase() + role.slice(1)));
+                    }
+           	}
+        }
 
         Dubtrack.Events.bind('realtime:chat-message', function(data) {
             updateLastDub();
