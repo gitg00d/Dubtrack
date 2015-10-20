@@ -1,7 +1,19 @@
-.isDefault .username { color: cyan !important; }
-.isResident-dj .username { color: #7BB5FF !important; }
-.isVip .username { color: #FF8800 !important; }
-.isMod .username { color: #DF5E5E !important; }
-.isManager .username { color: #D61B1B !important; }
-.isCo-owner .username { color: #6A00DD !important; }
-.isAdmin .username { color: #F0F000 !important; }
+/* COMPLEMENTARY FILE, should be imported into another .css file */
+
+/* Chat usernames in different colors */
+#chat .chat-main .isDefault a.username { color: cyan !important; }
+#chat .chat-main .isResident-dj a.username { color: #7BB5FF !important; }
+#chat .chat-main .isVip a.username { color: #FF8800 !important; }
+#chat .chat-main .isMod a.username { color: #DF5E5E !important; }
+#chat .chat-main .isManager a.username { color: #D61B1B !important; }
+#chat .chat-main .isCo-owner a.username { color: #6A00DD !important; }
+#chat .chat-main .isAdmin a.username { color: #F0F000 !important; }
+
+/* Chat icons & Chat on hover */
+/* From @matt's dubtrack.css at https://github.com/nightbloo/nightbloo.github.io/blob/master/dubtrack */
+/* From @sinful's assets.css at https://github.com/sinfulBA/DubX-Script/blob/master */
+#chat .chat-main .isVip a.username:before, #chat .chat-main .isResident-dj a.username:before, #chat .chat-main .isMod a.username:before, #chat .chat-main .isManager a.username:before, #chat .chat-main .isCo-owner a.username:before, #chat .chat-main .isAdmin a.username:before
+{ font-size: .7em; margin-right: 3px; text-align: center; border-radius: 40%; padding: 0px 4px; box-shadow: 0 0 5px #333333; }
+
+#chat .chat-main .isVip a.username:before { content: "VIP"; }
+#chat .chat-main .isVip a.username:before:hover { content: "VIP"; }
