@@ -1,4 +1,5 @@
 /* COMPLEMENTARY FILE, should be imported into another .css file */
+/* Imgur gallery link http://imgur.com/a/xyv3J */
 
 /* Chat usernames in different colors */
 #chat .chat-main .isDefault a.username { color: cyan !important; }
@@ -12,8 +13,23 @@
 /* Chat icons & Chat on hover */
 /* From @matt's dubtrack.css at https://github.com/nightbloo/nightbloo.github.io/blob/master/dubtrack */
 /* From @sinful's assets.css at https://github.com/sinfulBA/DubX-Script/blob/master */
-#chat .chat-main .isVip a.username:before, #chat .chat-main .isResident-dj a.username:before, #chat .chat-main .isMod a.username:before, #chat .chat-main .isManager a.username:before, #chat .chat-main .isCo-owner a.username:before, #chat .chat-main .isAdmin a.username:before
-{ font-size: .7em; margin-right: 3px; text-align: center; border-radius: 40%; padding: 0px 4px; box-shadow: 0 0 5px #333333; }
+#chat .chat-main .isResident-dj a.username:before, #chat .chat-main .isVip a.username:before, #chat .chat-main .isMod a.username:before, #chat .chat-main .isManager a.username:before, #chat .chat-main .isCo-owner a.username:before, #chat .chat-main .isAdmin a.username:before
+{ font-size: .7em; margin-right: 3px; text-align: center; border-radius: 5%; padding: 0px 4px; box-shadow: 0 0 5px #333333; color: white; }
 
-#chat .chat-main .isVip a.username:before { content: "VIP"; }
-#chat .chat-main .isVip a.username:before:hover { content: "VIP"; }
+#chat .chat-main .isResident-dj a.username:before { content: "R"; background: #5D5D5D; }
+#chat .chat-main .isResident-dj a.username:hover:before { content: "RESIDENT DJ"; }
+
+#chat .chat-main .isVip a.username:before { content: "V"; background: #888000; }
+#chat .chat-main .isVip a.username:hover:before { content: "VIP"; }
+
+#chat .chat-main .isMod a.username:before { content: "M"; background: darkmagenta; }
+#chat .chat-main .isMod a.username:hover:before { content: "MOD"; }
+
+#chat .chat-main .isManager a.username:before { content: "Ma"; background: #580058; }
+#chat .chat-main .isManager a.username:hover:before { content: "MANAGER"; }
+
+#chat .chat-main .isCo-owner a.username:before { content: "O"; background: #004435; }
+#chat .chat-main .isCo-owner a.username:hover:before { content: "OWNER"; }
+
+#chat .chat-main .isAdmin a.username:before { content: "A"; background: #007570; }
+#chat .chat-main .isAdmin a.username:hover:before { content: "DUBTRACK ADMIN"; }
