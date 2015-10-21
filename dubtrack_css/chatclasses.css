@@ -22,14 +22,14 @@
 #chat .chat-main .isVip a.username:before { content: "V"; background: #888000; }
 #chat .chat-main .isVip a.username:hover:before { content: "VIP"; }
 
-#chat .chat-main .isMod a.username:before { content: "M"; background: darkmagenta; }
+#chat .chat-main .isMod a.username:before { content: "M"; background: darkmagenta; font-weight: bold; }
 #chat .chat-main .isMod a.username:hover:before { content: "MOD"; }
 
-#chat .chat-main .isManager a.username:before { content: "Ma"; background: #580058; }
+#chat .chat-main .isManager a.username:before { content: "Ma"; background: #580058; font-weight: bold; }
 #chat .chat-main .isManager a.username:hover:before { content: "MANAGER"; }
 
-#chat .chat-main .isCo-owner a.username:before { content: "O"; background: #004435; }
+#chat .chat-main .isCo-owner a.username:before { content: "O"; background: #004435; font-weight: bold; }
 #chat .chat-main .isCo-owner a.username:hover:before { content: "OWNER"; }
 
-#chat .chat-main .isAdmin a.username:before { content: "A"; background: #007570; }
+#chat .chat-main .isAdmin a.username:before { content: "A"; background: #007570; font-weight: bold; text-decoration: underline; }
 #chat .chat-main .isAdmin a.username:hover:before { content: "DUBTRACK ADMIN"; }
