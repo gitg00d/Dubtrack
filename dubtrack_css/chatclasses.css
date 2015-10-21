@@ -5,10 +5,10 @@
 #chat .chat-main .isDefault a.username { color: cyan !important; }
 #chat .chat-main .isResident-dj a.username { color: #7BB5FF !important; }
 #chat .chat-main .isVip a.username { color: #FF8800 !important; }
-#chat .chat-main .isMod a.username { color: #DF5E5E !important; }
-#chat .chat-main .isManager a.username { color: #D61B1B !important; }
-#chat .chat-main .isCo-owner a.username { color: #6A00DD !important; }
-#chat .chat-main .isAdmin a.username { color: #F0F000 !important; }
+#chat .chat-main .isMod a.username { color: #DF5E5E !important; font-weight: bold; }
+#chat .chat-main .isManager a.username { color: #D61B1B !important; font-weight: bold; }
+#chat .chat-main .isCo-owner a.username { color: #6A00DD !important; font-weight: bold; }
+#chat .chat-main .isAdmin a.username { color: #F0F000 !important; font-weight: bold; text-decoration: underline; }
 
 /* Chat icons & Chat on hover */
 /* Based on @matt's dubtrack.css at https://github.com/nightbloo/nightbloo.github.io/blob/master/dubtrack */
@@ -22,14 +22,14 @@
 #chat .chat-main .isVip a.username:before { content: "V"; background: #888000; }
 #chat .chat-main .isVip a.username:hover:before { content: "VIP"; }
 
-#chat .chat-main .isMod a.username:before { content: "M"; background: darkmagenta; font-weight: bold; }
+#chat .chat-main .isMod a.username:before { content: "M"; background: darkmagenta; }
 #chat .chat-main .isMod a.username:hover:before { content: "MOD"; }
 
-#chat .chat-main .isManager a.username:before { content: "Ma"; background: #580058; font-weight: bold; }
+#chat .chat-main .isManager a.username:before { content: "Ma"; background: #580058; }
 #chat .chat-main .isManager a.username:hover:before { content: "MANAGER"; }
 
-#chat .chat-main .isCo-owner a.username:before { content: "O"; background: #004435; font-weight: bold; }
+#chat .chat-main .isCo-owner a.username:before { content: "O"; background: #004435; }
 #chat .chat-main .isCo-owner a.username:hover:before { content: "OWNER"; }
 
-#chat .chat-main .isAdmin a.username:before { content: "A"; background: #007570; font-weight: bold; text-decoration: underline; }
+#chat .chat-main .isAdmin a.username:before { content: "A"; background: #007570; }
 #chat .chat-main .isAdmin a.username:hover:before { content: "DUBTRACK ADMIN"; }
