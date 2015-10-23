@@ -10,7 +10,7 @@ var session = { name: undefined, id: undefined }, activeDJ;
 var volSpan, lastVolume, volUpdate = false;
 var chat, chatOptions = { join: false, leave: false, updub: true, downdub: true, songChange: true }, chatSeparationOnSongChange = true;
 var totalDubs, localUpdubs = 0, localDowndubs = 0;
-var lastUpdubLog = null, lastDowndubLog = null, lastUpdubLogTotal = 0, lastDowndubLogTotal = 0;
+var lastUpdubLog = null, lastDowndubLog = null, lastUpdubLogTotal = 0, lastDowndubLogTotal = 0, lastUpdubList = [], lastDowndubList = [];
 
 var updateInterval = setInterval(function() {
     // Volume update
@@ -115,16 +115,26 @@ var dte_init = setInterval(function() {
         totalDubs.attr("title", constructTotalDubsTitle);
 
         Dubtrack.Events.bind('realtime:room_playlist-dub', function(data) {
-            var songAttr = Dubtrack.room.player.activeSong.attributes;
+            var songAttr = Dubtrack.room.player.activeSong.attributes,
+                userid = data.user.userInfo.userid;
             var isUpdub = data.dubtype === 'updub',
-                isCurrentUser = data.user.userInfo.userid === session.id,
+                isCurrentUser = userid === session.id,
                 isUserDJ = songAttr === undefined ? false : (songAttr.song.userid === session.id);
-            var chatLogUser = '<a href="#" class="username user-' + data.user.userid + '" onclick="Dubtrack.helpers.displayUser(\'' + data.user.userid + '\', this);" class="cursor-pointer">@' + (isCurrentUser ? 'you' : data.user.username) + '</a>',                                                                                                                                                                               /*                                                       */
+            var chatLogUser = '<a href="#" class="username user-' + userid + '" onclick="Dubtrack.helpers.displayUser(\'' + userid + '\', this);" class="cursor-pointer">@' + (isCurrentUser ? 'you' : data.user.username) + '</a>',
                 chatLogHTML = '<li class="chat-system-loading">' + chatLogUser + ' <span id="all-usernames" style="display: none;"></span><span class="chat-plus-users cursor-pointer" style="display: initial;" onclick="showUsersWhoDubed($(this).parent());"></span> <span class="chat-' + data.dubtype + 'ed">' + data.dubtype + 'ed</span> <span title="' + (songAttr === undefined ? $(".currentSong").text() : ('[' + songAttr.songInfo.name + ']'   + 'played by [' + activeDJ.get('_user').username + ']'  )) + '">' + (isUserDJ ? 'your' : 'this') + ' track</span></li>';
 
-            var _localDubs = isUpdub ? localUpdubs : localDowndubs, _lastDubLog = isUpdub ? lastUpdubLog : lastDowndubLog, _lastDubLogTotal = isUpdub ? lastUpdubLogTotal : lastDowndubLogTotal, displayInChat = isUpdub ? chatOptions.updub : chatOptions.downdub;
+            var _localDubs = isUpdub ? localUpdubs : localDowndubs,
+                _lastDubLog = isUpdub ? lastUpdubLog : lastDowndubLog,
+                _lastDubLogTotal = isUpdub ? lastUpdubLogTotal : lastDowndubLogTotal,
+                _lastDubList = isUpdub ? lastUpdubList : lastDowndubList,
+                _lastContDubList = isUpdub ? lastDowndubList : lastUpdubList;
+                displayInChat = isUpdub ? chatOptions.updub : chatOptions.downdub;
 
             _localDubs++;
+
+            if(_lastContDubList.indexOf(userid) > -1)
+                _lastContDubList.splice(_lastContDubList.indexOf(userid), 1);
+            else _lastDubList.push(userid);
             if(displayInChat) {
                 try {
                     if(_lastDubLog === null) {
@@ -139,8 +149,6 @@ var dte_init = setInterval(function() {
                             _lastDubLog.children(".chat-plus-users").attr('val', _lastDubLogTotal);
                         }
                     }
-                    Dubtrack.room.chat.scrollToBottom = true
-                    Dubtrack.room.chat.scollBottomChat();
                 } catch(e) { // ? D:
                     _lastDubLog = $(chatLogHTML).appendTo(chat);
                     Dubtrack.room.chat.lastItemEl = null;
@@ -150,9 +158,13 @@ var dte_init = setInterval(function() {
             if(isUpdub) {
                 lastUpdubLog = _lastDubLog;
                 lastUpdubLogTotal = _lastDubLogTotal;
+                lastUpdubList = _lastDubList;
+                lastDowndubList = _lastContDubList;
             } else {
                 lastDowndubLog = _lastDubLog;
                 lastDowndubLogTotal = _lastDubLogTotal;
+                lastDowndubList = _lastDubList;
+                lastUpdubList = _lastContDubList;
             }
 
             localUpdubs = songAttr.song.updubs;
@@ -177,27 +189,14 @@ var dte_init = setInterval(function() {
             if(chatOptions.leave)
                 chat.append('<li class="chat-system-loading"><a href="#" class="username user-' + data.user.userInfo.userid + '">@' + data.user.username + '</a> left the room.</li>');
         });
-        
-        var chatElList = $('.chat-main').children();
-            for(var i = 0; i < chatElList.length; i++) {
-        	var el = $(chatElList[i]);
-          	if(el.attr('class').substring(0, 'user-'.length) === 'user-') {
-            	    var uId = el.attr('class').split('-')[1], // userid
-                        user = getUserById(uId);
-            
-            	    if(user) {
-                      var role = user.get('roleid') === null || user.get('roleid') === undefined ? 'default' : user.get('roleid').type;
-                      if(Dubtrack.helpers.isDubtrackAdmin(uId)) role = 'admin';
-                      el.addClass('is' + (role.charAt(0).toUpperCase() + role.slice(1)));
-                    }
-           	}
-        }
+
+
 
         Dubtrack.Events.bind('realtime:chat-message', function(data) {
             updateLastDub();
             var user = getUserById(data.user.userInfo.userid);
             var role = user.get('roleid') === null || user.get('roleid') === undefined ? 'default' : user.get('roleid').type;
-            if(Dubtrack.helpers.isDubtrackAdmin(data.user.userInfo.userid)) role = 'admin';
+            if(Dubtrack.helpers.isDubtrackAdmin(getUserById(data.user.userInfo.userid))) role = 'admin';
             if(role !== 'default')
                 Dubtrack.room.chat.lastItemEl.$el.addClass('is' + (role.charAt(0).toUpperCase() + role.slice(1)));
         });
@@ -206,6 +205,7 @@ var dte_init = setInterval(function() {
             updateLastDub();
             localUpdubs = 0;
             localDowndubs = 0;
+            $("#player-controller ul li.add-to-playlist a").removeClass('grabbed');
             if(totalDubs !== null) totalDubs.attr("title", constructTotalDubsTitle);
 
             var activeSong = Dubtrack.room.player.activeSong, activeDJ = getUserById(activeSong.get('song').userid);                                                                                                                   /*                                                                                                     */
@@ -217,6 +217,19 @@ var dte_init = setInterval(function() {
         $("head").append('<style>#player-controller ul li.remove-if-iframe.display-block{border-right: 0;}li.volume-button a span.icon-volume-down:before{padding-right: 5.5px;}li.volume-button a span.icon-volume-off:before{padding-right: 9.6094px;}.noanim.volume.remove-if-iframe.display-block{border-right-width: 0;}.volume-button,.pointer-no-select{cursor:pointer;-webkit-user-select:none; user-select:none; -moz-user-select:none; -ms-user-select:none;}</style>');
         $("head").append('<style>.chat-updubed,.chat-current-song-dj{color: cyan;}.chat-downdubed,.chat-current-song-name{color: #FF0080;}.chat-plus-users{top: -.5em;color: white;position: relative;font-size: .8em;}.chat-plus-users:hover{color: #8A8A8A;}</style>');
         $("head").append('<style>.chat-current-song-dj{color: cyan;}.chat-current-song-name{color: magenta;}</style>');
+        $("head").append('<style>#player-controller ul li.add-to-playlist a.grabbed{ background-color: rgba(255, 0, 255, 0.15); }</style>');
+
+        var addToPlaylistEl = $('#player-controller ul li.add-to-playlist a');
+        addToPlaylistEl.click(function() {
+            var nodeinserted = function(e) {
+                var containerLisEl = $('#addToPlaylistFloatContainer .playlist-list-action.ps-container li');
+                if(containerLisEl.length > 0) {
+                    containerLisEl.click(function() { addToPlaylistEl.addClass('grabbed'); });
+                    $('body').unbind('DOMNodeInserted', nodeinserted);
+                }
+            }
+            $('body').bind('DOMNodeInserted', nodeinserted);
+        });
 
         $("#player-controller .left ul .volume").after('<li class="volume-button"><a onclick="volumeBtn()"><span></span></a></li>');
 
@@ -225,8 +238,7 @@ var dte_init = setInterval(function() {
         if(lastVolume === 0) lastVolume = 50;
         volUpdate = true;
         $("#volume-div a").bind('style', function() { volSpan.attr("class", volumeClass()); });
-        //$("#volume-div a").trigger('style');
 
         console.log('Dubtrack Extras -> INIT');
-    }, 3000);
+    }, 1000);
 }, 100);
