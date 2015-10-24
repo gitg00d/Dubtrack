@@ -189,17 +189,6 @@ var dte_init = setInterval(function() {
                 chat.append('<li class="chat-system-loading"><a href="#" class="username user-' + data.user.userInfo.userid + '">@' + data.user.username + '</a> left the room.</li>');
         });
 
-
-
-        Dubtrack.Events.bind('realtime:chat-message', function(data) {
-            updateLastDub();
-            var user = getUserById(data.user.userInfo.userid);
-            var role = user.get('roleid') === null || user.get('roleid') === undefined ? 'default' : user.get('roleid').type;
-            if(Dubtrack.helpers.isDubtrackAdmin(getUserById(data.user.userInfo.userid))) role = 'admin';
-            if(role !== 'default')
-                Dubtrack.room.chat.lastItemEl.$el.addClass('is' + (role.charAt(0).toUpperCase() + role.slice(1)));
-        });
-
         Dubtrack.Events.bind('realtime:room_playlist-update', function(data) {
             updateLastDub();
             localUpdubs = 0;
