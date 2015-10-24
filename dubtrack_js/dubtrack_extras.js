@@ -8,7 +8,7 @@ var DTE_API = { // TODO
 }
 var session = { name: undefined, id: undefined }, activeDJ;
 var volSpan, lastVolume, volUpdate = false;
-var chat, chatOptions = { join: false, leave: false, updub: true, downdub: true, songChange: true }, chatSeparationOnSongChange = true;
+var chatEl, chatOptions = { join: false, leave: false, updub: true, downdub: true, songChange: true }, chatSeparationOnSongChange = true;
 var totalDubs, localUpdubs = 0, localDowndubs = 0;
 var lastUpdubLog = null, lastDowndubLog = null, lastUpdubLogTotal = 0, lastDowndubLogTotal = 0, lastUpdubList = [], lastDowndubList = [];
 
@@ -71,7 +71,6 @@ function updateLastDub() {
 function showUsersWhoDubed(chatEl, updub) {
     var wasHidden = chatEl.children("#all-usernames").css("display") === 'none';
     chatEl.children("#all-usernames").css("display", wasHidden ? 'initial' : 'none');
-    //chatEl.children(".chat-plus-users").css("display", chatEl.children(".chat-plus-users").css("display") === 'none' ? 'initial' : 'none');
     if(wasHidden) chatEl.children(".chat-plus-users").text(' [hide]');
     else chatEl.children(".chat-plus-users").text('+' + chatEl.children(".chat-plus-users").attr('val') + ' [show]');
 }
@@ -101,7 +100,7 @@ var dte_init = setInterval(function() {
             session.id = Dubtrack.session.attributes.userInfo.userid;
         }
 
-        chat = $("section#chat  .chat-container .chat-messages.ps-container .chat-main");
+        chatEl = $("section#chat  .chat-container .chat-messages.ps-container .chat-main");
 
         totalDubs = $("#maindubtotal.dubstotal");
         if(Dubtrack.room.player && Dubtrack.room.player.activeSong.get('song')) {
@@ -138,7 +137,7 @@ var dte_init = setInterval(function() {
             if(displayInChat) {
                 try {
                     if(_lastDubLog === null) {
-                        _lastDubLog = $(chatLogHTML).appendTo(chat);
+                        _lastDubLog = $(chatLogHTML).appendTo(chatEl);
                         Dubtrack.room.chat.lastItemEl = null;
                     } else {
                         _lastDubLogTotal++;
@@ -150,7 +149,7 @@ var dte_init = setInterval(function() {
                         }
                     }
                 } catch(e) { // ? D:
-                    _lastDubLog = $(chatLogHTML).appendTo(chat);
+                    _lastDubLog = $(chatLogHTML).appendTo(chatEl);
                     Dubtrack.room.chat.lastItemEl = null;
                 }
             }
@@ -210,7 +209,7 @@ var dte_init = setInterval(function() {
 
             var activeSong = Dubtrack.room.player.activeSong, activeDJ = getUserById(activeSong.get('song').userid);                                                                                                                   /*                                                                                                     */
             var chatLogStr = '<li class="chat-system-loading" ' + (chatSeparationOnSongChange ? 'style="border-top: 2px solid #5a5b5c ;"' : '') + '>Now Playing <span class="chat-current-song-name">' + data.songInfo.name + '</span>'   + '. Current DJ is <span class="chat-current-song-dj">' + activeDJ.get('_user').username + '</span>'  + '</li>';
-            var chatLogHTML = $(chatLogStr).appendTo(chat);
+            var chatLogHTML = $(chatLogStr).appendTo(chatEl);
             Dubtrack.room.chat.lastItemEl = null;
         });
 
