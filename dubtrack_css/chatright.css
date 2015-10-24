@@ -14,5 +14,6 @@
 #main-room:not(.fullscreenParent) #chat .chat-container, #chat { height: 100%; }
 #main-room:not(.fullscreenParent) #chat .chat-container ul.chat-main li .activity-row { width: calc(20.5em - 40px); }
 
-/* Room Users List fix */
-#main-room:not(.fullscreenParent) #main_avatar_room #main-user-list-room { height: calc(100vh - 10em) !important; }
+/* Miscellaneous */
+#main-room:not(.fullscreenParent) #main_avatar_room #main-user-list-room { height: calc(100vh - 10em) !important; } /* Room Users List fix */
+head { overflow-y: hidden; } /* Chat Only (DubX) Fix */
