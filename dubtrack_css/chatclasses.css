@@ -12,7 +12,7 @@
 
 /* Chat icons & Chat on hover */
 /* Based on @matt's dubtrack.css at https://github.com/nightbloo/nightbloo.github.io/blob/master/dubtrack */
-/* Based on @sinful's assets.css at https://github.com/sinfulBA/DubX-Script/blob/master */
+/* Based on @sinful's assets.css at https://github.com/sinfulBA/DubX-Script/blob/master/asset.css */
 #chat .chat-main .isResident-dj a.username:before, #chat .chat-main .isVip a.username:before, #chat .chat-main .isMod a.username:before, #chat .chat-main .isManager a.username:before, #chat .chat-main .isCo-owner a.username:before, #chat .chat-main .isAdmin a.username:before
 { font-size: .7em; margin-right: 3px; text-align: center; border-radius: 5%; padding: 0px 4px; box-shadow: 0 0 5px #333333; color: white; }
 
