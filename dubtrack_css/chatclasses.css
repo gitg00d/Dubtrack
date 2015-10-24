@@ -8,7 +8,6 @@
 #chat .chat-main .isMod a.username { color: #DF5E5E !important; font-weight: bold; }
 #chat .chat-main .isManager a.username { color: #D61B1B !important; font-weight: bold; }
 #chat .chat-main .isCo-owner a.username { color: #6A00DD !important; font-weight: bold; }
-#chat .chat-main .isAdmin a.username { color: #F0F000 !important; font-weight: bold; text-decoration: underline; }
 
 /* Chat icons & Chat on hover */
 /* Based on @matt's dubtrack.css at https://github.com/nightbloo/nightbloo.github.io/blob/master/dubtrack */
@@ -30,6 +29,3 @@
 
 #chat .chat-main .isCo-owner a.username:before { content: "O"; background: #004435; }
 #chat .chat-main .isCo-owner a.username:hover:before { content: "OWNER"; }
-
-#chat .chat-main .isAdmin a.username:before { content: "A"; background: #007570; }
-#chat .chat-main .isAdmin a.username:hover:before { content: "DUBTRACK ADMIN"; }
