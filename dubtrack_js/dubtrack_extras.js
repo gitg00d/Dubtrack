@@ -125,13 +125,13 @@ var dte_init = setInterval(function() {
                 isCurrentUser = userid === session.id,
                 isUserDJ = songAttr === undefined ? false : (songAttr.song.userid === session.id);
             var chatLogUser = '<a href="#" class="username user-' + userid + '" style="display: initial;" onclick="Dubtrack.helpers.displayUser(\'' + userid + '\', this);" class="cursor-pointer">@' + (isCurrentUser ? 'you' : data.user.username) + '</a>',
-                chatLogHTML = '<li class="chat-system-loading">' + chatLogUser + ' <span id="all-usernames" style="display: none;"></span><span class="chat-plus-users cursor-pointer" style="display: initial;" onclick="showUsersWhoDubed($(this).parent());"></span> <span class="chat-' + data.dubtype + 'ed">' + data.dubtype + 'ed</span> <span title="' + (songAttr === undefined ? $(".currentSong").text() : ('[' + songAttr.songInfo.name + ']'   + 'played by [' + activeDJ.get('_user').username + ']'  )) + '">' + (isUserDJ ? 'your' : 'this') + ' track</span></li>';
+                chatLogHTML = '<li class="chat-system-notification notification-' + data.dubtype + '">' + chatLogUser + ' <span id="all-usernames" style="display: none;"></span><span class="chat-plus-users cursor-pointer" style="display: initial;" onclick="showUsersWhoDubed($(this).parent());"></span> <span class="chat-' + data.dubtype + 'ed">' + data.dubtype + 'ed</span> <span title="' + (songAttr === undefined ? $(".currentSong").text() : ('[' + songAttr.songInfo.name + ']'   + 'played by [' + activeDJ.get('_user').username + ']'  )) + '">' + (isUserDJ ? 'your' : 'this') + ' track</span></li>';
 
             var _localDubs = isUpdub ? localUpdubs : localDowndubs,
                 _lastDubLog = isUpdub ? lastUpdubLog : lastDowndubLog,
                 _lastDubLogTotal = isUpdub ? lastUpdubLogTotal : lastDowndubLogTotal,
                 _lastDubList = isUpdub ? lastUpdubList : lastDowndubList,
-                _lastContDubList = isUpdub ? lastDowndubList : lastUpdubList;
+                _lastContDubList = isUpdub ? lastDowndubList : lastUpdubList,
                 displayInChat = isUpdub ? chatOptions.updub : chatOptions.downdub;
 
             _localDubs++;
@@ -194,7 +194,7 @@ var dte_init = setInterval(function() {
 
             //console.log(data.user.username + " -> joined the room");
             if(chatOptions.join)
-                chat.append('<li class="chat-system-loading"><a href="#" class="username user-' + data.user.userInfo.userid + '">@' + data.user.username + '</a> joined the room.</li>');
+                chat.append('<li class="chat-system-notification notification-user_leave"><a href="#" class="username user-' + data.user.userInfo.userid + '">@' + data.user.username + '</a> joined the room.</li>');
         });
 
         Dubtrack.Events.bind('realtime:user-leave', function(data) {
@@ -202,7 +202,7 @@ var dte_init = setInterval(function() {
 
             //console.log(data.user.username + " -> left the room");
             if(chatOptions.leave)
-                chat.append('<li class="chat-system-loading"><a href="#" class="username user-' + data.user.userInfo.userid + '">@' + data.user.username + '</a> left the room.</li>');
+                chat.append('<li class="chat-system-notification notification-user_join"><a href="#" class="username user-' + data.user.userInfo.userid + '">@' + data.user.username + '</a> left the room.</li>');
         });
 
         Dubtrack.Events.bind('realtime:room_playlist-update', function(data) {
@@ -212,10 +212,11 @@ var dte_init = setInterval(function() {
             $("#player-controller ul li.add-to-playlist a").removeClass('grabbed');
             if(totalDubs !== null) totalDubs.attr("title", constructTotalDubsTitle);
 
-            var activeSong = Dubtrack.room.player.activeSong, activeDJ = getUserById(activeSong.get('song').userid);
+            var activeSong = Dubtrack.room.player.activeSong;
+            activeDJ = getUserById(activeSong.get('song').userid);
             if(lastSongId === activeSong.get('song').songid) return;
             else lastSongId = activeSong.get('song').songid;
-            var chatLogStr = '<li class="chat-system-loading" ' + (chatSeparationOnSongChange ? 'style="border-top: 2px solid #5a5b5c ;"' : '') + '>Now Playing <span class="chat-current-song-name">' + data.songInfo.name + '</span>'   + '. Current DJ is <span class="chat-current-song-dj">' + activeDJ.get('_user').username + '</span>'  + '</li>';
+            var chatLogStr = '<li class="chat-system-notification notification-song_change" ' + (chatSeparationOnSongChange ? 'style="border-top: 2px solid #5a5b5c ;"' : '') + '>Now Playing <span class="chat-current-song-name">' + data.songInfo.name + '</span>'   + '. Current DJ is <span class="chat-current-song-dj">' + activeDJ.get('_user').username + '</span>'  + '</li>';
             var chatLogHTML = $(chatLogStr).appendTo(chatEl);
             Dubtrack.room.chat.lastItemEl = null;
         });
@@ -237,6 +238,10 @@ var dte_init = setInterval(function() {
 
                 '.volume-button,.pointer-no-select',
                 '{ cursor:pointer; -webkit-user-select:none; user-select:none; -moz-user-select:none; -ms-user-select:none; }',
+
+                '/* Chat Notifications */',
+                '.chat-system-notification',
+                '{ text-align: center; text-transform: uppercase; padding: .5em !important; font-size: .75em; color: #5a5b5c; font-weight: 700; }',
 
                 '/* Chat Dub Log */',
                 '.chat-updubed,.chat-current-song-dj',
