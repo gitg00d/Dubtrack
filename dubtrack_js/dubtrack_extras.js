@@ -10,7 +10,8 @@ var session = { name: undefined, id: undefined }, activeDJ;
 var volSpan, lastVolume, volUpdate = false;
 var chatEl, chatOptions = { join: false, leave: false, updub: true, downdub: true, songChange: true }, chatSeparationOnSongChange = true;
 var totalDubs, localUpdubs = 0, localDowndubs = 0;
-var lastUpdubLog = null, lastDowndubLog = null, lastUpdubLogTotal = 0, lastDowndubLogTotal = 0, lastUpdubList = [], lastDowndubList = [];
+var lastUpdubLog = null, lastDowndubLog = null, lastUpdubLogTotal = 0, lastDowndubLogTotal = 0, lastUpdubList = [], lastDowndubList = []
+var lastSongId = null;
 
 var updateInterval = setInterval(function() {
     // Volume update
@@ -20,6 +21,10 @@ var updateInterval = setInterval(function() {
     }
     if(volSpan !== undefined)
         volSpan.attr("class", volumeClass());
+
+    var vol = parseInt(getVolume());
+    if((vol + '%') !== $('.volume-percentage').text())
+        $('.volume-percentage').text(vol + '%');
 }, 100);
 
 function volumeBtn() {
@@ -119,7 +124,7 @@ var dte_init = setInterval(function() {
             var isUpdub = data.dubtype === 'updub',
                 isCurrentUser = userid === session.id,
                 isUserDJ = songAttr === undefined ? false : (songAttr.song.userid === session.id);
-            var chatLogUser = '<a href="#" class="username user-' + userid + '" onclick="Dubtrack.helpers.displayUser(\'' + userid + '\', this);" class="cursor-pointer">@' + (isCurrentUser ? 'you' : data.user.username) + '</a>',
+            var chatLogUser = '<a href="#" class="username user-' + userid + '" style="display: initial;" onclick="Dubtrack.helpers.displayUser(\'' + userid + '\', this);" class="cursor-pointer">@' + (isCurrentUser ? 'you' : data.user.username) + '</a>',
                 chatLogHTML = '<li class="chat-system-loading">' + chatLogUser + ' <span id="all-usernames" style="display: none;"></span><span class="chat-plus-users cursor-pointer" style="display: initial;" onclick="showUsersWhoDubed($(this).parent());"></span> <span class="chat-' + data.dubtype + 'ed">' + data.dubtype + 'ed</span> <span title="' + (songAttr === undefined ? $(".currentSong").text() : ('[' + songAttr.songInfo.name + ']'   + 'played by [' + activeDJ.get('_user').username + ']'  )) + '">' + (isUserDJ ? 'your' : 'this') + ' track</span></li>';
 
             var _localDubs = isUpdub ? localUpdubs : localDowndubs,
@@ -173,6 +178,17 @@ var dte_init = setInterval(function() {
             $(".dubstotal").attr("title", constructTotalDubsTitle);
         });
 
+        function setCssClasses(itemEl) {
+            if(itemEl.prop('tagName').toLowerCase() !== 'li' || itemEl.attr('class').substring(0, 'user-'.length) !== 'user-') return;
+            var user = Dubtrack.room.users.collection.findWhere({userid: itemEl.attr('class').split(/-| /)[1]});
+            itemEl.addClass('username-' + user.get('_user').username);
+            var role = !user.get('roleid') ? 'none' : Dubtrack.helpers.isDubtrackAdmin(user.get('userid')) ? 'admin' : user.get('roleid').type;
+            itemEl.addClass('role-' + role.replace('-', ''));
+        }
+
+        for(var i = 0; i < chatEl.children().length; i++) { setCssClasses($(chatEl.children()[i])); }
+        chatEl.on('DOMNodeInserted', function(e) { setCssClasses($(e.target)); });
+
         Dubtrack.Events.bind('realtime:user-join', function(data) {
             if(data.user.userInfo.userid === session.id) return;
 
@@ -196,16 +212,60 @@ var dte_init = setInterval(function() {
             $("#player-controller ul li.add-to-playlist a").removeClass('grabbed');
             if(totalDubs !== null) totalDubs.attr("title", constructTotalDubsTitle);
 
-            var activeSong = Dubtrack.room.player.activeSong, activeDJ = getUserById(activeSong.get('song').userid);                                                                                                                   /*                                                                                                     */
+            var activeSong = Dubtrack.room.player.activeSong, activeDJ = getUserById(activeSong.get('song').userid);
+            if(lastSongId === activeSong.get('song').songid) return;
+            else lastSongId = activeSong.get('song').songid;
             var chatLogStr = '<li class="chat-system-loading" ' + (chatSeparationOnSongChange ? 'style="border-top: 2px solid #5a5b5c ;"' : '') + '>Now Playing <span class="chat-current-song-name">' + data.songInfo.name + '</span>'   + '. Current DJ is <span class="chat-current-song-dj">' + activeDJ.get('_user').username + '</span>'  + '</li>';
             var chatLogHTML = $(chatLogStr).appendTo(chatEl);
             Dubtrack.room.chat.lastItemEl = null;
         });
 
-        $("head").append('<style>#player-controller ul li.remove-if-iframe.display-block{border-right: 0;}li.volume-button a span.icon-volume-down:before{padding-right: 5.5px;}li.volume-button a span.icon-volume-off:before{padding-right: 9.6094px;}.noanim.volume.remove-if-iframe.display-block{border-right-width: 0;}.volume-button,.pointer-no-select{cursor:pointer;-webkit-user-select:none; user-select:none; -moz-user-select:none; -ms-user-select:none;}</style>');
-        $("head").append('<style>.chat-updubed,.chat-current-song-dj{color: cyan;}.chat-downdubed,.chat-current-song-name{color: #FF0080;}.chat-plus-users{top: -.5em;color: white;position: relative;font-size: .8em;}.chat-plus-users:hover{color: #8A8A8A;}</style>');
-        $("head").append('<style>.chat-current-song-dj{color: cyan;}.chat-current-song-name{color: magenta;}</style>');
-        $("head").append('<style>#player-controller ul li.add-to-playlist a.grabbed{ background-color: rgba(255, 0, 255, 0.15); }</style>');
+        $("head").append([
+            '<style id="dte-stylesheet">',
+                '/* Volume Button */',
+                '#player-controller ul li.remove-if-iframe.display-block',
+                '{ border-right: 0; }',
+
+                'li.volume-button a span.icon-volume-down:before',
+                '{ padding-right: 5.5px; }',
+
+                'li.volume-button a span.icon-volume-off:before',
+                '{ padding-right: 9.6094px; }',
+
+                '.noanim.volume.remove-if-iframe.display-block',
+                '{ border-right-width: 0; }',
+
+                '.volume-button,.pointer-no-select',
+                '{ cursor:pointer; -webkit-user-select:none; user-select:none; -moz-user-select:none; -ms-user-select:none; }',
+
+                '/* Chat Dub Log */',
+                '.chat-updubed,.chat-current-song-dj',
+                '{ color: cyan; }',
+
+                '.chat-downdubed,.chat-current-song-name',
+                '{ color: #FF0080; }',
+
+                '.chat-plus-users',
+                '{ top: -.5em; color: white; position: relative; font-size: .8em; }',
+
+                '.chat-plus-users:hover',
+                '{ color: #8A8A8A; }',
+
+                '/* Chat Song Change Log */',
+                '.chat-current-song-dj',
+                '{ color: cyan; }',
+
+                '.chat-current-song-name',
+                '{ color: magenta; }',
+
+                '/* Grab Fix */',
+                '#player-controller ul li.add-to-playlist a.grabbed',
+                '{ background-color: rgba(255, 0, 255, 0.15); }',
+
+                '/* Volume Percentage */',
+                '.volume-percentage',
+                '{ position: absolute;  width: 85px; top: -3px; text-align: center; font-size: .75em; font-weight: bold; z-index: -1; }',
+            '</style>'].join(''));
 
         var addToPlaylistEl = $('#player-controller ul li.add-to-playlist a');
         addToPlaylistEl.click(function() {
@@ -219,13 +279,13 @@ var dte_init = setInterval(function() {
             $('body').bind('DOMNodeInserted', nodeinserted);
         });
 
-        $("#player-controller .left ul .volume").after('<li class="volume-button"><a onclick="volumeBtn()"><span></span></a></li>');
+        var volPercentage = $('<span class="volume-percentage">' + parseInt(getVolume()) + '%</span>').insertBefore('#player-controller .left ul .volume #volume-div');
+        $('#player-controller .left ul .volume').after('<li class="volume-button"><a onclick="volumeBtn()"><span></span></a></li>');
 
         volSpan = $(".volume-button a span");
         lastVolume = getVolume();
         if(lastVolume === 0) lastVolume = 50;
         volUpdate = true;
-        $("#volume-div a").bind('style', function() { volSpan.attr("class", volumeClass()); });
 
         console.log('Dubtrack Extras -> INIT');
     }, 1000);
