@@ -2,30 +2,30 @@
 /* Imgur gallery link http://imgur.com/a/xyv3J */
 
 /* Chat usernames in different colors */
-#chat .chat-main .isDefault a.username { color: cyan !important; }
-#chat .chat-main .isResident-dj a.username { color: #7BB5FF !important; }
-#chat .chat-main .isVip a.username { color: #FF8800 !important; }
-#chat .chat-main .isMod a.username { color: #DF5E5E !important; font-weight: bold; }
-#chat .chat-main .isManager a.username { color: #D61B1B !important; font-weight: bold; }
-#chat .chat-main .isCo-owner a.username { color: #6A00DD !important; font-weight: bold; }
+#chat .chat-main .role-none a.username { color: #00ADAD !important; }
+#chat .chat-main .role-residentdj a.username { color: #7BB5FF !important; }
+#chat .chat-main .role-vip a.username { color: #FF8800 !important; }
+#chat .chat-main .role-mod a.username { color: #DF5E5E !important; font-weight: bold; }
+#chat .chat-main .role-manager a.username { color: #D61B1B !important; font-weight: bold; }
+#chat .chat-main .role-coowner a.username { color: #6A00DD !important; font-weight: bold; }
 
 /* Chat icons & Chat on hover */
 /* Based on @matt's dubtrack.css at https://github.com/nightbloo/nightbloo.github.io/blob/master/dubtrack */
 /* Based on @sinful's assets.css at https://github.com/sinfulBA/DubX-Script/blob/master/asset.css */
-#chat .chat-main .isResident-dj a.username:before, #chat .chat-main .isVip a.username:before, #chat .chat-main .isMod a.username:before, #chat .chat-main .isManager a.username:before, #chat .chat-main .isCo-owner a.username:before, #chat .chat-main .isAdmin a.username:before
+#chat .chat-main .role-residentdj a.username:before, #chat .chat-main .role-vip a.username:before, #chat .chat-main .role-mod a.username:before, #chat .chat-main .role-manager a.username:before, #chat .chat-main .role-coowner a.username:before
 { font-size: .7em; margin-right: 3px; text-align: center; border-radius: 5%; padding: 0px 4px; box-shadow: 0 0 5px #333333; color: white; }
 
-#chat .chat-main .isResident-dj a.username:before { content: "R"; background: #5D5D5D; }
-#chat .chat-main .isResident-dj a.username:hover:before { content: "RESIDENT DJ"; }
+#chat .chat-main .role-residentdj a.username:before { content: "R"; background: #5D5D5D; }
+#chat .chat-main .role-residentdj a.username:hover:before { content: "RESIDENT DJ"; }
 
-#chat .chat-main .isVip a.username:before { content: "V"; background: #888000; }
-#chat .chat-main .isVip a.username:hover:before { content: "VIP"; }
+#chat .chat-main .role-vip a.username:before { content: "V"; background: #888000; }
+#chat .chat-main .role-vip a.username:hover:before { content: "VIP"; }
 
-#chat .chat-main .isMod a.username:before { content: "M"; background: darkmagenta; }
-#chat .chat-main .isMod a.username:hover:before { content: "MOD"; }
+#chat .chat-main .role-mod a.username:before { content: "M"; background: darkmagenta; }
+#chat .chat-main .role-mod a.username:hover:before { content: "MOD"; }
 
-#chat .chat-main .isManager a.username:before { content: "Ma"; background: #580058; }
-#chat .chat-main .isManager a.username:hover:before { content: "MANAGER"; }
+#chat .chat-main .role-manager a.username:before { content: "Ma"; background: #580058; }
+#chat .chat-main .role-manager a.username:hover:before { content: "MANAGER"; }
 
-#chat .chat-main .isCo-owner a.username:before { content: "O"; background: #004435; }
-#chat .chat-main .isCo-owner a.username:hover:before { content: "OWNER"; }
+#chat .chat-main .role-coowner a.username:before { content: "O"; background: #004435; }
+#chat .chat-main .role-coowner a.username:hover:before { content: "OWNER"; }
