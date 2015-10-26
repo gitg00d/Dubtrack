@@ -1,7 +1,7 @@
 /* Main file (NB3 room) */
 
 /* Imports */
-@import url('https://rawgit.com/Netox005/Test/master/dubtrack_css/voteicons.css') /* NB3 Vote Icons */
+@import url("https://rawgit.com/Netox005/Test/master/dubtrack_css/voteicons.css"); /* NB3 Vote Icons */
 
 /* Miscellaneous */
 #chat .chat-main .system { text-align: center; color: #0090CC; }
