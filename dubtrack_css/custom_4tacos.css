@@ -1,0 +1,4 @@
+ul.chat-main:before {
+  content: "Oh hey @tacotacotacotaco. As you can see, Dubtrack updated their style and so your custom css won't work (is broken af, don't even try to use it). You have to wait until I solve the problem and give you the fixed version. For now, just wait ^_^ . . - Netux";
+  color: red;
+}
