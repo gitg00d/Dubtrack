@@ -1,30 +1,5 @@
 /* Main file (NB3 room) */
 
-/* Imports */
-@import url("https://nightbloo.github.io/dubtrack/dubtrack.css"); /* Transparent background chat + NB3 room staff chat colors */
-@import url("https://rawgit.com/Netox005/Test/master/dubtrack_css/chatright.css"); /* Chat completly to the right */
-@import url("https://rawgit.com/Netox005/Test/master/dubtrack_css/videosmall.css"); /* Small video */
-@import url("https://rawgit.com/Netox005/Test/master/dubtrack_css/voteicons.css"); /* Vote icons (NB3 style) */
-
-/* Video next to chat */
-#main-room:not(.fullscreenParent) { float: right; }
-#main-room:not(.fullscreenParent) .left_section {
-  right: 400px;
-  float: right;
-}
-
 /* Miscellaneous */
-.userCustomB { top: 3em !important; } /* Background fix */
-#chat .chat-container ul.chat-main li .image_row > img { border-radius: 2px !important; } /* Chat images as round squares */
-#volume-div .ui-slider-range-min { height: 125%; background-color: #5A005A; } /* Volume bar slider range fix */
-.ps-container .ps-scrollbar-x, .ps-container .ps-scrollbar-y, .ps-container .ps-scrollbar-x-rail:hover .ps-scrollbar-x, .ps-container .ps-scrollbar-y-rail:hover .ps-scrollbar-y { background-color: #B1B1B1 } /* Chat scrollbar more visible */
-#chat .chat-container ul.chat-main li.user-560b4a33d9057a0300cc2fa0.current-chat-user .activity-row .text p a.username, #chat .chat-container ul.chat-main li.user-560b4a33d9057a0300cc2fa0.current-chat-user .activity-row .text p a.username:hover, #chat .chat-container ul.chat-main li.user-560b4a33d9057a0300cc2fa0.current-chat-user .activity-row .text p a.username:visited { color: #FFCA00; } /* Netux -> orange */
-
-/* Chat Mods */
-#chat .chat-container ul.chat-main li.user-56083b920cd1cc03003fe8e2 .activity-row .text p a.username, #chat .chat-container ul.chat-main li.user-56083b920cd1cc03003fe8e2 .activity-row .text p a.username:hover, #chat .chat-container ul.chat-main li.user-56083b920cd1cc03003fe8e2 .activity-row .text p a.username:visited, /* larry1123 */
-#chat .chat-container ul.chat-main li.user-55fface51564a403003f5103 .activity-row .text p a.username, #chat .chat-container ul.chat-main li.user-55fface51564a403003f5103 .activity-row .text p a.username:hover, #chat .chat-container ul.chat-main li.user-55fface51564a403003f5103 .activity-row .text p a.username:visited, /* toucan */
-#chat .chat-container ul.chat-main li.user-55ffae82196f170300cc0d62 .activity-row .text p a.username, #chat .chat-container ul.chat-main li.user-55ffae82196f170300cc0d62 .activity-row .text p a.username:hover, #chat .chat-container ul.chat-main li.user-55ffae82196f170300cc0d62 .activity-row .text p a.username:visited /* s4 */
-{ color: #DF5E5E; }
-
-#chat li.user-56083b920cd1cc03003fe8e2 p a.username::before, #chat li.user-55fface51564a403003f5103 p a.username::before, #chat li.user-55ffae82196f170300cc0d62 p a.username::before
-{ content: "Mod"; font-size: .7em; background: darkmagenta; margin-right:  3px; color: white; text-align: center; line-height: 20px; border-radius: 40%; padding: 0px 4px; box-shadow: 0 0 5px #333333; }
+#chat .chat-main .system { text-align: center; color: #0090CC; }
+#chat .chat-container .chat-messages .chat-main li.system-error { text-transform: uppercase; }
