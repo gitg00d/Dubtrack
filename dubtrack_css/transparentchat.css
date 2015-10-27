@@ -1,7 +1,0 @@
-/* COMPLEMENTARY FILE, should be imported into another .css file */
-/* From @matt's dubtrack.css file at https://github.com/nightbloo/nightbloo.github.io/tree/master/dubtrack */
-
-#chat { background-color: rgba(0, 0, 0, 0.8); }
-#chat .chat-container .pusher-chat-widget-input { background-color: rgba(0, 0, 0, 0.6); }
-#chat .chat_tools { background-color: rgba(0, 0, 0, 0.3); }
-#player-controller { background-color: rgba(0, 0, 0, 0.8); }
