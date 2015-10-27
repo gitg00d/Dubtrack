@@ -19,6 +19,7 @@
 #volume-div .ui-slider-range-min { height: 125%; background-color: #5A005A; } /* Volume bar slider range fix */
 .ps-container .ps-scrollbar-x, .ps-container .ps-scrollbar-y, .ps-container .ps-scrollbar-x-rail:hover .ps-scrollbar-x, .ps-container .ps-scrollbar-y-rail:hover .ps-scrollbar-y { background-color: #B1B1B1 } /* Chat scrollbar more visible */
 #chat .chat-container ul.chat-main li.user-560b4a33d9057a0300cc2fa0.current-chat-user .activity-row .text p a.username, #chat .chat-container ul.chat-main li.user-560b4a33d9057a0300cc2fa0.current-chat-user .activity-row .text p a.username:hover, #chat .chat-container ul.chat-main li.user-560b4a33d9057a0300cc2fa0.current-chat-user .activity-row .text p a.username:visited { color: #FFCA00; } /* Netux -> orange */
+#main_player .player_container .placeholder h5 { margin: 5.5em 0 0; } /* No video placeholder fix */
 
 /* Chat Mods */
 #chat .chat-container ul.chat-main li.user-56083b920cd1cc03003fe8e2 .activity-row .text p a.username, #chat .chat-container ul.chat-main li.user-56083b920cd1cc03003fe8e2 .activity-row .text p a.username:hover, #chat .chat-container ul.chat-main li.user-56083b920cd1cc03003fe8e2 .activity-row .text p a.username:visited, /* larry1123 */
