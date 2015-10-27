@@ -1,7 +1,0 @@
-/* Update warning */
-#chat .chat-container .chat-messages:before {
-  content: "Hello! Your current CSS link is outdated and so it won't longer recieve any updates, ask @netuxx or any NB3 room moderator for the new link.";
-  padding-top: 100em; /* lol */
-  color: red;
-  font-size: .8em;
-}

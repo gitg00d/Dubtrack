@@ -1,4 +1,4 @@
-$("head").append('<style src="https://rawgit.com/Netox005/Test/master/dubtrack.css"/>');
+$("head").append('<style src="https://rawgit.com/Netox005/Dubtrack/master/dubtrack.css"/>');
 
 var stylesheet = '<style>' +
                          '.no-selection, #vidEditDiv { webkit-user-select:none; user-select:none; -moz-user-select:none; -ms-user-select:none; }' +
