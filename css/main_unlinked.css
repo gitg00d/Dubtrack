@@ -1,11 +1,11 @@
 /* Beta of main file, for testing purposes and very unstable */
 
 /* Imports */
-@import url("https://rawgit.com/Netox005/Test/master/dubtrack_css/transparentchat.css"); /* Transparent Chat */
-@import url("https://rawgit.com/Netox005/Test/master/dubtrack_css/chatright.css"); /* Chat completly to the right */
-@import url("https://rawgit.com/Netox005/Test/master/dubtrack_css/videosmall.css"); /* Small video */
-@import url("https://rawgit.com/Netox005/Test/master/dubtrack_css/voteicons.css"); /* Vote icons (NB3 style) */
-@import url("https://rawgit.com/Netox005/Test/master/dubtrack_css/chatclasses.css"); /* Chat colors and icons (Dubtrack-Extras) */
+@import url("https://rawgit.com/Netox005/Dubtrack/master/css/transparentchat.css"); /* Transparent Chat */
+@import url("https://rawgit.com/Netox005/Dubtrack/master/css/chatright.css"); /* Chat completly to the right */
+@import url("https://rawgit.com/Netox005/Dubtrack/master/css/videosmall.css"); /* Small video */
+@import url("https://rawgit.com/Netox005/Dubtrack/master/css/voteicons.css"); /* Vote icons (NB3 style) */
+@import url("https://rawgit.com/Netox005/Dubtrack/master/css/chatclasses.css"); /* Chat colors and icons (Dubtrack-Extras) */
 
 /* Video next to chat */
 #main-room:not(.fullscreenParent) { float: right; }

@@ -2,9 +2,9 @@
 
 /* Imports */
 @import url("https://nightbloo.github.io/dubtrack/dubtrack.css"); /* Transparent background chat + NB3 room staff chat colors */
-@import url("https://rawgit.com/Netox005/Test/master/dubtrack_css/chatright.css"); /* Chat completly to the right */
-@import url("https://rawgit.com/Netox005/Test/master/dubtrack_css/videosmall.css"); /* Small video */
-@import url("https://rawgit.com/Netox005/Test/master/dubtrack_css/voteicons.css"); /* Vote icons (NB3 style) */
+@import url("https://rawgit.com/Netox005/Dubtrack/master/css/chatright.css"); /* Chat completly to the right */
+@import url("https://rawgit.com/Netox005/Dubtrack/master/css/videosmall.css"); /* Small video */
+@import url("https://rawgit.com/Netox005/Dubtrack/master/css/voteicons.css"); /* Vote icons (NB3 style) */
 
 /* Video next to chat */
 #main-room:not(.fullscreenParent) { float: right; }
