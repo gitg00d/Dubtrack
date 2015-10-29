@@ -223,53 +223,53 @@ var dte_init = setInterval(function() {
 
         $("head").append([
             '<style id="dte-stylesheet">',
-                '/* Volume Button */',
-                '#player-controller ul li.remove-if-iframe.display-block',
-                '{ border-right: 0; }',
+            '/* Volume Button */',
+            '#player-controller ul li.remove-if-iframe.display-block',
+            '{ border-right: 0; }',
 
-                'li.volume-button a span.icon-volume-down:before',
-                '{ padding-right: 5.5px; }',
+            'li.volume-button a span.icon-volume-down:before',
+            '{ padding-right: 5.5px; }',
 
-                'li.volume-button a span.icon-volume-off:before',
-                '{ padding-right: 9.6094px; }',
+            'li.volume-button a span.icon-volume-off:before',
+            '{ padding-right: 9.6094px; }',
 
-                '.noanim.volume.remove-if-iframe.display-block',
-                '{ border-right-width: 0; }',
+            '.noanim.volume.remove-if-iframe.display-block',
+            '{ border-right-width: 0; }',
 
-                '.volume-button,.pointer-no-select',
-                '{ cursor:pointer; -webkit-user-select:none; user-select:none; -moz-user-select:none; -ms-user-select:none; }',
+            '.volume-button,.pointer-no-select',
+            '{ cursor:pointer; -webkit-user-select:none; user-select:none; -moz-user-select:none; -ms-user-select:none; }',
 
-                '/* Chat Notifications */',
-                '.chat-system-notification',
-                '{ text-align: center; text-transform: uppercase; padding: .5em !important; font-size: .75em; color: #5a5b5c; font-weight: 700; }',
+            '/* Chat Notifications */',
+            '.chat-system-notification',
+            '{ text-align: center; text-transform: uppercase; padding: .5em !important; font-size: .75em; color: #5a5b5c; font-weight: 700; }',
 
-                '/* Chat Dub Log */',
-                '.chat-updubed,.chat-current-song-dj',
-                '{ color: cyan; }',
+            '/* Chat Dub Log */',
+            '.chat-updubed,.chat-current-song-dj',
+            '{ color: cyan; }',
 
-                '.chat-downdubed,.chat-current-song-name',
-                '{ color: #FF0080; }',
+            '.chat-downdubed,.chat-current-song-name',
+            '{ color: #FF0080; }',
 
-                '.chat-plus-users',
-                '{ top: -.5em; color: white; position: relative; font-size: .8em; }',
+            '.chat-plus-users',
+            '{ top: -.5em; color: white; position: relative; font-size: .8em; }',
 
-                '.chat-plus-users:hover',
-                '{ color: #8A8A8A; }',
+            '.chat-plus-users:hover',
+            '{ color: #8A8A8A; }',
 
-                '/* Chat Song Change Log */',
-                '.chat-current-song-dj',
-                '{ color: cyan; }',
+            '/* Chat Song Change Log */',
+            '.chat-current-song-dj',
+            '{ color: cyan; }',
 
-                '.chat-current-song-name',
-                '{ color: magenta; }',
+            '.chat-current-song-name',
+            '{ color: magenta; }',
 
-                '/* Grab Fix */',
-                '#player-controller ul li.add-to-playlist a.grabbed',
-                '{ background-color: rgba(255, 0, 255, 0.15); }',
+            '/* Grab Fix */',
+            '#player-controller ul li.add-to-playlist a.grabbed',
+            '{ background-color: #FF00FF; }',
 
-                '/* Volume Percentage */',
-                '.volume-percentage',
-                '{ position: absolute;  width: 85px; top: -3px; text-align: center; font-size: .75em; font-weight: bold; z-index: -1; }',
+            '/* Volume Percentage */',
+            '.volume-percentage',
+            '{ position: absolute;  width: 85px; top: -3px; text-align: center; font-size: .75em; font-weight: bold; z-index: -1; }',
             '</style>'].join(''));
 
         var addToPlaylistEl = $('#player-controller ul li.add-to-playlist a');
