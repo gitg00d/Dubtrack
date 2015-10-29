@@ -16,4 +16,4 @@
 
 /* Miscellaneous */
 #main-room:not(.fullscreenParent) #main_avatar_room #main-user-list-room { height: calc(100vh - 10em) !important; } /* Room Users List fix */
-#main_player .player_container .placeholder h5 { margin: 5.5em 0 0; } /* No video placeholder fix */
+#main_player .player_container .placeholder h5 { margin: 6.5em 0 0; font-size: 1em; } /* No video placeholder fix */
