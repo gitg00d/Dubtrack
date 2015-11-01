@@ -178,25 +178,6 @@ var dte_init = setInterval(function() {
             $(".dubstotal").attr("title", constructTotalDubsTitle);
         });
 
-        function setCssClasses(itemEl) {
-            if(itemEl.prop('tagName').toLowerCase() !== 'li' || itemEl.attr('class').substring(0, 'user-'.length) !== 'user-') return;
-            var user = Dubtrack.room.users.collection.findWhere({userid: itemEl.attr('class').split(/-| /)[1]});
-            itemEl.addClass('username-' + user.get('_user').username);
-            var role = !user.get('roleid') ? 'none' : Dubtrack.helpers.isDubtrackAdmin(user.get('userid')) ? 'admin' : user.get('roleid').type;
-            itemEl.addClass('role-' + role.replace('-', ''));
-        }
-
-        for(var i = 0; i < chatEl.children().length; i++) { setCssClasses($(chatEl.children()[i])); }
-        chatEl.on('DOMNodeInserted', function(e) { setCssClasses($(e.target)); });
-
-        Dubtrack.Events.bind('realtime:user-join', function(data) {
-            if(data.user.userInfo.userid === session.id) return;
-
-            //console.log(data.user.username + " -> joined the room");
-            if(chatOptions.join)
-                chat.append('<li class="chat-system-notification notification-user_leave"><a href="#" class="username user-' + data.user.userInfo.userid + '">@' + data.user.username + '</a> joined the room.</li>');
-        });
-
         Dubtrack.Events.bind('realtime:user-leave', function(data) {
             if(data.user._id === session.id) return;
 
