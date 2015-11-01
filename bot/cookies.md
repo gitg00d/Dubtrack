@@ -1,7 +1,7 @@
 # Cookie list #
 Use one of the above as second argument on the !cookie command.
 
-- simple/normal
+- simple
 - oreo
 - homemade
 - biscuit
@@ -19,3 +19,5 @@ Use one of the above as second argument on the !cookie command.
 - macadamien
 - jiggypuff
 - snikkerdoodle
+- pumpkin
+- ghost
