@@ -3,8 +3,8 @@
 var YTImporter = {
     _googleApiKey: 'AIzaSyC5uhOXO7XWm8A6FtikRDGKfv50XCpqYxA',
     _displayError: function(msg) {
-        if(!msg) Dubtrack.helpers.displayError('Youtube Playlist Exporter → Internal Error', 'Check console (F12) to see error log.');
-        else Dubtrack.helpers.displayError('Youtube Playlist Exporter → Error', msg);
+        if(!msg) Dubtrack.helpers.displayError('Youtube Playlist importer → Internal Error', 'Check console (F12) to see error log.');
+        else Dubtrack.helpers.displayError('Youtube Playlist importer → Error', msg);
     },
     _displayOutput_to: undefined,
     _displayOutput: function(msg, useTimeout) {
@@ -20,7 +20,7 @@ var YTImporter = {
     _fastMode: false
 };
 
-YTImporter.export = function(yt_username, yt_playlistName, playlistName) {
+YTImporter.import = function(yt_username, yt_playlistName, playlistName) {
     $.getJSON('https://www.googleapis.com/youtube/v3/channels', { forUsername: yt_username, part: 'id', key: this._googleApiKey })
         .done(function(data) {
             if(data.pageInfo.totalResults <= 0) {
@@ -41,20 +41,20 @@ YTImporter.export = function(yt_username, yt_playlistName, playlistName) {
                         YTImporter._displayError('No playlist with given youtube playlist name was found.');
                         return;
                     }
-                    YTImporter.exportFromPlaylistId(foundId, playlistName, foundTitle);
+                    YTImporter.importFromPlaylistId(foundId, playlistName, foundTitle);
                 }).error(function(x) { YTImporter._displayError(false); console.log(x); });
         }).error(function(x) { YTImporter._displayError(false); console.log(x); });
 };
 
 // PLEGaOxpFZhNB2hneot73NarmYGjKdpN2G
 // PL7kJb4R08nTgY8KA44g5zBT5BIuawdrUl
-YTImporter.exportFromPlaylistId = function(yt_playlistId, playlistName, yt_playlistTitle) {
+YTImporter.importFromPlaylistId = function(yt_playlistId, playlistName, yt_playlistTitle) {
     function inner() {
         var targetPlaylistId;
         function inner() {
             $.getJSON('https://www.googleapis.com/youtube/v3/playlistItems', { part: 'contentDetails', playlistId: yt_playlistId, maxResults: 50, key: YTImporter._googleApiKey })
                 .done(function(data) {
-                    function exportAtIndex(index, callback, video) {
+                    function importAtIndex(index, callback, video) {
                         YTImporter._displayOutput('Getting next song of playlist (song #' + index + ')', false);
                         var videoid = video.contentDetails.videoId;
                         $.getJSON('https://www.googleapis.com/youtube/v3/videos', { part: 'snippet', id: videoid, key: YTImporter._googleApiKey })
@@ -69,16 +69,16 @@ YTImporter.exportFromPlaylistId = function(yt_playlistId, playlistName, yt_playl
                             });
                     }
                     var i = -1;
-                    var exportLoop = function() {
+                    var importLoop = function() {
                         i++;
                         if(i >= data.items.length) {
                             YTImporter._displayOutput('Done importing to ' + playlistName + '! Reloading page to see results.', true);
                             location.reload();
                             return;
                         }
-                        else exportAtIndex(i, exportLoop, data.items[i]);
+                        else importAtIndex(i, importLoop, data.items[i]);
                     };
-                    exportLoop();
+                    importLoop();
                 }).error(function(x) { YTImporter._displayError(false); console.log(x); });
         }
 
