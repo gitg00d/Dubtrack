@@ -3,8 +3,8 @@
 /* Imports */
 @import url("https://rawgit.com/Netox005/Dubtrack/master/css/chatclasses.css"); /* Chat colors & Chat labels */
 @import url("https://rawgit.com/Netox005/Dubtrack/master/css/voteicons.css"); /* NB3 Vote Icons */
-@import url("https://dl.dropboxusercontent.com/content_link/nIYM4z1b5oDhNV3zo25Voui9NOFkTnEiBawRXYfE3oNkSl0iKF6mcXcVNrXxIh2i/file"); /* Chat completly to the right */
-@import url("https://dl.dropboxusercontent.com/content_link/uIBggTsjTLW6DWogP9LGEISndNt0uq8YHSTKyewXHIde7q2BVL01BtyWdkEm3U0W/file"); /* Small video */
+@import url("https://rawgit.com/Netox005/Dubtrack/master/css/chatright.css"); /* Chat completly to the right */
+@import url("https://rawgit.com/Netox005/Dubtrack/master/css/videosmall.css"); /* Small video */
 
 /* Video next to chat */
 #main-room .left_section { top: 50px; left: initial; right: 450px; }
