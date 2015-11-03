@@ -1,7 +1,0 @@
-/* COMPLEMENTARY FILE, should be imported into another .css file */
-
-#player-controller .right ul li .dub-counter { position: relative; top: -.4em; }
-
-#player-controller .right ul li .icon-heart:before { content: url('https://raw.githubusercontent.com/nightbloo/nightbloo.github.io/master/plug/icons/grab.png'); }
-#player-controller .right ul li .dubup .icon-arrow-up:before { content: url('https://raw.githubusercontent.com/nightbloo/nightbloo.github.io/master/plug/icons/woot.png'); }
-#player-controller .right ul li .dubdown .icon-arrow-down:before { content: url('https://raw.githubusercontent.com/nightbloo/nightbloo.github.io/master/plug/icons/meh.png'); }

@@ -1,12 +1,4 @@
-/* Imports */
-@import url("https://nightbloo.github.io/dubtrack/dubtrack.css"); /* Transparent background chat + NB3 room staff chat colors */
-@import url("https://rawgit.com/Netox005/Dubtrack/master/css/chatright.css"); /* Chat completly to the right */
-
-/* Video centered */
-#main-room:not(.fullscreenParent) .left_section {
-  position: fixed;
-  left: calc(50% - 60% / 2 - 400px / 2);
+ul.chat-main:before {
+  content: "Oh hey @tacotacotacotaco. As you can see, Dubtrack updated their style and so your custom css won't work (is broken af, don't even try to use it). You have to wait until I solve the problem and give you the fixed version. For now, just wait ^_^ . . - Netux";
+  color: red;
 }
-#main-room:not(.fullscreenParent) #main_player .player_container { height: calc(100vh - 33vh); }
-
-/* Requested by @tacotacotacotaco */

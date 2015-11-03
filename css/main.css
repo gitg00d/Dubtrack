@@ -1,21 +1,11 @@
 /* Main file (NB3 room) */
 
 /* Imports */
-@import url("https://nightbloo.github.io/dubtrack/dubtrack.css"); /* Transparent background chat + NB3 room staff chat colors */
-@import url("https://rawgit.com/Netox005/Dubtrack/master/css/chatright.css"); /* Chat completly to the right */
-@import url("https://rawgit.com/Netox005/Dubtrack/master/css/videosmall.css"); /* Small video */
-@import url("https://rawgit.com/Netox005/Dubtrack/master/css/voteicons.css"); /* Vote icons (NB3 style) */
-
-/* Video next to chat */
-#main-room:not(.fullscreenParent) { float: right; }
-#main-room:not(.fullscreenParent) .left_section {
-  right: 400px;
-  float: right;
-}
+@import url("https://rawgit.com/Netox005/Dubtrack/master/css/chatclasses.css"); /* Chat colors & Chat labels */
+@import url("https://rawgit.com/Netox005/Dubtrack/master/css/voteicons.css"); /* NB3 Vote Icons */
 
 /* Miscellaneous */
-.userCustomB { top: 3em !important; } /* Background fix */
-#chat .chat-container ul.chat-main li .image_row > img { border-radius: 2px !important; } /* Chat images as round squares */
-#volume-div .ui-slider-range-min { height: 125%; background-color: #5A005A; } /* Volume bar slider range fix */
-.ps-container .ps-scrollbar-x, .ps-container .ps-scrollbar-y, .ps-container .ps-scrollbar-x-rail:hover .ps-scrollbar-x, .ps-container .ps-scrollbar-y-rail:hover .ps-scrollbar-y { background-color: #B1B1B1 } /* Chat scrollbar more visible */
-#browser.animate { bottom: 3em; } /* Browser fix */
+.medium { top: 57.6px !important; } /* Background Fix */
+#chat .chat-main .system { text-align: center; color: #0090CC; } /* Promote/demote and song skips in chat not so similar to user /me's */
+#chat .chat-container .chat-messages .chat-main li.system-error { text-transform: uppercase; } /* Agresive errors in chat */
+.ps-container .ps-scrollbar-x, .ps-container .ps-scrollbar-y, .ps-container .ps-scrollbar-x-rail:hover .ps-scrollbar-x, .ps-container .ps-scrollbar-y-rail:hover .ps-scrollbar-y { background-color: #B1B1B1 } /* Scrollbars more visible */
