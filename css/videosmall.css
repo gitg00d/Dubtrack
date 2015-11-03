@@ -1,0 +1,16 @@
+/* COMPLEMENTARY FILE, should be imported into another .css file */
+
+/* Main function */
+#main-room .left_section { padding: 0; max-width: 32rem; }
+#main-room .left_section  .main-player-wrapper { display: initial; }
+
+/* Buttons fix */
+#main-room .left_section #main_player .play-song-link {
+    width: 10rem;
+    font-size: .8rem;
+    padding: .75rem 1.5rem;
+    bottom: -3rem;
+}
+#main-room .left_section #main_player .play-song-link .queue-info { padding-top: .1rem; }
+#main-room .left_section #main_player .player_header { top: -2.66rem; }
+#main-room .left_section #main_player .player_sharing span { font-size: 1.25rem; }

@@ -14,6 +14,4 @@
 #main-room:not(.fullscreenParent) #chat .chat-container, #chat { height: 100%; }
 #main-room:not(.fullscreenParent) #chat .chat-container ul.chat-main li .activity-row { width: calc(20.5em - 40px); }
 
-/* Miscellaneous */
 #main-room:not(.fullscreenParent) #main_avatar_room #main-user-list-room { height: calc(100vh - 10em) !important; } /* Room Users List fix */
-#main_player .player_container .placeholder h5 { margin: 6.5em 0 0; font-size: 1em; } /* No video placeholder fix */

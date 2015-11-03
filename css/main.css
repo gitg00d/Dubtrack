@@ -3,9 +3,24 @@
 /* Imports */
 @import url("https://rawgit.com/Netox005/Dubtrack/master/css/chatclasses.css"); /* Chat colors & Chat labels */
 @import url("https://rawgit.com/Netox005/Dubtrack/master/css/voteicons.css"); /* NB3 Vote Icons */
+@import url("https://dl.dropboxusercontent.com/content_link/nIYM4z1b5oDhNV3zo25Voui9NOFkTnEiBawRXYfE3oNkSl0iKF6mcXcVNrXxIh2i/file"); /* Chat completly to the right */
+@import url("https://dl.dropboxusercontent.com/content_link/uIBggTsjTLW6DWogP9LGEISndNt0uq8YHSTKyewXHIde7q2BVL01BtyWdkEm3U0W/file"); /* Small video */
+
+/* Video next to chat */
+#main-room .left_section { top: 50px; left: initial; right: 450px; }
+#main-room .left_section #main_player { border-radius: 0; border-bottom-left-radius: 1rem; }
+#main-room #chat .chat-container .chat-messages, #main-room #chat .chat-container .pusher-chat-widget-input { border-left: 1px solid #878c8e; }
 
 /* Miscellaneous */
 .medium { top: 57.6px !important; } /* Background Fix */
-#chat .chat-main .system { text-align: center; color: #0090CC; } /* Promote/demote and song skips in chat not so similar to user /me's */
-#chat .chat-container .chat-messages .chat-main li.system-error { text-transform: uppercase; } /* Agresive errors in chat */
+#chat .chat-main .system, #chat .chat-main .chat-system-loading { text-align: center; color: #0090CC !important; } /* Loading, promote/demote and song skips in chat not so similar to user /me's */
+#chat .chat-container .chat-messages .chat-main li.chat-welcome-message { color: white !important; } /* Welcome message in white */
+#chat .chat-container .chat-messages .chat-main li.system-error { text-transform: uppercase; } /* Agressive errors in chat */
 .ps-container .ps-scrollbar-x, .ps-container .ps-scrollbar-y, .ps-container .ps-scrollbar-x-rail:hover .ps-scrollbar-x, .ps-container .ps-scrollbar-y-rail:hover .ps-scrollbar-y { background-color: #B1B1B1 } /* Scrollbars more visible */
+
+/* CSS Warning */
+#main-room #chat .chat-container .chat-messages:before {
+    font-family: proxima-nova,sans-serif;
+    content: "CSS Warning → Beta version: Releasing to public for feedback. Video buttons may change soon.";
+    color: #FF6C6C;
+}
