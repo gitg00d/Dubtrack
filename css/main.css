@@ -7,9 +7,9 @@
 @import url("https://rawgit.com/Netox005/Dubtrack/master/css/videosmall.css"); /* Small video */
 
 /* Video next to chat */
-#main-room .left_section { top: 50px; left: initial; right: 450px; }
+#main-room .left_section { left: initial; right: 450px; }
 #main-room .left_section #main_player { border-radius: 0; border-bottom-left-radius: 1rem; }
-#main-room #chat .chat-container .chat-messages, #main-room #chat .chat-container .pusher-chat-widget-input { border-left: 1px solid #878c8e; }
+#main-room .right_section { border-left: 1px solid #878c8e; }
 
 /* Miscellaneous */
 .medium { top: 57.6px !important; } /* Background Fix */
@@ -17,10 +17,3 @@
 #chat .chat-container .chat-messages .chat-main li.chat-welcome-message { color: white !important; } /* Welcome message in white */
 #chat .chat-container .chat-messages .chat-main li.system-error { text-transform: uppercase; } /* Agressive errors in chat */
 .ps-container .ps-scrollbar-x, .ps-container .ps-scrollbar-y, .ps-container .ps-scrollbar-x-rail:hover .ps-scrollbar-x, .ps-container .ps-scrollbar-y-rail:hover .ps-scrollbar-y { background-color: #B1B1B1 } /* Scrollbars more visible */
-
-/* CSS Warning */
-#main-room #chat .chat-container .chat-messages:before {
-    font-family: proxima-nova,sans-serif;
-    content: "CSS Warning → Beta version: Releasing to public for feedback. Video buttons may change soon.";
-    color: #FF6C6C;
-}
