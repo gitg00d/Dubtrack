@@ -9,7 +9,7 @@
 /* Video next to chat */
 #main-room .left_section { left: initial; right: 450px; }
 #main-room .left_section #main_player { border-radius: 0; border-bottom-left-radius: 1rem; }
-#main-room .right_section { border-left: 1px solid #878c8e; }
+/*#main-room .right_section { border-left: 1px solid #878c8e; } It was driving me crazy*/
 
 /* Miscellaneous */
 .medium { top: 57.6px !important; } /* Background Fix */
