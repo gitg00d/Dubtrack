@@ -3,8 +3,8 @@
 #chat .chat-main li.user-561da9e034c45e0e0087b6d0 .image_row { display: none; }
 #chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row { width: 100% !important; padding: .5em .25em !important; }
 
-#chat .chat-main li[class^="user-"] .activity-row .username { display: none !important; }
-#chat .chat-main li[class^="user-"] .activity-row .text p:first-of-type:before {
+#chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row .username { display: none !important; }
+#chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row .text p:first-of-type:before {
     content: "netux-bot";
     color: #C3FF00;
     text-transform: uppercase;
