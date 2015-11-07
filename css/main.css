@@ -21,3 +21,5 @@
 #addToPlaylistFloatContainer .create-playlist-header .icon-close:hover { color: cyan; } /* Add to playlist X button color fix */
 #profileMainSection { top: 58px; min-height: initial; max-height: calc(100vh - 114px); overflow-y: auto; } /* User profile scrollbar fix (wish I could use perfect-scrollbar with CSS) */
 #main-menu-left { top: 58px; height: calc(100% - 58px); padding-top: 3rem; } /* Left menu height fix */
+#chat .pusher-chat-widget-input p { text-align: center; font-weight: bold; color: #AB0000; } /* User banned format fix */
+#chat .pusher-chat-widget-input p::after { content: " (You can't send messages)" } /* User banned warning */
