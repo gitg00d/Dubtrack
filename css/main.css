@@ -24,3 +24,4 @@
 #main-menu-left { top: 58px; height: calc(100% - 58px); padding-top: 3rem; } /* Left menu height fix */
 #chat .pusher-chat-widget-input p { text-align: center; font-weight: bold; color: #AB0000; } /* User banned format fix */
 #chat .pusher-chat-widget-input p::after { content: " (You can't send messages)" } /* User banned warning */
+#chat .chat-container .chat-messages .chat-main li:not([class^="user-"]) { padding-bottom: .5rem; min-height: initial; } /* No user messages height fix */
