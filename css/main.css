@@ -5,6 +5,7 @@
 @import url("https://rawgit.com/Netox005/Dubtrack/master/css/voteicons.css"); /* NB3 Vote Icons */
 @import url("https://rawgit.com/Netox005/Dubtrack/master/css/chatright.css"); /* Chat completly to the right */
 @import url("https://rawgit.com/Netox005/Dubtrack/master/css/videosmall.css"); /* Small video */
+@import url("https://rawgit.com/Netox005/Dubtrack/master/css/netuxbot.css"); /* @netuxbot custom chat */
 
 /* Video next to chat */
 #main-room .left_section { left: initial; right: 450px; }

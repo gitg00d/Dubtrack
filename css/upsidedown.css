@@ -1,0 +1,13 @@
+html {
+    -ms-transform: rotateY(180deg) rotateZ(180deg) translateY(calc(100vh - 200vh + 58px));
+    -webkit-transform: rotateY(180deg) rotateZ(180deg) translateY(calc(100vh - 200vh + 58px));
+    transform: rotateY(180deg) rotateZ(180deg) translateY(calc(100vh - 200vh + 58px));
+}
+#player-controller { top: calc(100vh - 56px); }
+#main-section { top: 58px; }
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, p:hover, span:hover, input:hover, img:hover, li.chat-welcome-message:hover, #header-global .header-left-navigation:hover, #room-info-display > div:hover {
+    -ms-transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+#main-menu-left { height: 100vh; }

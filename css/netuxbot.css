@@ -1,0 +1,25 @@
+/* COMPLEMENTARY FILE, should be imported into another .css file */
+
+#chat .chat-main li.user-561da9e034c45e0e0087b6d0 .image_row { display: none; }
+#chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row { width: 100% !important; padding: .5em .25em !important; }
+
+#chat .chat-main li[class^="user-"] .activity-row .username { display: none !important; }
+#chat .chat-main li[class^="user-"] .activity-row .text p:first-of-type:before {
+    content: "netux-bot";
+    color: #C3FF00;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .75em;
+    cursor: pointer;
+    text-align: initial;
+    display: block;
+}
+
+#chat .chat-main li.user-561da9e034c45e0e0087b6d0:hover .activity-row .meta-info::before {
+    content: "Unofficial Nightblue3 Room BOT";
+    position: absolute;
+    color: #878c8e;
+    font-weight: 700;
+    font-size: 12px;
+    font-size: .75rem;
+}
