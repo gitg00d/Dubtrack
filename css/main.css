@@ -34,6 +34,9 @@ span.close-browser:before { content: "\e903"; }
 #browser .browser-content .browser-content-header .form .music-type-select .icon-youtube { color: red; }
 #browser .browser-content .browser-content-header .form .music-type-select .icon-soundcloud { color: orange; }
 
+/* Sorry @matt, it doesn't fit my theme u_u */
+#player-controller, #player-controller > div.right { border-radius: 0 !important; border-top-right-radius: 0 !important; border-top-left-radius: 0 !important; }
+
 /* Other fixes */
 .medium { top: 57.6px !important; } /* Background Fix */
 .ps-container .ps-scrollbar-x, .ps-container .ps-scrollbar-y, .ps-container .ps-scrollbar-x-rail:hover .ps-scrollbar-x, .ps-container .ps-scrollbar-y-rail:hover .ps-scrollbar-y { background-color: #B1B1B1 } /* Scrollbars more visible */
