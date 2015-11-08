@@ -1,27 +1,42 @@
 /* Main file (NB3 room) */
 
 /* Imports */
-@import url("https://rawgit.com/Netox005/Dubtrack/master/css/chatclasses.css"); /* Chat colors & Chat labels */
 @import url("https://rawgit.com/Netox005/Dubtrack/master/css/voteicons.css"); /* NB3 Vote Icons */
 @import url("https://rawgit.com/Netox005/Dubtrack/master/css/chatright.css"); /* Chat completly to the right */
 @import url("https://rawgit.com/Netox005/Dubtrack/master/css/videosmall.css"); /* Small video */
-@import url("https://rawgit.com/Netox005/Dubtrack/master/css/netuxbot.css"); /* @netuxbot custom chat */
+@import url("https://rawgit.com/Netox005/Dubtrack/master/css/skynet.css"); /* @netuxbot custom chat */
 
 /* Video next to chat */
 #main-room .left_section { left: initial; right: 450px; }
 #main-room .left_section #main_player { border-radius: 0; border-bottom-left-radius: 1rem; }
-/*#main-room .right_section { border-left: 1px solid #878c8e; } It was driving me crazy*/
 
-/* Miscellaneous */
+/* Chat formatting */
+#chat .chat-container .chat-messages .chat-main li.chat-welcome-message { color: white !important; }
+#chat .chat-container .chat-messages .chat-main li.system-error { text-transform: uppercase; }
+#chat .chat-main .system, #chat .chat-main .chat-system-loading { text-align: center; color: #0090CC !important; }
+
+/* User banned fix */
+#chat .pusher-chat-widget-input p { text-align: center; font-weight: bold; color: #AB0000; }
+#chat .pusher-chat-widget-input p::after { content: " (You can't send messages)" }
+
+/* Add to playlist fixes */
+#addToPlaylistFloatContainer .create-playlist-header .icon-close { position: absolute; top: 15px; right: 15px; }
+#addToPlaylistFloatContainer .create-playlist-header .icon-close:hover { color: cyan; }
+
+/* Browser fixes */
+#browser.animate { bottom: 56px; padding-top: 114px; }
+#browser .browser-content { border-radius: 0; }
+span.close-browser { font-size: 1.125rem !important; padding-top: 1.2rem !important; }
+span.close-browser:before { content: "\e903"; }
+
+#browser .browser-content .browser-content-header .form .music-type-select .music-type-dropdown span { line-height: .8; }
+#browser .browser-content .browser-content-header .form .music-type-select .music-type-dropdown span:hover { background: #6D6D6D;  }
+#browser .browser-content .browser-content-header .form .music-type-select .icon-youtube { color: red; }
+#browser .browser-content .browser-content-header .form .music-type-select .icon-soundcloud { color: orange; }
+
+/* Other fixes */
 .medium { top: 57.6px !important; } /* Background Fix */
-#chat .chat-main .system, #chat .chat-main .chat-system-loading { text-align: center; color: #0090CC !important; } /* Loading, promote/demote and song skips in chat not so similar to user /me's */
-#chat .chat-container .chat-messages .chat-main li.chat-welcome-message { color: white !important; } /* Welcome message in white */
-#chat .chat-container .chat-messages .chat-main li.system-error { text-transform: uppercase; } /* Agressive errors in chat */
 .ps-container .ps-scrollbar-x, .ps-container .ps-scrollbar-y, .ps-container .ps-scrollbar-x-rail:hover .ps-scrollbar-x, .ps-container .ps-scrollbar-y-rail:hover .ps-scrollbar-y { background-color: #B1B1B1 } /* Scrollbars more visible */
-#addToPlaylistFloatContainer .create-playlist-header .icon-close { position: absolute; top: 15px; right: 15px; } /* Add to playlist X button position fix */
-#addToPlaylistFloatContainer .create-playlist-header .icon-close:hover { color: cyan; } /* Add to playlist X button color fix */
 #profileMainSection { top: 58px; min-height: initial; max-height: calc(100vh - 114px); overflow-y: auto; } /* User profile scrollbar fix (wish I could use perfect-scrollbar with CSS) */
 #main-menu-left { top: 58px; height: calc(100% - 58px); padding-top: 3rem; } /* Left menu height fix */
-#chat .pusher-chat-widget-input p { text-align: center; font-weight: bold; color: #AB0000; } /* User banned format fix */
-#chat .pusher-chat-widget-input p::after { content: " (You can't send messages)" } /* User banned warning */
 #chat .chat-container .chat-messages .chat-main li:not([class^="user-"]) { padding-bottom: .5rem; min-height: initial; } /* No user messages height fix */
