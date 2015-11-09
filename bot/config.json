@@ -1,0 +1,67 @@
+{
+  "options": {
+    "startup_msg": "Beep-Boop! Ready to go.",
+    "error_msg": "Beep-Boop; an error ocurred!",
+
+    "global_cooldown": 5000,
+    "use_mod_perks": true,
+    "cmd_prefix": "!",
+
+    "look_for_mods": [ ],
+    "forbidden_users": ["spongybot"],
+
+    "is_debug": true,
+    "debug_id": "560b4a33d9057a0300cc2fa0",
+
+    "check_if_streaming": false,
+    "streaming_check_rate": 10000,
+
+    "check_if_song_exceeds_limit": false,
+    "song_length_limit": 390000,
+    "if_song_limit_wait": 2000,
+
+    "check_if_video_not_avaliable": true,
+
+    "google_api_key": "AIzaSyC5uhOXO7XWm8A6FtikRDGKfv50XCpqYxA",
+    "twitch_account": "nightblue3",
+
+    "rules_link": "",
+    "oplist_link": "",
+    "blacklist_link": "",
+    "stafflist_link": ""
+  },
+  "skip-reason": [
+    { "name": ["op", "oplist", "overplayed"], "description": "it is in the Overplayed list." },
+    { "name": ["black", "blacklist", "bl"], "description": "it is in the Black list." },
+    { "name": "troll", "description": "it was a troll song." },
+    { "name": ["communitygenre", "genre"], "description": "it didn't fit the community genre." }
+  ],
+  "blacklist": [
+    { "regex": "Darude - Sandstorm", "id": null, "reason": ["troll", "communitygenre"] },
+    { "regex": "Fox Stevenson - Sandstorm", "id": null, "reason": "op" },
+    { "regex": "Imagine Dragons - Radioactive", "id": null, "reason": "op" }
+  ],
+  "cookies": [
+    { "name": ["simple", "normal"], "realname": "a simple cookie", "form": ":cookie:" },
+    { "name": "oreo", "realname": "an oreo", "form": ":cookie:" },
+    { "name": "homemade", "realname": "a homemade cookie", "form": ":cookie:" },
+    { "name": "biscuit", "realname": "a biscuit", "form": ":cookie:" },
+    { "name": ["black&white", "bnw", "b&w", "blackandwhite"], "realname": "a black and white cookie", "form": ":cookie:" },
+    { "name": ["chocochip", "chocolatechip"], "realname": "a chocolate chip cookie", "form": ":cookie:" },
+    { "name": ["ginger", "christmas"], "realname": "a ginger cookie", "form": ":cookie:" },
+    { "name": "raspberry", "realname": "a raspberry cookie", "form": ":cookie:" },
+    { "name": "sugar", "realname": "a sugar cookie", "form": ":cookie:" },
+    { "name": ["chocolate", "choco"], "realname": "a chocolate cookie", "form": ":cookie:" },
+    { "name": "macaron", "realname": "a macaron (not the song)", "form": ":cookie:" },
+    { "name": "coconut", "realname": "a coconut cookie", "form": ":cookie:" },
+    { "name": ["party", "partyring"], "realname": "a party ring", "form": ":cookie::tada:" },
+    { "name": "tea", "realname": "a tea cookie", "form": ":cookie:" },
+    { "name": ["whitechocolate", "whitechoco"], "realname": "a white chocolate cookie", "form": ":cookie:" },
+    { "name": "macadamien", "realname": "a macadamien cookie", "form": ":cookie:" },
+    { "name": "jigglypuff", "realname": "a jiggly puff flavoured cookie", "form": ":cookie:" },
+    { "name": "snikkerdoodle", "realname": "a snikkerdoodle", "form": ":cookie:" },
+    { "name": "heart", "realname": "a heart shaped cookie", "form": ":cookie:<3" },
+    { "name": ["pumpkin", "jack-o-lantern", "jackolantern"], "realname": "an spooky pumpkin shaped cookie", "form": ":jack_o_lantern::cookie::jack_o_lantern:" },
+    { "name": "ghost", "realname": "an spooky ghost shaped cookie", "form": ":ghost::cookie::ghost:" }
+  ]
+}
