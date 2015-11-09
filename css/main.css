@@ -35,7 +35,15 @@ span.close-browser:before { content: "\e903"; }
 #browser .browser-content .browser-content-header .form .music-type-select .icon-soundcloud { color: orange; }
 
 /* Sorry @matt, it doesn't fit my theme u_u */
-#player-controller, #player-controller > div.right { border-radius: 0 !important; border-top-right-radius: 0 !important; border-top-left-radius: 0 !important; }
+#player-controller, #player-controller > div.right {
+    border-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+}
+
+/* Chat avatars fix */
+#chat .chat-container .chat-messages .chat-main li .stream-item-content .image_row { border-radius: 15%; }
+#chat .chat-container .chat-messages .chat-main li .stream-item-content .image_row > img { max-width: none; max-height: 100% }
 
 /* Other fixes */
 .medium { top: 57.6px !important; } /* Background Fix */
