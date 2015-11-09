@@ -51,3 +51,4 @@ span.close-browser:before { content: "\e903"; }
 #profileMainSection { top: 58px; min-height: initial; max-height: calc(100vh - 114px); overflow-y: auto; } /* User profile scrollbar fix (wish I could use perfect-scrollbar with CSS) */
 #main-menu-left { top: 58px; height: calc(100% - 58px); padding-top: 3rem; } /* Left menu height fix */
 #chat .chat-container .chat-messages .chat-main li:not([class^="user-"]) { padding-bottom: .5rem; min-height: initial; } /* No user messages height fix */
+#chat .chat-container .chat-messages .chat-main li .activity-row .text img { display: block; } /* Chat images in new bar */
