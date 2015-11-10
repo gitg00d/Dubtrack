@@ -18,6 +18,9 @@
 #chat .chat-container .chat-messages .chat-main li.system-error { text-transform: uppercase; }
 #chat .chat-main .system, #chat .chat-main .chat-system-loading { text-align: center; color: #0090CC !important; }
 
+/* Room size fix */
+@media screen and (min-width: 72em) { #main-room .main-room-wrapper { min-height: 0; margin-bottom: 0; } }
+
 /* User banned fix */
 #chat .pusher-chat-widget-input p { text-align: center; font-weight: bold; color: #AB0000; }
 #chat .pusher-chat-widget-input p::after { content: " (You can't send messages)" }
