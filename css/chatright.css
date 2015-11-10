@@ -6,6 +6,7 @@
     width: 450px !important;
     border-radius: 0;
     float: right !important;
+    height: calc(100vh - 112px);
 }
-#main-room #chat .chat-container .chat-messages { height: inherit !important; }
+#main-room #chat .chat-container .chat-messages { height: inherit; }
 #main-room #chat .chat-container, #chat { height: 100%; }
