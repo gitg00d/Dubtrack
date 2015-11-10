@@ -1,0 +1,8 @@
+/* COMPLEMENTARY FILE, should be imported into another .css file */
+
+/* Main function */
+@media screen and (max-width: 72em) {
+    #main-room { padding: 92px 1px 112px; }
+    #main-room .right_section { border-radius: 0; }
+    #main_player { border-radius: 0; }
+}

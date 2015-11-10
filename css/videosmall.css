@@ -1,26 +1,28 @@
 /* COMPLEMENTARY FILE, should be imported into another .css file */
 
-/* Main function */
-#main-room .left_section { padding: 0; max-width: 32rem; margin-top: 0; }
-#main-room .left_section  .main-player-wrapper { display: initial; }
+@media screen and (min-width: 72em) { /* If not "phone mode" */
+    /* Main function */
+    #main-room .left_section { padding: 0; max-width: 32rem; margin-top: 0; }
+    #main-room .left_section  .main-player-wrapper { display: initial; }
 
-/* Buttons fix */
-#main-room .left_section #main_player .play-song-link {
-    width: 10rem;
-    font-size: .8rem;
-    padding: .75rem 1.5rem;
-    bottom: -3rem;
+    /* Buttons fix */
+    #main-room .left_section #main_player .play-song-link {
+        width: 10rem;
+        font-size: .8rem;
+        padding: .75rem 1.5rem;
+        bottom: -3rem;
+    }
+    #main-room .left_section #main_player { padding-bottom: .5rem; }
+    #main-room .left_section #main_player .play-song-link .queue-info { padding-top: .1rem; }
+    #main-room .left_section #main_player .player_sharing span { font-size: 1.25rem; }
+    #main_player .player_header {
+        width: 85px;
+        height: 100%;
+        top: 0 !important;
+        left: -85px;
+    }
+    #main_player .player_header span { margin: .125rem 0; float: right; }
+    #main_player .player_header span.skip-el { position: absolute; bottom: 0; right: 0; }
+    #main_player .player_header span.edit-room { padding: 1px 4px 0 4px; }
+    #main_player .player_header span.edit-room i { position: initial; }
 }
-#main-room .left_section #main_player { padding-bottom: .5rem; }
-#main-room .left_section #main_player .play-song-link .queue-info { padding-top: .1rem; }
-#main-room .left_section #main_player .player_sharing span { font-size: 1.25rem; }
-#main_player .player_header {
-    width: 85px;
-    height: 100%;
-    top: 0 !important;
-    left: -85px;
-}
-#main_player .player_header span { margin: .125rem 0; float: right; }
-#main_player .player_header span.skip-el { position: absolute; bottom: 0; right: 0; }
-#main_player .player_header span.edit-room { padding: 1px 4px 0 4px; }
-#main_player .player_header span.edit-room i { position: initial; }

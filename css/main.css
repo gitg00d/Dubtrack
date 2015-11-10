@@ -5,10 +5,13 @@
 @import url("https://rawgit.com/Netox005/Dubtrack/master/css/chatright.css"); /* Chat completly to the right */
 @import url("https://rawgit.com/Netox005/Dubtrack/master/css/videosmall.css"); /* Small video */
 @import url("https://rawgit.com/Netox005/Dubtrack/master/css/skynet.css"); /* @netuxbot custom chat */
+@import url("https://rawgit.com/Netox005/Dubtrack/master/css/phonefix.css"); /* Phone Fixes */
 
 /* Video next to chat */
-#main-room .left_section { left: initial; right: 450px; }
-#main-room .left_section #main_player { border-radius: 0; border-bottom-left-radius: 1rem; }
+@media screen and (min-width: 72em) {
+    #main-room .left_section { left: initial; right: 450px; }
+    #main-room .left_section #main_player { border-radius: 0; border-bottom-left-radius: 1rem; }
+}
 
 /* Chat formatting */
 #chat .chat-container .chat-messages .chat-main li.chat-welcome-message { color: white !important; }
@@ -42,7 +45,7 @@ span.close-browser:before { content: "\e903"; }
 }
 
 /* Chat avatars fix */
-#chat .chat-container .chat-messages .chat-main li .stream-item-content .image_row { border-radius: 15%; }
+#chat .chat-container .chat-messages .chat-main li .stream-item-content .image_row { border-radius: 10%; }
 #chat .chat-container .chat-messages .chat-main li .stream-item-content .image_row > img { max-width: none; max-height: 100% }
 
 /* Other fixes */

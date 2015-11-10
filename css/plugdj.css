@@ -13,7 +13,7 @@
   position: absolute;
   padding-right: 0;
 }
-#player-controller .right { right: calc((512px - 335px) / 2); top: 3rem; }
+#player-controller .right { right: calc(calc(512px - 335px) / 2); top: 3rem; }
 #main-room .right_section { height: calc(100% + 3.5rem);}
 #chat .pusher-chat-widget-input { background: #2f2f2f; }
 
