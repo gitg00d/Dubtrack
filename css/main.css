@@ -41,7 +41,7 @@ span.close-browser:before { content: "\e903"; }
 #browser .browser-content .browser-content-header .form .music-type-select .icon-soundcloud { color: orange; }
 
 /* Sorry @matt, it doesn't fit my theme u_u */
-#player-controller, #player-controller > div.right {
+#player-controller, #player-controller > div.right, #header-global {
     border-radius: 0 !important;
     border-top-right-radius: 0 !important;
     border-top-left-radius: 0 !important;
