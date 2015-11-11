@@ -82,12 +82,12 @@ span.close-browser:before { content: "\e903"; }
 
 /* Animations (yey) */
 #main-room .left_section #main_player .player_sharing span.icon-reload {
-    transition: transform .4s cubic-bezier(0, 0, .33, 1.5);
-    -webkit-transition: -webkit-transform .4s cubic-bezier(0, 0, .33, 1.5);
+    transition: transform .5s cubic-bezier(0, 0, .33, 1.5);
+    -webkit-transition: -webkit-transform .5s cubic-bezier(0, 0, .33, 1.5);
 }
 #main-room .left_section #main_player .player_sharing span.icon-reload:hover {
-    transition: transform .8s cubic-bezier(0, 0.58, 0.58, 1);
-    -webkit-transition: -webkit-transform .8s cubic-bezier(0, 0.58, 0.58, 1);
+    transition: transform .5s cubic-bezier(0.42, 1.2, 1, 1);
+    -webkit-transition: -webkit-transform .5s cubic-bezier(0.42, 1.2, 1, 1);
     transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
 }
