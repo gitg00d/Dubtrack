@@ -1,3 +1,5 @@
 {
-  "hi": "how are you today? :D"
+  "emojis": [
+    { "regex": "pepepls", "url": "http://i.imgur.com/tLKPb6I.gif" }
+  ]
 }
