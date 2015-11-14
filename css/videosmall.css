@@ -14,6 +14,7 @@
     }
     #main-room .left_section #main_player { padding-bottom: .5rem; }
     #main-room .left_section #main_player .play-song-link .queue-info { padding-top: .1rem; }
+    #main-room .left_section #main_player .play-song-link i { position: relative; top: .125rem; }
     #main-room .left_section #main_player .player_sharing span { font-size: 1.25rem; }
     #main_player .player_header {
         width: 85px;
