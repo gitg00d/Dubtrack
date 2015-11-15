@@ -51,6 +51,14 @@ span.close-browser:before { content: "\e903"; }
 #chat .chat-container .chat-messages .chat-main li .stream-item-content .image_row { border-radius: 10%; }
 #chat .chat-container .chat-messages .chat-main li .stream-item-content .image_row > img { max-width: none; max-height: 100% }
 
+/* Twitch Emotes (DubX) fixes */
+img.emoji.twitch-emoji[alt="fishmoley"] { min-width: 2.5rem; } /* fishmoley */
+img.emoji.twitch-emoji[alt="yetiz"] { min-width: 3rem; } /* :yetiz: */
+img.emoji.twitch-emoji[alt="lenny"] { min-width: 3.5rem; } /* :lenny: */
+img.emoji.twitch-emoji[alt="firespeed"] { min-width: 4rem; } /* firespeed */
+img.emoji.twitch-emoji[alt="shrug"] { min-width: 5rem; } /* :shrug: */
+img.emoji.twitch-emoji[alt="angelthump"], img.emoji.twitch-emoji[alt="taxibro"] { min-width: 4.5rem; } /* :angelthump:, :taxibro: */
+
 /* Other fixes */
 .medium { top: 57.6px !important; } /* Background Fix */
 .ps-container .ps-scrollbar-x, .ps-container .ps-scrollbar-y, .ps-container .ps-scrollbar-x-rail:hover .ps-scrollbar-x, .ps-container .ps-scrollbar-y-rail:hover .ps-scrollbar-y { background-color: #B1B1B1 } /* Scrollbars more visible */
@@ -74,9 +82,6 @@ span.close-browser:before { content: "\e903"; }
         font-size: 10rem;
     }
 }
-img.emoji.twitch-emoji[alt="lenny"] { min-width: 3.5rem; } /* :lenny: size fix */
-img.emoji.twitch-emoji[alt="shrug"] { min-width: 5rem; } /* :shrug: size fix */
-img.emoji.twitch-emoji[alt="angelthump"] { min-width: 4.5rem; } /* :angelthump: size fix */
 
 /* Other fixes in phone mode */
 @media screen and (max-width: 72em) {
