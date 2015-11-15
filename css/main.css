@@ -74,6 +74,7 @@ span.close-browser:before { content: "\e903"; }
         font-size: 10rem;
     }
 }
+img.emoji.twitch-emoji[alt="lenny"],  img.emoji.twitch-emoji[alt="shrug"] { min-width: 3rem; } /* :lenny: and :shrug: size fix */
 
 /* Other fixes in phone mode */
 @media screen and (max-width: 72em) {
