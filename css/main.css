@@ -82,6 +82,7 @@ img.emoji.twitch-emoji[alt="angelthump"], img.emoji.twitch-emoji[alt="taxibro"] 
         font-size: 10rem;
     }
 }
+#container-room-list .room-item.userRoom { border: 2px solid cadetblue; } /* User room with different color. */
 
 /* Other fixes in phone mode */
 @media screen and (max-width: 72em) {
