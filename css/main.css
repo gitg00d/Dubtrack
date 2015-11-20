@@ -83,6 +83,13 @@ img.emoji.twitch-emoji[alt="angelthump"], img.emoji.twitch-emoji[alt="taxibro"] 
     }
 }
 #container-room-list .room-item.userRoom { border: 2px solid cadetblue; } /* User room with different color. */
+time.timeago { /* Time ago on messages not selectable */
+    cursor: default;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
 
 /* Other fixes in phone mode */
 @media screen and (max-width: 72em) {
