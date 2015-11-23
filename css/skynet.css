@@ -1,5 +1,4 @@
 /* COMPLEMENTARY FILE, should be imported into another .css file */
-/* NETUXBOT: 561da9e034c45e0e0087b6d0 | NB3BOT: 56216481426d191300e5bfef */
 
 #chat .chat-main li.user-561da9e034c45e0e0087b6d0 .image_row, #chat .chat-main li.user-56216481426d191300e5bfef .image_row { display: none; }
 #chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row, #chat .chat-main li.user-56216481426d191300e5bfef .activity-row { width: 100% !important; padding: .5em .25em !important; }
@@ -19,14 +18,15 @@
     color: #878c8e;
     font-weight: 700;
     font-size: 12px;
-    font-size: .75rem;
 }
 
 #chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row .text p:first-of-type:before {
     content: "netuxbot";
     color: #C3FF00;
+    font-size: .75rem;
 }
 #chat .chat-main li.user-56216481426d191300e5bfef .activity-row .text p:first-of-type:before {
     content: "nb3bot";
     color: #7EC0EE;
+    font-size: .8rem;
 }
