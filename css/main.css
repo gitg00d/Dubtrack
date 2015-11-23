@@ -90,6 +90,7 @@ time.timeago { /* Time ago on messages not selectable */
     -webkit-user-select: none;
     user-select: none;
 }
+#avatar-list p.dubs span { font-family: monospace; font-size: 1.2rem } /* User list dubs num position fix */
 
 /* Other fixes in phone mode */
 @media screen and (max-width: 72em) {

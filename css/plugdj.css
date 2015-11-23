@@ -1,6 +1,6 @@
 /* PlugDJ alike file (NB3 Room) */
 
-@import url("https://rawgit.com/Netox005/Dubtrack/master/css/main.css"); /* Import main.css, which is the closest to what I'm doing */
+@import url("https://cloudy-netux.rhcloud.com/dubtrack/css/main.css"); /* Import main.css, which is the closest to what I'm doing */
 
 #player-controller {
   width: calc(100% - 450px);
