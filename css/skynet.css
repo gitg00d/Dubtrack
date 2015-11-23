@@ -1,12 +1,11 @@
 /* COMPLEMENTARY FILE, should be imported into another .css file */
+/* NETUXBOT: 561da9e034c45e0e0087b6d0 | NB3BOT: 56216481426d191300e5bfef */
 
-#chat .chat-main li.user-561da9e034c45e0e0087b6d0 .image_row { display: none; }
-#chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row { width: 100% !important; padding: .5em .25em !important; }
+#chat .chat-main li.user-561da9e034c45e0e0087b6d0 .image_row, #chat .chat-main li.user-56216481426d191300e5bfef .image_row { display: none; }
+#chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row, #chat .chat-main li.user-56216481426d191300e5bfef .activity-row { width: 100% !important; padding: .5em .25em !important; }
 
-#chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row .username { display: none !important; }
-#chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row .text p:first-of-type:before {
-    content: "netux-bot";
-    color: #C3FF00;
+#chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row .username, #chat .chat-main li.user-56216481426d191300e5bfef .activity-row .username { display: none !important; }
+#chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row .text p:first-of-type:before, #chat .chat-main li.user-56216481426d191300e5bfef .activity-row .text p:first-of-type:before {
     text-transform: uppercase;
     font-weight: 600;
     font-size: .75em;
@@ -14,12 +13,20 @@
     text-align: initial;
     display: block;
 }
-
-#chat .chat-main li.user-561da9e034c45e0e0087b6d0:hover .activity-row .meta-info::before {
-    content: "Unofficial Nightblue3 Room BOT";
+#chat .chat-main li.user-561da9e034c45e0e0087b6d0:hover .activity-row .meta-info::before, #chat .chat-main li.user-56216481426d191300e5bfef:hover .activity-row .meta-info::before {
+    content: "Nightblue3 Room BOT";
     position: absolute;
     color: #878c8e;
     font-weight: 700;
     font-size: 12px;
     font-size: .75rem;
+}
+
+#chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row .text p:first-of-type:before {
+    content: "netuxbot";
+    color: #C3FF00;
+}
+#chat .chat-main li.user-56216481426d191300e5bfef .activity-row .text p:first-of-type:before {
+    content: "nb3bot";
+    color: #7EC0EE;
 }
