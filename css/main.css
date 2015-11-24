@@ -13,11 +13,6 @@
     #main-room .left_section #main_player { border-radius: 0; border-bottom-left-radius: 1rem; }
 }
 
-/* Chat formatting */
-#chat .chat-container .chat-messages .chat-main li.chat-welcome-message { color: white !important; }
-#chat .chat-container .chat-messages .chat-main li.system-error { text-transform: uppercase; }
-#chat .chat-main .system, #chat .chat-main .chat-system-loading { text-align: center; color: #0090CC !important; }
-
 /* Room size fix */
 @media screen and (min-width: 72em) { #main-room .main-room-wrapper { min-height: 0; margin-bottom: 0; } }
 
@@ -91,6 +86,7 @@ time.timeago { /* Time ago on messages not selectable */
     user-select: none;
 }
 #avatar-list p.dubs span { font-family: monospace; font-size: 1.2rem } /* User list dubs num position fix */
+#chat .chat-main .system, #chat .chat-main .chat-system-loading { color: #0090CC !important; } /* Chat system message color fix */
 
 /* Other fixes in phone mode */
 @media screen and (max-width: 72em) {
