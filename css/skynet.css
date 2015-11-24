@@ -20,6 +20,8 @@
     font-size: 12px;
 }
 
+#chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row .text img { width: 100%; }
+
 #chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row .text p:first-of-type:before {
     content: "netuxbot";
     color: #C3FF00;
