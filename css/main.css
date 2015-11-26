@@ -26,8 +26,9 @@
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
+    text-transform: uppercase;
 }
-#chat .pusher-chat-widget-input p::after { content: " (You can't send messages)" }
+#chat .pusher-chat-widget-input p::after { content: " (You can't send messages)"; text-transform: none; }
 
 /* Add to playlist fixes */
 #addToPlaylistFloatContainer .create-playlist-header .icon-close { position: absolute; top: 15px; right: 15px; }
