@@ -54,7 +54,7 @@ span.close-browser:before { content: "\e903"; }
 
 /* Chat avatars fix */
 #chat .chat-container .chat-messages .chat-main li .stream-item-content .image_row { border-radius: 10%; }
-#chat .chat-container .chat-messages .chat-main li .stream-item-content .image_row > img { max-width: none; max-height: 100% }
+#chat .chat-container .chat-messages .chat-main li .stream-item-content .image_row > img { max-width: none; height: 100% }
 
 /* Twitch Emotes (DubX) fixes */
 img.emoji.twitch-emoji[alt="fishmoley"] { min-width: 2.5rem; } /* fishmoley */
