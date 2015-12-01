@@ -1,5 +1,4 @@
 /* COMPLEMENTARY FILE, should be imported into another .css file */
-/* dubtrack_bot user-565aa52e6fe207830052f57f */
 
 #chat .chat-main li.user-561da9e034c45e0e0087b6d0 .image_row,
 #chat .chat-main li.user-56216481426d191300e5bfef .image_row,
@@ -31,25 +30,34 @@
 #chat .chat-main li.user-561da9e034c45e0e0087b6d0:hover .activity-row .meta-info::before,
 #chat .chat-main li.user-56216481426d191300e5bfef:hover .activity-row .meta-info::before,
 #chat .chat-main li.user-565aa52e6fe207830052f57f:hover .activity-row .meta-info::before {
-    content: "Nightblue3 Room BOT";
     position: absolute;
     color: #878c8e;
     font-weight: 700;
     font-size: 12px;
 }
 
+#chat .chat-main li.user-561da9e034c45e0e0087b6d0:hover .activity-row .meta-info::before { content: "Lonely BOT without Room :("; }
+#chat .chat-main li.user-56216481426d191300e5bfef:hover .activity-row .meta-info::before { content: "Nightblue3 Room BOT"; }
+#chat .chat-main li.user-565aa52e6fe207830052f57f:hover .activity-row .meta-info::before { content: "Dubtrack Official BOT"; }
+
 #chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row .text p:first-of-type:before {
-    content: "netuxbot";
+    content: "netux bot";
     color: #C3FF00;
     font-size: .75rem;
 }
 #chat .chat-main li.user-56216481426d191300e5bfef .activity-row .text p:first-of-type:before {
-    content: "nb3bot";
+    content: "nightblue bot";
     color: #7EC0EE;
     font-size: .75rem;
+    padding-left: 1.5rem;
+    background: url("https://raw.githubusercontent.com/nightbloo/nightbloo.github.io/master/plug/icons/bot.png") no-repeat left top;
+    background-size: contain;
 }
 #chat .chat-main li.user-565aa52e6fe207830052f57f .activity-row .text p:first-of-type:before {
-    content: "dubtrackbot";
-    color: #7EC0EE;
-    font-size: .8rem;
+    content: "dubtrack bot";
+    color: #FF0097;
+    font-size: .75rem;
+    padding-left: 1.5rem;
+    background: url("https://res.cloudinary.com/hhberclba/image/upload/c_lpad,h_100,w_100/v1400351432/dubtrack_new_logo_fvpxa6.png") no-repeat left top;
+    background-size: contain;
 }
