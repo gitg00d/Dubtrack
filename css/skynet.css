@@ -1,10 +1,26 @@
 /* COMPLEMENTARY FILE, should be imported into another .css file */
+/* dubtrack_bot user-565aa52e6fe207830052f57f */
 
-#chat .chat-main li.user-561da9e034c45e0e0087b6d0 .image_row, #chat .chat-main li.user-56216481426d191300e5bfef .image_row { display: none; }
-#chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row, #chat .chat-main li.user-56216481426d191300e5bfef .activity-row { width: 100% !important; padding: .5em .25em !important; }
+#chat .chat-main li.user-561da9e034c45e0e0087b6d0 .image_row,
+#chat .chat-main li.user-56216481426d191300e5bfef .image_row,
+#chat .chat-main li.user-565aa52e6fe207830052f57f .image_row {
+    display: none;
+}
+#chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row,
+#chat .chat-main li.user-56216481426d191300e5bfef .activity-row,
+#chat .chat-main li.user-565aa52e6fe207830052f57f .activity-row  {
+    width: 100% !important;
+    padding: .5em .25em !important;
+}
 
-#chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row .username, #chat .chat-main li.user-56216481426d191300e5bfef .activity-row .username { display: none !important; }
-#chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row .text p:first-of-type:before, #chat .chat-main li.user-56216481426d191300e5bfef .activity-row .text p:first-of-type:before {
+#chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row .username,
+#chat .chat-main li.user-56216481426d191300e5bfef .activity-row .username,
+#chat .chat-main li.user-565aa52e6fe207830052f57f .activity-row .username{
+    display: none !important;
+}
+#chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row .text p:first-of-type:before,
+#chat .chat-main li.user-56216481426d191300e5bfef .activity-row .text p:first-of-type:before,
+#chat .chat-main li.user-565aa52e6fe207830052f57f .activity-row .text p:first-of-type:before {
     text-transform: uppercase;
     font-weight: 600;
     font-size: .75em;
@@ -12,15 +28,15 @@
     text-align: initial;
     display: block;
 }
-#chat .chat-main li.user-561da9e034c45e0e0087b6d0:hover .activity-row .meta-info::before, #chat .chat-main li.user-56216481426d191300e5bfef:hover .activity-row .meta-info::before {
+#chat .chat-main li.user-561da9e034c45e0e0087b6d0:hover .activity-row .meta-info::before,
+#chat .chat-main li.user-56216481426d191300e5bfef:hover .activity-row .meta-info::before,
+#chat .chat-main li.user-565aa52e6fe207830052f57f:hover .activity-row .meta-info::before {
     content: "Nightblue3 Room BOT";
     position: absolute;
     color: #878c8e;
     font-weight: 700;
     font-size: 12px;
 }
-
-#chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row .text img { width: 100%; }
 
 #chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row .text p:first-of-type:before {
     content: "netuxbot";
@@ -29,6 +45,11 @@
 }
 #chat .chat-main li.user-56216481426d191300e5bfef .activity-row .text p:first-of-type:before {
     content: "nb3bot";
+    color: #7EC0EE;
+    font-size: .75rem;
+}
+#chat .chat-main li.user-565aa52e6fe207830052f57f .activity-row .text p:first-of-type:before {
+    content: "dubtrackbot";
     color: #7EC0EE;
     font-size: .8rem;
 }
