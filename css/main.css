@@ -33,6 +33,11 @@
 /* Add to playlist fixes */
 #addToPlaylistFloatContainer .create-playlist-header .icon-close { position: absolute; top: 15px; right: 15px; }
 #addToPlaylistFloatContainer .create-playlist-header .icon-close:hover { color: cyan; }
+#addToPlaylistFloatContainer .create-playlist-input { background: #666A6B; border-bottom: 2px solid #878c8e; }
+#addToPlaylistFloatContainer .create-playlist-input .playlist-input { width: calc(100% - 2.75rem); border-right: 1px solid #878C8E; border-bottom: none; }
+#addToPlaylistFloatContainer .create-playlist-input .icon-add { top: 4px; }
+#addToPlaylistFloatContainer .playlist-list-action { padding-bottom: .5rem; margin-bottom: .75rem; max-height: 352px; }
+#addToPlaylistFloatContainer .playlist-list-action li:last-of-type { border-bottom: 1px solid #878c8e; }
 
 /* Browser fixes */
 #browser.animate { bottom: 56px; padding-top: 114px; }
@@ -54,9 +59,18 @@ span.close-browser:before { content: "\e903"; }
 
 /* Chat avatars fix */
 #chat .chat-container .chat-messages .chat-main li .stream-item-content .image_row { border-radius: 10%; }
-#chat .chat-container .chat-messages .chat-main li .stream-item-content .image_row > img { max-width: none; height: 100% }
+#chat .chat-container .chat-messages .chat-main li .stream-item-content .image_row > img {
+    max-width: none;
+    height: 100%;
+    /* Fix height > width images centering ?
+    -ms-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+    */
+}
 
-/* Twitch Emotes (DubX) fixes */
+/* Twitch Emotes (DubX) size fixes */
 img.emoji.twitch-emoji[alt="fishmoley"] { min-width: 2.5rem; } /* fishmoley */
 img.emoji.twitch-emoji[alt="yetiz"] { min-width: 3rem; } /* :yetiz: */
 img.emoji.twitch-emoji[alt="lenny"] { min-width: 3.5rem; } /* :lenny: */
