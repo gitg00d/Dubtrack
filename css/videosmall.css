@@ -17,32 +17,21 @@
     #main-room .left_section #main_player .play-song-link i { position: relative; top: .125rem; }
     #main-room .left_section #main_player .player_sharing span { font-size: 1.25rem; }
     #main_player .player_header {
-        width: 85px;
-        top: 16px !important;
-        height: 270px;
-        left: -2rem;
-    }
-    #main_player .player_header:after {
-        content: " ";
-        position: absolute;
-        width: 512px;
-        height: 100%;
-        left: 2rem;
-        background: black;
+        width: 73px;
+        top: 0 !important;
+        height: 286px;
+        left: -73px;
     }
     #main_player .player_header span {
-        float: left !important;
+        float: left;
         margin: .125rem 0;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
         position: relative;
-        left: -38px;
+        padding: .5rem 0 .5rem .5rem;
+        width: 73px;
     }
-    #main_player .player_header span.edit-room { padding: 1px 4px 0 4px; }
+    #main_player .player_header span.edit-room { padding: 1px 0 0 4px; float: right; width: initial; }
     #main_player .player_header span.edit-room i { position: initial; }
-    #main_player .player_header span.displayVideo-el { padding-left: 1.15rem; }
-    #main_player .player_header span.room-info-display { padding-left: 1.5rem; }
-    #main_player .player_header span.display-mods-controls { padding-left: 1.5rem; }
-    #main_player .player_header span.skip-el { position: absolute; bottom: 0; right: initial; padding-left: 1.6rem; }
-    #main_player .player_header span.edit-room { left: 0; }
+    #main_player .player_header span.skip-el { position: absolute; bottom: 0; right: initial; float: left; }
 }
