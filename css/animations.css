@@ -45,7 +45,7 @@
 #main_player .player_sharing .icon-facebook:hover { color: #3a5795; }
 #main_player .player_sharing .icon-twitter:hover { color: #55acee; }
 
-/* Volume full icon shaking on hover */
+/* Volume full icon shaking on appear */
 @-moz-keyframes shaking {
     0% { -moz-transform: translate(-1px); }
     100% { -moz-transform: translate(1px); }
@@ -58,7 +58,7 @@
     0% { transform: translate(-1px); }
     100% { transform: translate(1px); }
 }
-#main_player .player_sharing .mute .icon-sound-alt:hover::before {
+#main_player .player_sharing .mute .icon-sound-alt::before {
     -moz-animation-name: shaking;
     -moz-animation-duration: .075s;
     -moz-animation-iteration-count: 5;
