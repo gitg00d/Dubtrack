@@ -31,7 +31,7 @@
         background: black;
     }
     #main_player .player_header span {
-        float: left;
+        float: left !important;
         margin: .125rem 0;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
@@ -43,6 +43,6 @@
     #main_player .player_header span.displayVideo-el { padding-left: 1.15rem; }
     #main_player .player_header span.room-info-display { padding-left: 1.5rem; }
     #main_player .player_header span.display-mods-controls { padding-left: 1.5rem; }
-    #main_player .player_header span.skip-el { right: initial; padding-left: 1.6rem; }
+    #main_player .player_header span.skip-el { position: absolute; bottom: 0; right: initial; padding-left: 1.6rem; }
     #main_player .player_header span.edit-room { left: 0; }
 }
