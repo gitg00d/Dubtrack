@@ -65,10 +65,10 @@ ul.avatar-list li.user-netuxbot p.dubs:before,
 ul.avatar-list li.user-nb3bot p.dubs:before,
 ul.avatar-list li.user-dubtrack_bot p.dubs:before,
 ul.avatar-list li.user-chilloutroomba p.dubs:before {
-    content: "BOT - ";
+    content: "known bot - ";
     text-transform: uppercase;
     font-weight: bold;
-    color: #8751B7 !important;
+    color: #8751B7;
 }
 
 /* netuxbot */
@@ -81,7 +81,7 @@ ul.avatar-list li.user-chilloutroomba p.dubs:before {
 ul.avatar-list li.user-netuxbot p.username { color: #C3FF00; }
 ul.avatar-list li.user-netuxbot p.dubs:before {
     color: #C3FF00;
-    content: "BOT/CYBORG - "
+    content: "known bot and cyborg - "
 }
 
 /* nb3bot */
