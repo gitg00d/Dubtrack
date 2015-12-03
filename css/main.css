@@ -85,6 +85,7 @@ span.close-browser:before { content: "\e903"; }
     height: 100%;
     display: block;
     margin: auto;
+    border-radius: 10%;
 }
 
 /* Twitch Emotes (DubX) size fixes */
