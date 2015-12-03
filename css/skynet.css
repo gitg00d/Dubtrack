@@ -66,7 +66,6 @@ ul.avatar-list li.user-nb3bot p.dubs:before,
 ul.avatar-list li.user-dubtrack_bot p.dubs:before,
 ul.avatar-list li.user-chilloutroomba p.dubs:before {
     content: "known BOT - ";
-    text-transform: uppercase;
     font-weight: bold;
     color: #8751B7 !important;
 }
@@ -81,7 +80,7 @@ ul.avatar-list li.user-chilloutroomba p.dubs:before {
 ul.avatar-list li.user-netuxbot p.username { color: #C3FF00 !important; }
 ul.avatar-list li.user-netuxbot p.dubs:before {
     color: #C3FF00 !important;
-    content: "known BOT and Cyborg - "
+    content: "known BOT & Cyborg - "
 }
 
 /* nb3bot */
