@@ -1,0 +1,2 @@
+@import url("https://rawgit.com/Netox005/Dubtrack/master/css/main.css");
+#chat .chat-container .chat-messages .chat-main li.current-chat-user .activity-row .text .username { color: pink !important; }
