@@ -139,6 +139,7 @@ time.timeago { /* Time ago on messages not selectable */
 #chat .chat-main .system, #chat .chat-main .chat-system-loading { color: #0090CC !important; } /* Chat system message color fix */
 #room-main-player-container-soundcloud { background-color: #111111; } /* Make it look like Dubtrack logo fits player */
 .for_content { overflow-y: scroll !important; } /* Temporal Fix to DubX menu scrolling */
+img.emoji.twitch-emoji[alt="facepalm"] { background-color: white; }
 
 /* Other fixes in phone mode */
 @media screen and (max-width: 72em) {
