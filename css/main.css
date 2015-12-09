@@ -138,6 +138,7 @@ time.timeago { /* Time ago on messages not selectable */
 #avatar-list p.dubs span { font-family: monospace; font-size: 1.2rem } /* User list dubs num position fix */
 #chat .chat-main .system, #chat .chat-main .chat-system-loading { color: #0090CC !important; } /* Chat system message color fix */
 #room-main-player-container-soundcloud { background-color: #111111; } /* Make it look like Dubtrack logo fits player */
+.for_content { overflow: scroll !important; } /* Temporal Fix to DubX menu scrolling */
 
 /* Other fixes in phone mode */
 @media screen and (max-width: 72em) {
