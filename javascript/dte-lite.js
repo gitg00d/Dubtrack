@@ -385,5 +385,3 @@ DTELite.init = setInterval(function() {
     DTELite.render();
     console.log('Dubtrack Extras [Lite] → Started in ' + (Date.now() - loadTime) + ' miliseconds!');
 }, 100);
-
-console.log('AGH');

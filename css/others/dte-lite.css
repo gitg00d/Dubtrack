@@ -33,6 +33,6 @@
 { 0% { transform: translateY(-100%); } 5% { transform: translateY(0%); } 95% { transform: translateY(0%); } 100% { transform: translateY(-100%); } }
 
 #dte-lite_popup
-{ position: fixed; text-align: center; line-height: 1; z-index: 100; transform: translateY(-100%); padding: .25rem; background-color: black; opacity: .75; cursor: default; }
+{ position: fixed; text-align: center; line-height: 1; transform: translateY(-100%); padding: .25rem; background-color: black; opacity: .75; cursor: default; }
 #dte-lite_popup
 { -moz-animation: dte-lite_popup linear 5s; -webkit-animation: dte-lite_popup linear 5s; animation: dte-lite_popup linear 5s; }
