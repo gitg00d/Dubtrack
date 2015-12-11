@@ -15,7 +15,7 @@ var DTELite = {
     roomSettingsBool: false
 }
 DTELite.render = function() {
-    var stylesheetUrl = 'http://netox005.github.io/Dubtrack/css/others/dte-lite.css';
+    var stylesheetUrl = 'https://netox005.github.io/Dubtrack/css/others/dte-lite.css';
     DTELite.stylesheetEl = $('<link href="' + stylesheetUrl + '" rel="stylesheet" type="text/css"/>').appendTo('head');
 
     // > Room Favorites < \\
