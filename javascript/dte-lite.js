@@ -16,7 +16,7 @@ var DTELite = {
 }
 DTELite.render = function() {
     var stylesheetUrl = 'http://netox005.github.io/Dubtrack/css/others/dte-lite.css';
-    DTELite.stylesheetEl = $('<link href="' + stylesheetUrl + '" rel="stylesheet" type="text/css"/>');
+    DTELite.stylesheetEl = $('<link href="' + stylesheetUrl + '" rel="stylesheet" type="text/css"/>').appendTo('head');
 
     // > Room Favorites < \\
     var roomFavEl = $('<a href="#" class="room-fav" title="Add Room to Favorites"><span class="icon-heart"></span></a>').insertAfter('#main-room-active-link'),
