@@ -15,34 +15,8 @@ var DTELite = {
     roomSettingsBool: false
 }
 DTELite.render = function() {
-    $('head').append(['<style id="dte-stylesheet">',
-        '#chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite > *:last-of-type { margin-bottom: .3rem; }',
-        '#chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite span { padding: .5rem 0; position: relative; }',
-        '#chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite div { height: 2.6rem; position: relative; }',
-
-        '#chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite span.loading::before ',
-        '{ content: ""; position: absolute; top: 0; right: 0; width: 15px; height: 15px; background: url("http://i.imgur.com/fvR2AWg.gif") no-repeat 0 0; background-size: 100%; }',
-
-        '#chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite .toggleIcon { width: 13%; color: #990088 !important; }',
-        '#chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite .toggleIcon::before { content: "\\f217"; font-family: "foundation-icons"; line-height: 1; }',
-        '#chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite div.active .toggleIcon { color: cyan !important; }',
-        '#chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite div.active .toggleIcon::before { content: "\\f126"; }',
-
-        '#chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite .toggleText { width: 87%; color: #878c8e !important; padding: .5rem 1rem; text-align: left; }',
-        '#chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite div.active .toggleText { color: white !important; }',
-
-        '#header-global { padding: .7rem 1rem; }',
-        '#header-global .header-left-navigation .room-fav { position: relative; font-size: 1.5rem; top: .25rem; }',
-        '#header-global .header-left-navigation .room-fav span { line-height: 0; border-left: 2px solid cyan; padding-left: .75rem; }',
-        '#header-global .header-left-navigation .room-fav span::before { color: gray; }',
-        '#header-global .header-left-navigation .room-fav.active span::before { color: red; }',
-
-        '#container-room-list .room-item.userFav { border: 2px solid red; }',
-        '#container-room-list .room-item.userFav .roomImage .join { cursor: pointer; }',
-
-        '.nsfw-dialogbox { position: fixed; display: inline-block; background: #5A5A5A; padding: .25rem; font-size: .75rem; opacity: .8; z-index: 100; }',
-        '.nsfw-dialogbox::after { content: ""; position: absolute; border: 8px solid transparent; border-top-color: #5A5A5A; top: 100%; left: calc(50% - 8px); }',
-        '</style>'].join(''));
+    var stylesheetUrl = 'http://netox005.github.io/Dubtrack/css/others/dte-lite.css';
+    DTELite.stylesheetEl = $('<link href="' + stylesheetUrl + '" rel="stylesheet" type="text/css"/>');
 
     // > Room Favorites < \\
     var roomFavEl = $('<a href="#" class="room-fav" title="Add Room to Favorites"><span class="icon-heart"></span></a>').insertAfter('#main-room-active-link'),
@@ -224,6 +198,14 @@ DTELite.render = function() {
     // > Miscellaneous < \\
     DTELite.nsfwDialogBoxEl = $('<div class="nsfw-dialogbox">This link seems to be NSFW</div>').appendTo('body');
     DTELite.nsfwDialogBoxEl.hide();
+
+    DTELite.startUpPopupEl = $([
+        '<div id="dte-lite_popup">',
+            'Dubtrack-Extras [Lite]',
+            '<br/>',
+            'is now enabled',
+        '</div>'
+    ].join('')).appendTo('body');
 };
 var fileReader;
 DTELite.renderImgurUpload = function() {
@@ -403,3 +385,5 @@ DTELite.init = setInterval(function() {
     DTELite.render();
     console.log('Dubtrack Extras [Lite] → Started in ' + (Date.now() - loadTime) + ' miliseconds!');
 }, 100);
+
+console.log('AGH');

@@ -1,0 +1,38 @@
+#chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite > *:last-of-type { margin-bottom: .3rem; }
+#chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite span { padding: .5rem 0; position: relative; }
+#chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite div { height: 2.6rem; position: relative; }
+
+#chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite span.loading::before 
+{ content: ""; position: absolute; top: 0; right: 0; width: 15px; height: 15px; background: url("http://i.imgur.com/fvR2AWg.gif") no-repeat 0 0; background-size: 100%; }
+
+#chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite .toggleIcon { width: 13%; color: #990088 !important; }
+#chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite .toggleIcon::before { content: "\\f217"; font-family: "foundation-icons"; line-height: 1; }
+#chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite div.active .toggleIcon { color: cyan !important; }
+#chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite div.active .toggleIcon::before { content: "\\f126"; }
+
+#chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite .toggleText { width: 87%; color: #878c8e !important; padding: .5rem 1rem; text-align: left; }
+#chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite div.active .toggleText { color: white !important; }
+
+#header-global { padding: .7rem 1rem; }
+#header-global .header-left-navigation .room-fav { position: relative; font-size: 1.5rem; top: .25rem; }
+#header-global .header-left-navigation .room-fav span { line-height: 0; border-left: 2px solid cyan; padding-left: .75rem; }
+#header-global .header-left-navigation .room-fav span::before { color: gray; }
+#header-global .header-left-navigation .room-fav.active span::before { color: red; }
+
+#container-room-list .room-item.userFav { border: 2px solid red; }
+#container-room-list .room-item.userFav .roomImage .join { cursor: pointer; }
+
+.nsfw-dialogbox { position: fixed; display: inline-block; background: #5A5A5A; padding: .25rem; font-size: .75rem; opacity: .8; z-index: 100; }
+.nsfw-dialogbox::after { content: ""; position: absolute; border: 8px solid transparent; border-top-color: #5A5A5A; top: 100%; left: calc(50% - 8px); }
+
+@-moz-keyframes dte-lite_popup
+{ 0% { -moz-transform: translateY(-100%); } 5% { -moz-transform: translateY(0%); } 95% { -moz-transform: translateY(0%); } 100% { -moz-transform: translateY(-100%); } }
+@-webkit-keyframes dte-lite_popup
+{ 0% { -webkit-transform: translateY(-100%); } 5% { -webkit-transform: translateY(0%); } 95% { -webkit-transform: translateY(0%); } 100% { -webkit-transform: translateY(-100%); } }
+@keyframes dte-lite_popup
+{ 0% { transform: translateY(-100%); } 5% { transform: translateY(0%); } 95% { transform: translateY(0%); } 100% { transform: translateY(-100%); } }
+
+#dte-lite_popup
+{ position: fixed; text-align: center; line-height: 1; z-index: 100; transform: translateY(-100%); padding: .25rem; background-color: black; opacity: .75; cursor: default; }
+#dte-lite_popup
+{ -moz-animation: dte-lite_popup linear 5s; -webkit-animation: dte-lite_popup linear 5s; animation: dte-lite_popup linear 5s; }
