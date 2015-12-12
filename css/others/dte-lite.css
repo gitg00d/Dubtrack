@@ -6,9 +6,9 @@
 { content: ""; position: absolute; top: 0; right: 0; width: 15px; height: 15px; background: url("http://i.imgur.com/fvR2AWg.gif") no-repeat 0 0; background-size: 100%; }
 
 #chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite .toggleIcon { width: 13%; color: #990088 !important; }
-#chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite .toggleIcon::before { content: "\\f217"; font-family: "foundation-icons"; line-height: 1; }
+#chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite .toggleIcon::before { content: "\f217"; font-family: "foundation-icons"; line-height: 1; }
 #chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite div.active .toggleIcon { color: cyan !important; }
-#chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite div.active .toggleIcon::before { content: "\\f126"; }
+#chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite div.active .toggleIcon::before { content: "\f126"; }
 
 #chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite .toggleText { width: 87%; color: #878c8e !important; padding: .5rem 1rem; text-align: left; }
 #chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite div.active .toggleText { color: white !important; }
