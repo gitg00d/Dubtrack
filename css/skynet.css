@@ -70,6 +70,16 @@ ul.avatar-list li.user-chilloutroomba p.dubs:before {
     color: #8751B7 !important;
 }
 
+/* Fix for @matt christmas stylesheet */
+#chat > div.chat-container > div.chat-messages.ps-container ul li.user-561da9e034c45e0e0087b6d0 div.stream-item-content::before,
+#chat > div.chat-container > div.chat-messages.ps-container ul li.user-56216481426d191300e5bfef div.stream-item-content::before,
+#chat > div.chat-container > div.chat-messages.ps-container ul li.user-565aa52e6fe207830052f57f div.stream-item-content::before,
+#chat > div.chat-container > div.chat-messages.ps-container ul li.user-56208ef772fbd14400119c64 div.stream-item-content::before {
+    transform: scale(.4,.5);
+    top: -8px;
+    left: -11px;
+}
+
 /* netuxbot */
 #chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row .text p:first-of-type:before {
     content: "netux bot";
