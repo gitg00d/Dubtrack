@@ -1,12 +1,12 @@
 /* Main file (NB3 room) */
 
 /* Imports */
-@import url("https://rawgit.com/Netox005/Dubtrack/master/css/voteicons.css"); /* NB3 Vote Icons */
-@import url("https://rawgit.com/Netox005/Dubtrack/master/css/chatright.css"); /* Chat completly to the right */
-@import url("https://rawgit.com/Netox005/Dubtrack/master/css/videosmall.css"); /* Small video */
-@import url("https://rawgit.com/Netox005/Dubtrack/master/css/skynet.css"); /* @netuxbot custom chat */
-@import url("https://rawgit.com/Netox005/Dubtrack/master/css/phonefix.css"); /* Phone Fixes */
-@import url("https://rawgit.com/Netox005/Dubtrack/master/css/animations.css"); /* Animations */
+@import url("https://netox005.github.io/Dubtrack/css/voteicons.css"); /* NB3 Vote Icons */
+@import url("https://netox005.github.io/Dubtrack/css/chatright.css"); /* Chat completly to the right */
+@import url("https://netox005.github.io/Dubtrack/css/videosmall.css"); /* Small video */
+@import url("https://netox005.github.io/Dubtrack/css/skynet.css"); /* @netuxbot custom chat */
+@import url("https://netox005.github.io/Dubtrack/css/phonefix.css"); /* Phone Fixes */
+@import url("https://netox005.github.io/Dubtrack/css/animations.css"); /* Animations */
 
 /* Video next to chat */
 @media screen and (min-width: 72em) {
@@ -77,15 +77,16 @@ span.close-browser:before { content: "\e903"; }
     border-top-right-radius: 0 !important;
     border-top-left-radius: 0 !important;
 }
+#chat .chat-container li.isDefault.current-chat-user a.username { color: gold !important; }
 
 /* Chat avatars fix */
-#chat .chat-container .chat-messages .chat-main li .stream-item-content .image_row { border-radius: 10%; }
+/*#chat .chat-container .chat-messages .chat-main li .stream-item-content .image_row { border-radius: 10%; }*/
 #chat .chat-container .chat-messages .chat-main li .stream-item-content .image_row > img {
     max-width: none;
     height: 100%;
     display: block;
     margin: auto;
-    border-radius: 10%;
+    /*border-radius: 10%;*/
 }
 
 /* Twitch Emotes (DubX) size fixes */
