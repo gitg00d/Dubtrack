@@ -127,6 +127,8 @@ img.emoji.twitch-emoji[alt="angelthump"], img.emoji.twitch-emoji[alt="taxibro"] 
     }
     /* HD toggle position */
     #main-room .left_section #main_player .player_sharing .videoquality-el { top: -3px; }
+    /* Fix footer vote section width */
+    #player-controller .right { width: 26.7% !important; }
 }
 #container-room-list .room-item.userRoom { border: 2px solid cadetblue; } /* User room with different color. */
 time.timeago { /* Time ago on messages not selectable */
@@ -140,7 +142,8 @@ time.timeago { /* Time ago on messages not selectable */
 #chat .chat-main .system, #chat .chat-main .chat-system-loading { color: #0090CC !important; } /* Chat system message color fix */
 #room-main-player-container-soundcloud { background-color: #111111; } /* Make it look like Dubtrack logo fits player */
 .for_content { overflow-y: scroll !important; } /* Temporal Fix to DubX menu scrolling */
-img.emoji.twitch-emoji[alt="facepalm"] { background-color: white; }
+img.emoji.twitch-emoji[alt="facepalm"] { background-color: white; } /* Facepalm coloring fix */
+
 
 /* Other fixes in phone mode */
 @media screen and (max-width: 72em) {
