@@ -127,8 +127,6 @@ img.emoji.twitch-emoji[alt="angelthump"], img.emoji.twitch-emoji[alt="taxibro"] 
     }
     /* HD toggle position */
     #main-room .left_section #main_player .player_sharing .videoquality-el { top: -3px; }
-    /* Fix footer vote section width */
-    #player-controller .right { width: 26.7% !important; }
 }
 #container-room-list .room-item.userRoom { border: 2px solid cadetblue; } /* User room with different color. */
 time.timeago { /* Time ago on messages not selectable */
