@@ -2,7 +2,7 @@
 #chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite span { padding: .5rem 0; position: relative; }
 #chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite div { height: 2.6rem; position: relative; }
 
-#chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite span.loading::before 
+#chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite span.loading::before
 { content: ""; position: absolute; top: 0; right: 0; width: 15px; height: 15px; background: url("http://i.imgur.com/fvR2AWg.gif") no-repeat 0 0; background-size: 100%; }
 
 #chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite .toggleIcon { width: 13%; color: #990088 !important; }
