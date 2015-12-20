@@ -2,7 +2,12 @@
 
 @media screen and (min-width: 72em) { /* If not "phone mode" */
     /* Main function */
-    #main-room .left_section { padding: 0; max-width: 32rem; margin-top: 0; }
+    #main-room .left_section {
+        padding: 0;
+        max-width: 35.6%;
+        min-width: 450px;
+        margin-top: 0;
+    }
     #main-room .left_section  .main-player-wrapper { display: initial; }
 
     /* Buttons fix */
@@ -19,7 +24,7 @@
     #main_player .player_header {
         width: 73px;
         top: 0 !important;
-        height: 286px;
+        height: 19.9vw;
         left: -73px;
     }
     #main_player .player_header span {
