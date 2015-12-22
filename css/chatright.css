@@ -2,12 +2,12 @@
 
 @media screen and (min-width: 72em) { /* If not "phone mode" */
     /* Main functions */
-    #main-room { max-width: initial; padding: 3.5rem 0; }
+    #main-room { max-width: initial; padding: 3.4rem 0; }
     #main-room .right_section {
         width: 450px !important;
         border-radius: 0;
         float: right !important;
-        height: calc(100vh - 112px);
+        height: calc(100vh - 110px);
     }
     #main-room #chat .chat-container .chat-messages { height: inherit; }
     #main-room #chat .chat-container, #chat { height: 100%; }
