@@ -97,7 +97,7 @@ img.emoji.twitch-emoji[alt="shrug"] { min-width: 5rem; } /* :shrug: */
 img.emoji.twitch-emoji[alt="angelthump"], img.emoji.twitch-emoji[alt="taxibro"] { min-width: 4.5rem; } /* :angelthump:, :taxibro: */
 
 /* Other fixes */
-.medium { top: 56px !important; } /* Background Fix */
+.medium { top: 54px !important; } /* Background Fix */
 .ps-container .ps-scrollbar-x, .ps-container .ps-scrollbar-y, .ps-container .ps-scrollbar-x-rail:hover .ps-scrollbar-x, .ps-container .ps-scrollbar-y-rail:hover .ps-scrollbar-y { background-color: #B1B1B1 } /* Scrollbars more visible */
 #profileMainSection { top: 58px; min-height: calc(100vh - 114px); max-height: calc(100vh - 114px); overflow-y: auto; } /* User profile scrollbar fix (wish I could use perfect-scrollbar with CSS) */
 #main-menu-left { top: 58px; height: calc(100% - 58px); padding-top: 3rem; } /* Left menu height fix */
