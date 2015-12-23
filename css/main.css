@@ -99,7 +99,7 @@ img.emoji.twitch-emoji[alt="angelthump"], img.emoji.twitch-emoji[alt="taxibro"] 
 /* Other fixes */
 .medium { top: 54px !important; } /* Background Fix */
 .ps-container .ps-scrollbar-x, .ps-container .ps-scrollbar-y, .ps-container .ps-scrollbar-x-rail:hover .ps-scrollbar-x, .ps-container .ps-scrollbar-y-rail:hover .ps-scrollbar-y { background-color: #B1B1B1 } /* Scrollbars more visible */
-#profileMainSection { top: 58px; min-height: calc(100vh - 114px); max-height: calc(100vh - 114px); overflow-y: auto; } /* User profile scrollbar fix (wish I could use perfect-scrollbar with CSS) */
+#profileMainSection { top: 3.4rem; min-height: initial; max-height: calc(100vh - 6.9rem); overflow-y: auto; } /* User profile scrollbar fix (wish I could use perfect-scrollbar with CSS) */
 #main-menu-left { top: 58px; height: calc(100% - 58px); padding-top: 3rem; } /* Left menu height fix */
 #chat .chat-container .chat-messages .chat-main li:not([class^="user-"]) { padding-bottom: .5rem; min-height: initial; } /* No user messages height fix */
 #chat .chat-container .chat-messages .chat-main li .activity-row .text img { display: block; } /* Chat images in new bar */
