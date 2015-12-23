@@ -1,4 +1,4 @@
-var triangles_target = ".userCustomB", triangles_to = null, triangles_init = true, triangles_zIndex = -999997;
+var triangles_target = ".medium", triangles_to = null, triangles_init = true, triangles_zIndex = -999997;
 
 $("head").append('<style>.triangle { position: fixed; width: 0; height: 0; border-left: 1px solid transparent; border-right: 1px solid transparent; border-bottom: 2px solid black; } </style>');
 
