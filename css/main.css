@@ -96,10 +96,22 @@ img.emoji.twitch-emoji[alt="firespeed"] { min-width: 4rem; } /* firespeed */
 img.emoji.twitch-emoji[alt="shrug"] { min-width: 5rem; } /* :shrug: */
 img.emoji.twitch-emoji[alt="angelthump"], img.emoji.twitch-emoji[alt="taxibro"] { min-width: 4.5rem; } /* :angelthump:, :taxibro: */
 
-/* Profile Fixes */
+/* Profile fixes */
 #profileMainSection { top: 3.4rem; min-height: initial; height: calc(100vh - 6.9rem); overflow-y: auto; }
 #profileMainSection .profileWrapper { margin-top: 3rem; }
 #profileMainSection #profileSidebar #followersEl { margin-bottom: 3rem; }
+
+/* User banned/message deleted fix */
+#chat .chat-container .chat-messages .chat-main li.deleted-message .stream-item-content .image_row > img { visibility: hidden; }
+#chat .chat-container .chat-messages .chat-main li.deleted-message .stream-item-content .image_row::before {
+    content: "X";
+    position: absolute;
+    top: 3px;
+    left: 14px;
+    font-weight: 900;
+    color: red;
+    font-size: 1.5rem;
+}
 
 /* Other fixes */
 .medium { top: 54px !important; } /* Background Fix */
