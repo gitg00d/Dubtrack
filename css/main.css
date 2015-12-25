@@ -120,7 +120,7 @@ img.emoji.twitch-emoji[alt="angelthump"], img.emoji.twitch-emoji[alt="taxibro"] 
 .playerPreview .loaded,
 .playerPreview .progress
 { animation-duration: 25s !important; }
-#volume-bar, #volume-bar div { background: #0ff !important; animation: none !important; }
+#volume-div, #volume-div > div { background: #0ff !important; animation: none !important; }
 
 /* Other fixes */
 .medium { top: 54px !important; } /* Background Fix */
