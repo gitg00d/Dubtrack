@@ -76,3 +76,6 @@
 #main-room .left_section #main_player .player_sharing .videoquality-el { transition: text-shadow, color; transition-duration: .25s; }
 #main-room .left_section #main_player .player_sharing .videoquality-el.active-hd { text-shadow: 0 0 5px white; }
 #main-room .left_section #main_player .player_sharing .videoquality-el:hover { text-shadow: 0 0 5px #BBBBBB; }
+
+/* Progress Bar smooth transition */
+#player-controller .left ul li.infoContainer .infoContainerInner .progressBg { transition: width 1s; transition-timing-function: linear; }
