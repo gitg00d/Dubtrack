@@ -7,7 +7,7 @@
 @import url("https://netox005.github.io/Dubtrack/css/skynet.css"); /* @netuxbot custom chat */
 @import url("https://netox005.github.io/Dubtrack/css/phonefix.css"); /* Phone Fixes */
 @import url("https://netox005.github.io/Dubtrack/css/animations.css"); /* Animations */
-@import url("https://rawgit.com/Netox005/Hebgbs.github.io/master/rainbowstuff.css"); /* [TEMPORAL LINK] Rainbowstuff (Progress bar and volume bar) */
+@import url("https://hebgbs.github.io/rainbowstuff.css"); /* Rainbowstuff (Progress bar and volume bar) */
 
 /* Video next to chat */
 @media screen and (min-width: 72em) {
@@ -115,11 +115,7 @@ img.emoji.twitch-emoji[alt="angelthump"], img.emoji.twitch-emoji[alt="taxibro"] 
 }
 
 /* Rainbowstuff.css fixes */
-#player-controller .left,
-#player-controller .progressBg,
-.playerPreview .loaded,
-.playerPreview .progress
-{ animation-duration: 25s !important; }
+#player-controller .left, #player-controller .left .progressBg, .playerPreview .loaded, .playerPreview .progress { animation-duration: 25s !important; }
 #volume-div, #volume-div > div { background: #0ff !important; animation: none !important; }
 
 /* Other fixes */
