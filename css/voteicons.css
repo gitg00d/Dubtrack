@@ -7,3 +7,14 @@
 #player-controller .right ul li .icon-heart:before { content: url('https://raw.githubusercontent.com/nightbloo/nightbloo.github.io/master/plug/icons/grab.png'); }
 #player-controller .right ul li .dubup .icon-arrow-up:before { content: url('https://raw.githubusercontent.com/nightbloo/nightbloo.github.io/master/plug/icons/woot.png'); }
 #player-controller .right ul li .dubdown .icon-arrow-down:before { content: url('https://raw.githubusercontent.com/nightbloo/nightbloo.github.io/master/plug/icons/meh.png'); }
+
+/* ↓ Thanks to @hebgbs for the fixed position ↓ */
+#player-controller .right ul li .dub-counter,
+#player-controller .right ul li .grab-counter {
+    position: relative;
+    top: -7px;
+}
+#player-controller .right ul li:nth-child(n+2):nth-child(n-5){
+    position: relative;
+    top: -4px !Important;
+}
