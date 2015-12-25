@@ -8,11 +8,17 @@ dubtrackMouseParallax.state = function(enable) {
         dubtrackMouseParallax._target.css('top', 0);
         dubtrackMouseParallax._target.css('left', 0);
         $('#parallax-video_fix').remove();
-    } else $('<style id="parallax-video_fix">#room-main-player-container::after { content: ""; width: 100%; height: 100%; position: absolute; background: rgba(0,0,0,.1) }</style>').appendTo('head');
+    } else $('<style id="parallax-video_fix">#room-main-player-container::after { content: ""; width: 100%; height: 100%; position: absolute; background: rgba(0,0,0,.001); z-index: 5; }</style>').appendTo('head');
 };
 dubtrackMouseParallax.init = function() {
     dubtrackMouseParallax._target.parent().css('overflow', 'hidden');
     var parallaxEvent;
+    $(document).keydown(function(e) {
+        if(e.target === $('#chat-txt-message')[0]) return;
+        if(e.keyCode || e.which === 80)
+            dubtrackMouseParallax.state(true);
+    });
+    $(document).keyup(function(e) { if(e.keyCode || e.which === 80) dubtrackMouseParallax.state(false); });
     $(document).mousemove(parallaxEvent = function(e) {
         if(!dubtrackMouseParallax.enabled) return;
         this.lastMousePos = { top: e.pageY, left: e.pageX };
