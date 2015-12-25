@@ -102,7 +102,7 @@ img.emoji.twitch-emoji[alt="angelthump"], img.emoji.twitch-emoji[alt="taxibro"] 
 #profileMainSection #profileSidebar #followersEl { margin-bottom: 3rem; }
 
 /* User banned/message deleted fix */
-#chat .chat-container .chat-messages .chat-main li.deleted-message .stream-item-content .image_row > img { visibility: hidden; }
+#chat .chat-container .chat-messages .chat-main li.deleted-message .stream-item-content .image_row > img { opacity: .01; }
 #chat .chat-container .chat-messages .chat-main li.deleted-message .stream-item-content .image_row::before {
     content: "X";
     position: absolute;
