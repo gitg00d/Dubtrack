@@ -31,4 +31,5 @@ dubtrackMouseParallax.init = function() {
     });
     parallaxEvent.lastMousePos = { top: window.innerHeight / 2, left: window.innerWidth / 2 };
 };
-$(function() { dubtrackMouseParallax.init(true); });
+if(/ready|complete/.test(document.readyState)) dubtrackMouseParallax.init();
+else $(function() { dubtrackMouseParallax.init(); });
