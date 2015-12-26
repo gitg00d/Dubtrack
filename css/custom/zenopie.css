@@ -1,0 +1,36 @@
+/* Imports */
+@import url("https://netox005.github.io/Dubtrack/css/chatright.css"); /* Chat completely to the right */
+
+/* Remove "Queue a song" buttons */
+#main_player .play-song-link { display: none; }
+
+@media screen and (min-width: 72em) {
+    #main-room .left_section { padding-right: 450px; margin-top: 0; }
+    #main-room .left_section .main-player-wrapper { display: initial; }
+    #main_player { border-radius: 0; padding: 0 1.5vw; position: initial; }
+    #main_player .player_sharing, #main_player .player_header { width: calc(50% - 450px / 2); }
+    #main_player .player_sharing {
+        line-height: 0;
+        padding: 1.19vh 1rem 1rem;
+        position: absolute;
+        right: 450px;
+        background-color: rgba(0,0,0,.7);
+        margin: 0;
+    }
+    #main_player .player_header {
+        top: initial;
+        bottom: 0;
+        left: 0;
+        display: table;
+    }
+    #main_player .player_header span {
+        display: table-cell !important;
+        border-radius: 0;
+        float: initial !important;
+        width: calc(100% / 6);
+        padding: 1.5vh 0;
+    }
+    #main_player .player_header span.edit-room i { line-height: .7; width: 100%; text-align: center; }
+}
+
+/* Requested by zenopie */
