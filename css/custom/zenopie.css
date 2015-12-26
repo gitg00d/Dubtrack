@@ -11,7 +11,7 @@
     #main_player .player_sharing, #main_player .player_header { width: calc(50% - 450px / 2); }
     #main_player .player_sharing {
         line-height: 0;
-        padding: 1.19vh 1rem 1rem;
+        padding: 1.2vh 1rem;
         position: absolute;
         right: 450px;
         background-color: rgba(0,0,0,.7);
