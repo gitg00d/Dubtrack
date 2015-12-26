@@ -16,6 +16,7 @@
         right: 450px;
         background-color: rgba(0,0,0,.7);
         margin: 0;
+        bottom: 0;
     }
     #main_player .player_header {
         top: initial;
