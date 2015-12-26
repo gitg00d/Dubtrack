@@ -7,7 +7,7 @@
 @media screen and (min-width: 72em) {
     #main-room .left_section { padding-right: 450px; margin-top: 0; }
     #main-room .left_section .main-player-wrapper { display: initial; }
-    #main_player { border-radius: 0; padding: 0 1.5vw; position: initial; }
+    #main_player { border-radius: 0; padding: 0 2.19vw; position: initial; }
     #main_player .player_sharing, #main_player .player_header { width: calc(50% - 450px / 2); }
     #main_player .player_sharing {
         line-height: 0;
@@ -35,3 +35,4 @@
 }
 
 /* Requested by zenopie */
+/* Intended to be used on Mozilla Firefox, maximized on a resolution of 1336x768 */
