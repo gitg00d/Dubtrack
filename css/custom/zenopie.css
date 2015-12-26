@@ -7,8 +7,14 @@
 @media screen and (min-width: 72em) {
     #main-room .left_section { padding-right: 450px; margin-top: 0; }
     #main-room .left_section .main-player-wrapper { display: initial; }
-    #main_player { border-radius: 0; padding: 0 2.19vw; position: initial; }
-    #main_player .player_sharing, #main_player .player_header { width: calc(50% - 450px / 2); }
+    #main_player { border-radius: 0; padding: .5vh 0; position: initial; }
+    #main_player .player_header, #main_player .player_sharing {
+        width: calc(50% - 450px / 2);
+        z-index: 6;
+        bottom: .5vh;
+        opacity: 0;
+        transition: opacity 0s;
+    }
     #main_player .player_sharing {
         line-height: 0;
         padding: 1.2vh 1rem;
@@ -16,13 +22,11 @@
         right: 450px;
         background-color: rgba(0,0,0,.7);
         margin: 0;
-        bottom: 0;
+        display: table;
     }
     #main_player .player_header {
         top: initial;
-        bottom: 0;
         left: 0;
-        display: table;
     }
     #main_player .player_header span {
         display: table-cell !important;
@@ -32,6 +36,8 @@
         padding: 1.5vh 0;
     }
     #main_player .player_header span.edit-room i { line-height: .7; width: 100%; text-align: center; }
+    #main_player:hover .player_header, #main_player:hover .player_sharing { opacity: 1; }
+    #main_player:hover .player_sharing { display: block; }
 }
 
 /* Requested by zenopie */
