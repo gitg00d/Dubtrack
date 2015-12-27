@@ -12,7 +12,7 @@
 /* Video next to chat */
 @media screen and (min-width: 72em) {
     #main-room .left_section { left: initial; right: 449px; }
-    #main-room .left_section #main_player { border-radius: 0; border-bottom-left-radius: 1rem; }
+    #main-room .left_section #main_player { border-radius: 0 0 0 1rem; }
 }
 
 /* Room size fix */
@@ -71,14 +71,6 @@ span.close-browser:before { content: "\e903"; }
 #browser .browser-content .browser-content-header .form .music-type-select .music-type-dropdown span:hover { background: #6D6D6D;  }
 #browser .browser-content .browser-content-header .form .music-type-select .icon-youtube { color: red; }
 #browser .browser-content .browser-content-header .form .music-type-select .icon-soundcloud { color: orange; }
-
-/* Sorry @matt, it doesn't fit my theme u_u */
-#player-controller, #player-controller > div.right, #header-global {
-    border-radius: 0 !important;
-    border-top-right-radius: 0 !important;
-    border-top-left-radius: 0 !important;
-}
-#chat .chat-container li.isDefault.current-chat-user a.username { color: gold !important; }
 
 /* Chat avatars fix */
 /*#chat .chat-container .chat-messages .chat-main li .stream-item-content .image_row { border-radius: 10%; }*/
@@ -141,8 +133,8 @@ time.timeago { /* Time ago on messages not selectable */
 }
 #avatar-list p.dubs span { font-family: monospace; font-size: 1.2rem } /* User list dubs num position fix */
 #chat .chat-main .system, #chat .chat-main .chat-system-loading { color: #0090CC !important; } /* Chat system message color fix */
-#room-main-player-container-soundcloud { background-color: #111111; } /* Make it look like Dubtrack logo fits player */
 img.emoji.twitch-emoji[alt="facepalm"] { background-color: white; } /* Facepalm coloring fix */
+#chat .chat-container li.isDefault.current-chat-user a.username { color: gold !important; } /* Gold color on user if it's pleb */
 
 
 /* Other fixes in phone mode */
