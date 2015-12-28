@@ -135,7 +135,7 @@ time.timeago { /* Time ago on messages not selectable */
 #chat .chat-main .system, #chat .chat-main .chat-system-loading { color: #0090CC !important; } /* Chat system message color fix */
 img.emoji.twitch-emoji[alt="facepalm"] { background-color: white; } /* Facepalm coloring fix */
 #chat .chat-container li.isDefault.current-chat-user a.username { color: gold !important; } /* Gold color on user if it's pleb */
-
+body.no-song-playing #player-controller .infoContainerInner:after { display: none; } /* Fake progress bar not visible when no song is playing */
 
 /* Other fixes in phone mode */
 @media screen and (max-width: 72em) {
