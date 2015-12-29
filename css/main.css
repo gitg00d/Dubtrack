@@ -107,6 +107,10 @@ img.emoji.twitch-emoji[alt="angelthump"], img.emoji.twitch-emoji[alt="taxibro"] 
     font-size: 1.5rem;
 }
 
+/* Soundcloud player fixes */
+#room-main-player-container-soundcloud { background-color: #111111; cursor: default; }
+#main_player .player_container #room-main-player-container .playerElement.soundcloud img { pointer-events: none; }
+
 /* Other fixes */
 .medium { top: 54px !important; } /* Background Fix */
 .ps-container .ps-scrollbar-x, .ps-container .ps-scrollbar-y, .ps-container .ps-scrollbar-x-rail:hover .ps-scrollbar-x, .ps-container .ps-scrollbar-y-rail:hover .ps-scrollbar-y { background-color: #B1B1B1 } /* Scrollbars more visible */
@@ -140,7 +144,6 @@ body.no-song-playing #player-controller .infoContainerInner:after { display: non
 #main-loading { background: transparent linear-gradient(to bottom, transparent 66px, #0ff 66px, #0ff 100%) !important; } /* Cyan loading message poping out of header fix, thanks @Hebgbs */
 #player-controller .right ul li .dubdown.voted { background-color: #f0a; } /* Different grab and downdub colors */
 #chat .chat_tools span:hover { color: #fff !important; } /* Chat tools always white on hover fix */
-#room-main-player-container-soundcloud { background-color: #111111; } /* Make it look like Dubtrack logo fits player */
 
 /* Other fixes in phone mode */
 @media screen and (max-width: 72em) {
