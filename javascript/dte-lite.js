@@ -19,6 +19,7 @@ DTELite.render = function() {
     DTELite.stylesheetEl = $('<link href="' + stylesheetUrl + '" rel="stylesheet" type="text/css"/>').appendTo('head');
 
     // > Room Favorites < \\
+    /*
     var roomFavEl = $('<a href="#" class="room-fav" title="Add Room to Favorites"><span class="icon-heart"></span></a>').insertAfter('#main-room-active-link'),
         roomFavsStr = localStorage.getItem('dte-roomfavs');
     roomFavEl.click(function(e) {
@@ -83,6 +84,7 @@ DTELite.render = function() {
     };
     if(location.pathname === '/lobby') appendRoomFavs();
     $('#header-global .header-left-navigation .lobby-link').click(function() { if(!atLobby) appendRoomFavs(); });
+    */
 
     // > Chat Options < \\
     var chatOptions = $('#chat .chat-options'), buttonsSection;
@@ -92,8 +94,8 @@ DTELite.render = function() {
     function appendToggle(name, displayname, variableName, storageName, description, action) {
         var toggleBtnEl = $([
             '<div class="' + name + 'Toggle">',
-            '<span class="toggleIcon"></span>',
-            '<span class="toggleText" title="' + description + '">' + displayname + '</span>',
+                '<span class="toggleIcon"></span>',
+                '<span class="toggleText" title="' + description + '">' + displayname + '</span>',
             '</div>',
         ].join('')).appendTo(buttonsSection);
         var toggleStr = localStorage.getItem('dte-' + storageName);
@@ -112,10 +114,21 @@ DTELite.render = function() {
             toggleBtnEl.toggleClass('active');
             if(action) action(true);
         }
+        return toggleBtnEl;
     }
     function appendButton(name, realname, description, style, action) {
         var btnEl = $('<span class="' + name + 'Btn" style="' + style + '" title="' + description + '">' + realname + '</span>').appendTo(buttonsSection);
         btnEl.click(action);
+        return btnEl;
+    }
+    function appendVideoTab(name, realname, inside, style, useScroll) {
+        var spanEl = $('<span class="' + name + '-display">' + realname + '</span>').appendTo('#main_player .player_header'),
+            displayEl = $([
+                '<div class="' + name + '-display" style="display: none;">',
+                    inside,
+                '</div>',
+            ].join('\n')).appendTo('#main_player');
+        return [spanEl, displayEl];
     }
 
     /* Toggles */
@@ -146,6 +159,24 @@ DTELite.render = function() {
         function(val) {
             if(val) $('head').append('<style id="dte-hide_skip">#main_player .player_header .skip-el { display: none !important; }</style>');
             else $('#dte-hide_skip').remove();
+        }
+    );
+    appendToggle(
+        'videoAvailability',
+        'Video Availability Tab',
+        'videoAvailabilityDisplayBool',
+        'videoavailability',
+        "If enabled, the availability tab will appear.",
+        function(val) {
+            if(val) {
+                appendVideoTab('video-availability', 'Availability');
+                if(Dubtrack.room.player.activeSong)
+                    //DTELite.onVideoAvailability(Dubtrack.room.player.activeSong.get('songInfo').fkid)
+                    ;
+            } else {
+                DTELite.videoAvailabilitySpanEl.remove();
+                DTELite.videoAvailabilityDisplayEl.remove();
+            }
         }
     );
 
@@ -196,9 +227,15 @@ DTELite.render = function() {
     );
 
     // > Miscellaneous < \\
+    /* ISO Countries */
+    var isoCountriesURL = 'https://netox005.github.io/Dubtrack/javascript/tools/isoCountries.js';
+    $.getScript(isoCountriesURL);
+
+    /* NSFW */
     DTELite.nsfwDialogBoxEl = $('<div class="nsfw-dialogbox">This link seems to be NSFW</div>').appendTo('body');
     DTELite.nsfwDialogBoxEl.hide();
 
+    /* Startup Popup */
     DTELite.startUpPopupEl = $([
         '<div id="dte-lite_popup">',
             'Dubtrack-Extras [Lite]',
@@ -206,44 +243,17 @@ DTELite.render = function() {
             'is now enabled',
         '</div>'
     ].join('')).appendTo('body');
+
+    /* Debug Tab TODO */
+    /*
+    DTELite.debugEl = $([
+        '<section class="dte-debug" style="position: absolute; top: 0; left: 0; width: 400px; height: 100%; background: rgba(0,0,0,.5); overflow: auto; word-wrap: break-word; padding: .5rem;"></section>'
+    ].join('')).appendTo('#main-room .main-room-wrapper');
+    */
 };
-var fileReader;
-DTELite.renderImgurUpload = function() {
-    var fileUploadEl = $('.fileinput-button').css('display', 'block'),
-        fileInputEl = fileUploadEl.children('#fileupload');
-
-    fileInputEl.change(function() {
-        var file = fileInputEl.prop('files')[0];
-        fileReader = new FileReader(file);
-
-        fileReader.onloadend = function(e) {
-            fileReader.onloadend = null;
-            if(/image\/(png|jpeg|jpg|gif)/.test(file.type)) {
-                var imgB64 = e.target.result.split(',')[1];
-                console.log(e.target.result);
-                $.ajax({
-                    url: 'https://api.imgur.com/3/upload.json',
-                    type: 'POST',
-                    data: {
-                        type: 'base64',
-                        image: imgB64,
-                        key: '7848f2eed9f68bb98f9173b70b7467b0ea6887b2'
-                    },
-                    success: function(data) {
-                        console.log('POST CALLBACK:', data);
-                    },
-                    error: function(x) { console.log('POST ERROR:', x) }
-                })
-            }
-        }
-        fileReader.readAsDataURL(file);
-    });
-}
 DTELite.init = setInterval(function() {
-    if(location.pathname === '/imgur/index.html' && document.readyState === 'complete') {
+    if(location.pathname === '/imgur/index.html') {
         clearTimeout(DTELite.init);
-        //DTELite.renderImgurUpload(); TODO
-        console.log('Dubtrack Extras [Imgur Upload Popup] → Started');
         return;
     }
     if(typeof(Dubtrack) === 'undefined') return;
@@ -269,10 +279,68 @@ DTELite.init = setInterval(function() {
         if(!song) return;
         if(song.get('song').songid === DTELite.lastSongID) return;
         else DTELite.lastSongID = song.get('song').songid;
+        Dubtrack.Events.trigger('realtime:room_playlist-changesong', data);
         if(song.get('song').userid === Dubtrack.session.id && DTELite.boothNotificationBool) {
             $('<li class="system my_song">You\'re the DJ right now!</li>').appendTo('#chat .chat-messages .chat-main');
-            Dubtrack.room.chat.mentionChatSound.play();
+            var chat = Dubtrack.room.chat;
+            chat.mentionChatSound.play();
+            chat.lastItemEl = null;
         }
+    });
+
+    // E3Zcuw52SDk = blocked in Germany
+    DTELite.checkIfVideoIsAvailable = function(fkid) {
+        var googleAPIKey = 'AIzaSyCACL-ZD2fhYIk1Nq3ZRn8VxngWfMh8Qok';
+        $.getJSON(
+            'https://www.googleapis.com/youtube/v3/videos?part=status,contentDetails&maxResults=1&id=' + fkid + '&key=' + googleAPIKey,
+            function(data) {
+                var video = data.items[0];
+                var debug = [ ];
+                if(video) {
+                    debug.push('video fkid ' + fkid);
+                    if (video.status.uploadStatus === 'rejection') {
+                        var reason = '';
+                        switch (video.status.rejectionReason) {
+                            case 'claim':
+                                reason = 'claimed';
+                                break;
+                            case 'copyright':
+                                reason = 'claimed for copyright';
+                                break;
+                            case 'inappropriate':
+                                reason = 'content was inappropiated for YouTube';
+                                break;
+                            case 'termsOfUse':
+                                reason = 'violated YouTube\'s Terms Of Use';
+                                break;
+                            case 'trademark':
+                                reason = 'it had a trademark on it ?';
+                                break;
+                            case 'uploaderAccountClosed':
+                            case 'uploaderAccountSuspended':
+                                reason = 'uploader account is no longer available';
+                                break;
+                            default:
+                                'dont know why O_o';
+                                break;
+                        }
+                        debug.push('video rejected - ' + reason);
+                    }
+                    if (video.contentDetails.regionRestriction)
+                        debug.push('blocked in - ' + video.contentDetails.regionRestriction.blocked.join(', '));
+                } else debug.push('video not found? O_o');
+                var debug1 = '<h1 style="margin: 0;">Video availability</h1>';
+                debug.forEach(function(str) { debug1 += '<p style="margin: 0;">' + str + '</p>' });
+                //DTELite.debugEl.html(debug1);
+            }
+        );
+    };
+    if(Dubtrack.room.player.activeSong) DTELite.checkIfVideoIsAvailable(Dubtrack.room.player.activeSong.get('songInfo').fkid);
+
+    Dubtrack.Events.bind('realtime:room_playlist-changesong', DTELite.onVideoAvailability = function(data) {
+        var sInfo = data.songInfo;
+        if(sInfo.type !== 'youtube') return;
+        DTELite.checkIfVideoIsAvailable(sInfo.fkid);
     });
 
     $('.pusher-chat-widget-input').on('keydown', '#chat-txt-message', function(e) {
@@ -376,11 +444,13 @@ DTELite.init = setInterval(function() {
         });
     };
 
+    /*
     Dubtrack.app.navigateAlt = Dubtrack.app.navigate;
     Dubtrack.app.navigate = function(url, params) {
         Dubtrack.app.navigateAlt(url, params);
-        atLobby = url === 'join'
-    }
+        atLobby = url === 'join';
+    };
+    */
 
     DTELite.render();
     console.log('Dubtrack Extras [Lite] → Started in ' + (Date.now() - loadTime) + ' miliseconds!');
