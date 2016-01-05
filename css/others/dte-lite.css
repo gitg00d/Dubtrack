@@ -13,6 +13,7 @@
 #chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite .toggleText { width: 87%; color: #878c8e !important; padding: .5rem 1rem; text-align: left; }
 #chat .chat-options .chat-option-buttons.chat-option-buttons-dtelite div.active .toggleText { color: white !important; }
 
+/*
 #header-global { padding: .7rem 1rem; }
 #header-global .header-left-navigation .room-fav { position: relative; font-size: 1.5rem; top: .25rem; }
 #header-global .header-left-navigation .room-fav span { line-height: 0; border-left: 2px solid cyan; padding-left: .75rem; }
@@ -21,6 +22,7 @@
 
 #container-room-list .room-item.userFav { border: 2px solid red; }
 #container-room-list .room-item.userFav .roomImage .join { cursor: pointer; }
+*/
 
 .nsfw-dialogbox { position: fixed; display: inline-block; background: #5A5A5A; padding: .25rem; font-size: .75rem; opacity: .8; z-index: 100; }
 .nsfw-dialogbox::after { content: ""; position: absolute; border: 8px solid transparent; border-top-color: #5A5A5A; top: 100%; left: calc(50% - 8px); }
