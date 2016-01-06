@@ -41,9 +41,17 @@
 }
 
 /* Share buttons coloring on hover */
-#main_player .player_sharing .icon-facebook, #main_player .player_sharing .icon-twitter { transition: color; transition-duration: .5s; }
-#main_player .player_sharing .icon-facebook:hover { color: #3a5795; }
-#main_player .player_sharing .icon-twitter:hover { color: #55acee; }
+#main_player .player_sharing .icon-facebook,
+#main_player .player_sharing .icon-twitter,
+#room-list .room-lobby-header .links-container .icon-facebook,
+#room-list .room-lobby-header .links-container .icon-twitter
+{ transition: color; transition-duration: .5s; }
+#main_player .player_sharing .icon-facebook:hover,
+#room-list .room-lobby-header .links-container .icon-facebook:hover
+{ color: #3a5795; }
+#main_player .player_sharing .icon-twitter:hover,
+#room-list .room-lobby-header .links-container .icon-twitter:hover
+{ color: #55acee; }
 
 /* Volume full icon shaking on appear */
 @-moz-keyframes shaking {
