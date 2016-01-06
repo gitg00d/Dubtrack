@@ -34,6 +34,8 @@
         padding: .5rem 0 .5rem .5rem;
         width: 73px;
         border-radius: 1rem 0 0 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     #main_player .player_header span.edit-room { padding: 1px 0 0 4px; float: right; width: initial; }
     #main_player .player_header span.edit-room i { position: initial; }

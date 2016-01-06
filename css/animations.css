@@ -79,3 +79,39 @@
 
 /* Progress Bar smooth transition */
 #player-controller .left ul li.infoContainer .infoContainerInner .progressBg { transition: width 1s; transition-timing-function: linear; }
+
+/* Room List song scrolling marquee effect */
+@-moz-keyframes room-song_span-scroll {
+    0% { right: -100%; }
+    100% { right: 150%; }
+}
+@-webkit-keyframes room-song_span-scroll {
+    0% { right: -100%; }
+    100% { right: 150%; }
+}
+@keyframes room-song_span-scroll {
+    0% { right: -100%; }
+    100% { right: 150%; }
+}
+#room-list #container-room-list .room-item header { background: #1c1c1c; }
+#room-list #container-room-list .room-item .current-song {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    text-overflow: ellipsis;
+}
+#room-list #container-room-list .room-item::after {
+    content: ".";
+    position: relative;
+    display: block;
+    padding: .5rem 1rem;
+    background: #2f2f2f;
+    font-size: .85rem;
+    color: transparent;
+    z-index: 0;
+}
+#room-list #container-room-list .room-item:hover .current-song {
+    display: table;
+    animation: room-song_span-scroll 8s linear;
+    animation-iteration-count: infinite;
+}
