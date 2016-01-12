@@ -1,16 +1,22 @@
-/* COMPLEMENTARY FILE, should be imported into another .css file */
 /*
-    netuxbot: 561da9e034c45e0e0087b6d0
-    nb3bot: 56216481426d191300e5bfef
-    dubtrack_bot: 565aa52e6fe207830052f57f
-    chilloutroomba: 56208ef772fbd14400119c64
+COMPLEMENTARY FILE, should be imported into another .css file
+
+Contact Netux in case you want your BOT added to the list:
+netuxbot: 561da9e034c45e0e0087b6d0
+nb3bot: 56216481426d191300e5bfef
+dubtrack_bot: 565aa52e6fe207830052f57f
+chilloutroomba: 56208ef772fbd14400119c64
 */
 
 #chat .chat-main li.user-561da9e034c45e0e0087b6d0 .image_row,
 #chat .chat-main li.user-56216481426d191300e5bfef .image_row,
 #chat .chat-main li.user-565aa52e6fe207830052f57f .image_row,
 #chat .chat-main li.user-56208ef772fbd14400119c64 .image_row {
-    display: none;
+    opacity: 0;
+    top: 7px !important;
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+    z-index: 1;
 }
 #chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row,
 #chat .chat-main li.user-56216481426d191300e5bfef .activity-row,
@@ -20,11 +26,16 @@
     padding: .5em 0.75em .5em .25em !important;
 }
 
-#chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row .username,
-#chat .chat-main li.user-56216481426d191300e5bfef .activity-row .username,
-#chat .chat-main li.user-565aa52e6fe207830052f57f .activity-row .username,
-#chat .chat-main li.user-56208ef772fbd14400119c64 .activity-row .username {
-    display: none !important;
+#chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row .text .username,
+#chat .chat-main li.user-56216481426d191300e5bfef .activity-row .text .username,
+#chat .chat-main li.user-565aa52e6fe207830052f57f .activity-row .text .username,
+#chat .chat-main li.user-56208ef772fbd14400119c64 .activity-row .text .username {
+    opacity: 0;
+    position: absolute;
+    top: 7px;
+    padding-left: 1.5rem;
+    width: 100%;
+    font-size: .75rem !important;
 }
 #chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row .text p:first-of-type:before,
 #chat .chat-main li.user-56216481426d191300e5bfef .activity-row .text p:first-of-type:before,
