@@ -10,48 +10,10 @@
     -webkit-transform: rotate(360deg);
 }
 
-/* Share buttons bounce on hover */
-@-moz-keyframes bouncy {
-    0% { -moz-transform: translateY(0); }
-    50% { -moz-transform: translateY(-5px); }
-    100% { -moz-transform: translateY(2px); }
-}
-@-webkit-keyframes bouncy {
-    0% { -webkit-transform: translateY(0); }
-    50% { -webkit-transform: translateY(-5px); }
-    100% { -webkit-transform: translateY(2px); }
-}
-@keyframes bouncy {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
-    100% { transform: translateY(2px); }
-}
-#main_player .player_sharing .icon-facebook:hover, #main_player .player_sharing .icon-twitter:hover {
-    -moz-animation-name: bouncy;
-    -moz-animation-duration: .40s;
-    -moz-animation-iteration-count: infinite;
-
-    -webkit-animation-name: bouncy;
-    -webkit-animation-duration: .40s;
-    -webkit-animation-iteration-count: infinite;
-
-    animation-name: bouncy;
-    animation-duration: .40s;
-    animation-iteration-count: infinite;
-}
-
 /* Share buttons coloring on hover */
-#main_player .player_sharing .icon-facebook,
-#main_player .player_sharing .icon-twitter,
-#room-list .room-lobby-header .links-container .icon-facebook,
-#room-list .room-lobby-header .links-container .icon-twitter
-{ transition: color; transition-duration: .5s; }
-#main_player .player_sharing .icon-facebook:hover,
-#room-list .room-lobby-header .links-container .icon-facebook:hover
-{ color: #3a5795; }
-#main_player .player_sharing .icon-twitter:hover,
-#room-list .room-lobby-header .links-container .icon-twitter:hover
-{ color: #55acee; }
+.icon-facebook, .icon-twitter { transition: color .5s linear; }
+a.facebook:hover, a.facebook:focus, .icon-facebook:hover { color: #3a5795; }
+a.twitter:hover, a.twitter:focus, .icon-twitter:hover { color: #55acee; }
 
 /* Volume full icon shaking on appear */
 @-moz-keyframes shaking {
@@ -67,17 +29,9 @@
     100% { transform: translate(1px); }
 }
 #main_player .player_sharing .mute .icon-sound-alt::before {
-    -moz-animation-name: shaking;
-    -moz-animation-duration: .075s;
-    -moz-animation-iteration-count: 5;
-
-    -webkit-animation-name: shaking;
-    -webkit-animation-duration: .075s;
-    -webkit-animation-iteration-count: 5;
-
-    animation-name: shaking;
-    animation-duration: .075s;
-    animation-iteration-count: 5;
+    -moz-animation: shaking .075s 5;
+    -webkit-animation: shaking .075s 5;
+    animation: shaking .075s 5;
 }
 
 /* HD toggle glow effect on hover */
@@ -123,3 +77,10 @@ body:not(.no-song-playing) #player-controller .left ul li.infoContainer .infoCon
     animation: room-song_span-scroll 8s linear;
     animation-iteration-count: infinite;
 }
+
+/* Filled Add to Playlist button (Chrome, Opera or any browser supporting webkit only) */
+#player-controller .right ul li .add-to-playlist-button:hover .icon-heart::before,
+#player-controller .right ul li .add-to-playlist-button.grabbed .icon-heart::before
+{ -webkit-text-stroke: none; -webkit-text-fill-color: initial; }
+#player-controller .right ul li .add-to-playlist-button:hover .icon-heart::before { transition: text-shadow .25s linear, -webkit-text-fill-color .15s linear; text-shadow: 0 0 1rem #b3e790; }
+#player-controller .right ul li .add-to-playlist-button .icon-heart::before { -webkit-text-stroke: 2px #b3e790; -webkit-text-fill-color: transparent; }

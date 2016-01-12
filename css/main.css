@@ -163,6 +163,16 @@ body.no-song-playing #player-controller .infoContainerInner:after { display: non
 #main-loading { background: transparent linear-gradient(to bottom, transparent 66px, #0ff 66px, #0ff 100%) !important; } /* Cyan loading message poping out of header fix, thanks @Hebgbs */
 #player-controller .right ul li .dubdown.voted { background-color: #f0a; } /* Different grab and downdub colors */
 #chat .chat_tools span:hover { color: #fff !important; } /* Chat tools always white on hover fix */
+#player-controller .right ul li .add-to-playlist-button, #player-controller .right ul li .dubdown, #player-controller .right ul li .dubup { padding-left: 0; padding-right: 0; min-width: 100%; } /* Vote buttons width fix */
+#player-controller { z-index: 6; } /* Footer at top */
+.not-logged-in #player-controller .right::after { /* Not logged in users vote icons not clickeable */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 /* Other fixes in phone mode */
 @media screen and (max-width: 72em) {
