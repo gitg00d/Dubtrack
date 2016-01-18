@@ -2,7 +2,8 @@
 
 /* Main function */
 @media screen and (max-width: 72em) {
-    #main-room { padding: 92px 1px 112px; }
+    #main-room { padding: 92px 0 112px 0; max-width: 90vh; }
     #main-room .right_section { border-radius: 0; }
     #main_player { border-radius: 0; }
+    #main_player .player_header { top: -2.75rem; }
 }

@@ -8,6 +8,7 @@
 @import url("https://netox005.github.io/Dubtrack/css/phonefix.css"); /* Phone Fixes */
 @import url("https://netox005.github.io/Dubtrack/css/animations.css"); /* Animations */
 @import url("https://hebgbs.github.io/rainbowNB3.css"); /* Rainbowstuff (Progress bar and volume bar) */
+@import url("https://netox005.github.io/Dubtrack/css/browserbetter.css"); /* Better Browser */
 
 /* Video next to chat */
 @media screen and (min-width: 72em) {
@@ -60,17 +61,6 @@
 
 #roomFormUpdate .mid select { padding: 0; }
 #roomFormUpdate .mid select option:not(selected) { color: black; }
-
-/* Browser fixes */
-#browser.animate { bottom: 3.5rem; padding-top: 110px; }
-#browser .browser-content { border-radius: 0; }
-span.close-browser { font-size: 1.125rem !important; padding-top: 1.2rem !important; }
-span.close-browser:before { content: "\e903"; }
-
-#browser .browser-content .browser-content-header .form .music-type-select .music-type-dropdown span { line-height: .8; }
-#browser .browser-content .browser-content-header .form .music-type-select .music-type-dropdown span:hover { background: #6D6D6D;  }
-#browser .browser-content .browser-content-header .form .music-type-select .icon-youtube { color: red; }
-#browser .browser-content .browser-content-header .form .music-type-select .icon-soundcloud { color: orange; }
 
 /* Chat avatars fix */
 #chat .chat-container .chat-messages .chat-main li .stream-item-content .image_row { border-radius: 10%; }

@@ -1,0 +1,42 @@
+/* COMPLEMENTARY FILE, should be imported into another .css file */
+
+/* Centered vertically, not overlapping footer */
+#browser.animate { bottom: 7rem; padding-top: 10.6rem; }
+@media screen and (min-width: 72em) { #browser.animate { bottom: 3.5rem; padding-top: 7.1rem; } }
+#browser .browser-content { border-radius: 0; }
+span.close-browser { font-size: 1.125rem !important; padding-top: 1.2rem !important; }
+span.close-browser:before { content: "\e903"; }
+
+/* Color on YouTube and Soundcloud icons */
+#browser .browser-content .browser-content-header .form .music-type-select .music-type-dropdown span { line-height: .8; }
+#browser .browser-content .browser-content-header .form .music-type-select .music-type-dropdown span:hover { background: #6D6D6D;  }
+#browser .browser-content .browser-content-header .form .music-type-select .icon-youtube { color: red; }
+#browser .browser-content .browser-content-header .form .music-type-select .icon-soundcloud { color: orange; }
+
+/* Transparency when not hover */
+#browser .browser-content { background-color: transparent; }
+#browser .browser-content .browser-content-main .nano { background-color: rgba(0,0,0,.5); }
+#browser .browser-content .browser-content-main .nano:hover { background-color: rgba(0,0,0,.7); transition: background-color .25s linear; }
+#browser .browser-content .browser-content-main .nano .content-videos { opacity: .5; transition: opacity .25s linear; }
+#browser .browser-content .browser-content-main .nano:hover .content-videos { opacity: 1; }
+
+/*
+Position of song on playlist/queue/history
+Thanks to @Larry1123 for showing me the counter function, counter-reset and counter-increment CSS rules.
+*/
+#browser .browser-content .browser-content-main .nano .content-videos #results_video_api .browserPlaylistItems { counter-reset: browser-item-counter; }
+#browser .browser-content .browser-content-main .nano .content-videos #results_video_api .browserPlaylistItems > *[class$="-item"] figure { left: .2em; }
+#browser .browser-content .browser-content-main .nano .content-videos #results_video_api .browserPlaylistItems > *[class$="-item"] { border-left: 1em solid rgba(255,255,255,0.07); padding-left: 0; }
+#browser .browser-content .browser-content-main .nano .content-videos #results_video_api .browserPlaylistItems  > *[class$="-item"]::before {
+    counter-increment: browser-item-counter;
+    content: counter(browser-item-counter);
+    color: gold;
+    font-size: .5rem;
+    position: absolute;
+    top: 50%;
+    left: -1rem;
+    transform: translateY(-50%);
+    width: 1rem;
+    text-align: center;
+    line-height: 1;
+}
