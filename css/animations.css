@@ -79,8 +79,7 @@ body:not(.no-song-playing) #player-controller .left ul li.infoContainer .infoCon
 }
 
 /* Filled Add to Playlist button (Chrome, Opera or any browser supporting webkit only) */
-#player-controller .right ul li .add-to-playlist-button:hover .icon-heart::before,
-#player-controller .right ul li .add-to-playlist-button.grabbed .icon-heart::before
-{ -webkit-text-stroke: none; -webkit-text-fill-color: initial; }
+#player-controller .right ul li .add-to-playlist-button:hover .icon-heart::before { -webkit-text-stroke: none; -webkit-text-fill-color: initial; }
+#player-controller .right ul li .add-to-playlist-button.grabbed .icon-heart::before { -webkit-text-stroke: none; -webkit-text-fill-color: #b3e790 }
 #player-controller .right ul li .add-to-playlist-button:hover .icon-heart::before { transition: text-shadow .25s linear, -webkit-text-fill-color .15s linear; text-shadow: 0 0 1rem #b3e790; }
 #player-controller .right ul li .add-to-playlist-button .icon-heart::before { -webkit-text-stroke: 2px #b3e790; -webkit-text-fill-color: transparent; }

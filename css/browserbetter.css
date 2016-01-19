@@ -14,11 +14,10 @@ span.close-browser:before { content: "\e903"; }
 #browser .browser-content .browser-content-header .form .music-type-select .icon-soundcloud { color: orange; }
 
 /* Transparency when not hover */
-#browser .browser-content { background-color: transparent; }
-#browser .browser-content .browser-content-main .nano { background-color: rgba(0,0,0,.5); }
-#browser .browser-content .browser-content-main .nano:hover { background-color: rgba(0,0,0,.7); transition: background-color .25s linear; }
-#browser .browser-content .browser-content-main .nano .content-videos { opacity: .5; transition: opacity .25s linear; }
-#browser .browser-content .browser-content-main .nano:hover .content-videos { opacity: 1; }
+#browser .browser-content { background-color: rgba(0,0,0,.5); transition: background-color .25s linear; }
+#browser .browser-content:hover { background-color: rgba(0,0,0,.7); }
+#browser .browser-content .browser-content-main .nano { opacity: .6; transition: opacity .25s linear; }
+#browser .browser-content:hover .browser-content-main .nano { opacity: 1; }
 
 /*
 Position of song on playlist/queue/history
