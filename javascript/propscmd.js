@@ -53,7 +53,7 @@ propsCmd.initEvents = function() {
 
 };
 propsCmd.render = function() {
-    $('<link id="propscmd-stylesheet" rel="stylesheet" type="text/css" src="https://netox005.github.io/Dubtrack/css/other/propscmd.css" />').appendTo('head');
+    $('<link id="propscmd-stylesheet" rel="stylesheet" type="text/css" src="https://netox005.github.io/Dubtrack/css/others/propscmd.css" />').appendTo('head');
 
     var optionsTabEl = $('#chat .chat-options');
         optionsTabEl.append('<span class="chat-option-header">Props Command - Messages</span>');
