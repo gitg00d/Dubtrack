@@ -1,11 +1,14 @@
 // ==UserScript==
 // @name        [Dubtrack] Props Command
 // @namespace   me.netux.dubtrack.propscommand
-// @description /props for Dubtrack.FM
+// @author      netux (@Netox005 on GitHub)
+// @description props command for Dubtrack.FM
 // @include     https://www.dubtrack.fm/*
 // @version     1
 // @grant       none
 // ==/UserScript==
+
+// Warning: To use this extension, install Greasemonkey Add-On on Firefox or Tampermonkey Extension on Chrome and then open the link
 
 if(typeof(propsCmd) === 'undefined') propsCmd = { msgs: [ '@%dj% I like your song. Keep it up!' ] };
 propsCmd.initEvents = function() {
