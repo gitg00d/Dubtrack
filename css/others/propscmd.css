@@ -1,0 +1,51 @@
+#chat .chat-options .chat-option-buttons-propscmd > ul {
+    border-top: 1px solid #878c8e;
+}
+#chat .chat-options .chat-option-buttons-propscmd > span.save {
+    width: 100%;
+    padding: .25rem 0;
+    font-size: .8rem;
+    color: #fff !important;
+}
+#chat .chat-options .chat-option-buttons-propscmd .message {
+    display: flex;
+}
+#chat .chat-options .chat-option-buttons-propscmd .message input {
+    width: 80%;
+    background-color: white;
+    color: black;
+    padding: 0 .25rem;
+    margin: .5rem;
+    border: 1px solid #aaa;
+    font-style: normal;
+}
+#chat .chat-options .chat-option-buttons-propscmd .message .button {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: .5rem;
+    cursor: pointer;
+    position: relative;
+}
+#chat .chat-options .chat-option-buttons-propscmd .message:not(:last-child) .button { visibility: hidden; }
+#chat .chat-options .chat-option-buttons-propscmd .message:hover .button { visibility: visible; }
+#chat .chat-options .chat-option-buttons-propscmd .message .button::before,
+#chat .chat-options .chat-option-buttons-propscmd .message .button::after {
+    content: "";
+    position: absolute;
+    top: 47.5%;
+    left: 14.56%;
+    width: 70%;
+    height: 2px;
+    background-color: #fff;
+}
+#chat .chat-options .chat-option-buttons-propscmd .message .button.add {
+    background-color: #46D846;
+    border: 1px solid #326931;
+}
+#chat .chat-options .chat-option-buttons-propscmd .message .button.add::before { transform: rotate(-90deg); }
+#chat .chat-options .chat-option-buttons-propscmd .message .button.remove {
+    background-color: #E03535;
+    border: 1px solid #822E2E;
+}
+#chat .chat-options .chat-option-buttons-propscmd .message .button.remove::before { transform: rotate(-45deg); }
+#chat .chat-options .chat-option-buttons-propscmd .message .button.remove::after { transform: rotate(45deg);  }
