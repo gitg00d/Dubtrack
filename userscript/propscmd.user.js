@@ -23,7 +23,7 @@ propsCmd.initEvents = function() {
         var keyCode = e.which || e.keyCode,
             $target = $(e.target);
         if(keyCode !== 13) return;
-        if(!/(!|\/)prop(|s)/.test($target.val())) return;
+        if(!/^(!|\/)prop(|s)/.test($target.val())) return;
         $target.val('');
         if(Dubtrack.room.player.activeSong.get('startTime') === null) {
             addSystemMsg("Someone has to be playing a song for you to prop!", '#f00');
