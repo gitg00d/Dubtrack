@@ -3,16 +3,28 @@
 <head>
   <title>Dubtrack CSS</title>
   <style>
+    body { font-family: Arial, sans-serif; }
     p { margin: 0; }
+    p.small { font-size: .5rem; color: gray; }
+    *[title] { border: 0 solid black; border-bottom-width: 1px; border-bottom-style: dotted; cursor: help; }
   </style>
 </head>
 <body>
-  <p style="font-size: .5rem; color: gray;">So GitHub wants me to add this page for GitHub Pages to work...</p>
+  <p class="small">So GitHub wants me to add this page for GitHub Pages to work...</p>
   <p>Useful links:</p>
   <ul>
-    <li><a href="css/main.css">Dubtrack Main CSS</a></li>
-    <li><a href="userscript/dte-lite.user.js">Dubtrack-Extras [Lite]</a> Userscript</li>
-    <li><a href="userscript/propscmd.user.js">Dubtrack Props Command</a> Userscript</li>
+    <li>
+      <a href="css/main.css">Dubtrack Main CSS</a>
+      <span title="To install, copy and paste the link on DubX.">(?)</span>
+    </li>
+    <li>
+      <a href="userscript/dte-lite.user.js">Dubtrack-Extras [Lite]</a>
+      <span title="To install, download Greasemonkey Add-On on Firefox or Tampermonkey Extension on Chrome">Userscript</span>
+    </li>
+    <li>
+      <a href="userscript/propscmd.user.js">Dubtrack Props Command</a>
+      <span title="To install, download Greasemonkey Add-On on Firefox or Tampermonkey Extension on Chrome">Userscript</span>
+    </li>
   </ul>
 </body>
 </html>
