@@ -1,3 +1,15 @@
+// ==UserScript==
+// @name        [Dubtrack & DubX] DTELite
+// @namespace   me.netux.dubtrack.dtelite
+// @author      netux (@Netox005 on GitHub)
+// @description addition to DubX extension
+// @include     https://www.dubtrack.fm/*
+// @version     1
+// @grant       none
+// ==/UserScript==
+
+// Warning: To use this extension, install Greasemonkey Add-On on Firefox or Tampermonkey Extension on Chrome and then open the link
+
 var DTELite = {
     lastSongID: undefined,
 
@@ -13,7 +25,7 @@ var DTELite = {
 
     boothNotificationBool: false,
     roomSettingsBool: false
-}
+};
 DTELite.render = function() {
     var stylesheetUrl = 'https://netox005.github.io/Dubtrack/css/others/dte-lite.css';
     DTELite.stylesheetEl = $('<link href="' + stylesheetUrl + '" rel="stylesheet" type="text/css"/>').appendTo('head');
