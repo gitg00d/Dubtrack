@@ -1,6 +1,7 @@
 /* COMPLEMENTARY FILE, should be imported into another .css file */
 
 /* Centered vertically, not overlapping footer */
+#browser { z-index: 5; }
 #browser.animate { bottom: 7rem; padding-top: 10.6rem; }
 @media screen and (min-width: 72em) { #browser.animate { bottom: 3.5rem; padding-top: 7.1rem; } }
 #browser .browser-content { border-radius: 0; }
