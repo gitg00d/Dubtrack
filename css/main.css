@@ -163,6 +163,7 @@ body.no-song-playing #player-controller .infoContainerInner:after { display: non
     width: 100%;
     height: 100%;
 }
+#main-room .left_section #main_player .play-song-link { border-radius: .5rem; } /* Less border radius on "Queue a Song" button */
 
 /* Other fixes in phone mode */
 @media screen and (max-width: 72em) {
