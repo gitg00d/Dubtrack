@@ -1,0 +1,6 @@
+/* Imports */
+@import url("https://netox005.github.io/Dubtrack/css/voteicons.css"); /* Vote icons */
+
+#player-controller .left ul li.infoContainer .infoContainerInner .progressBg { background: linear-gradient(to right, #22aeff, #0ff); }
+
+/* Requested by @dkim */
