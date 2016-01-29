@@ -14,7 +14,8 @@
     #main_player .play-song-link { display: none; }
 }
 
-/* Footer vote icons fix */
-#player-controller .right ul li a { padding: 1rem 0; }
+/* Other fixes */
+#player-controller .right ul li a { padding: 1rem 0; } /* Footer vote icons fix */
+#private-messages .search-results:before { height: 3.5rem; } /* Private messages fix */
 
 /* Requested by @tacotacotacotaco */
