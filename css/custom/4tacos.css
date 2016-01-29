@@ -2,6 +2,8 @@
 @import url("https://netox005.github.io/Dubtrack/css/chatright.css"); /* Chat completely to the right */
 @import url("https://netox005.github.io/Dubtrack/css/videosmall.css"); /* Player header to the left */
 @import url("https://netox005.github.io/Dubtrack/css/animations.css"); /* Animations */
+@import url("https://frosolf.github.io/mixercore.css"); /* Blue palet */
+@import url("https://frosolf.github.io/betterchat.css"); /* Blue palet Chat fix */
 
 /* Video position and size */
 @media screen and (min-width: 72em) {
@@ -11,5 +13,8 @@
     #main_player .player_header { top: -2.5rem; }
     #main_player .play-song-link { display: none; }
 }
+
+/* Footer vote icons fix */
+#player-controller .right ul li a { padding: 1rem 0; }
 
 /* Requested by @tacotacotacotaco */
