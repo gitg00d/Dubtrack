@@ -12,7 +12,12 @@
 
 /* Video next to chat */
 @media screen and (min-width: 72em) {
-    #main-room .left_section { left: initial; right: 449px; }
+    #main-room .left_section {
+        left: initial;
+        right: 449px;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+    }
     #main-room .left_section #main_player { border-radius: 0 0 0 1rem; }
 }
 
