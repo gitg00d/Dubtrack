@@ -4,7 +4,7 @@
     /* Main function */
     #main-room .left_section { padding: 0; margin-top: 0; }
     #main-room .left_section  .main-player-wrapper { display: initial; }
-    #main_player { max-width: 35.6%; min-width: 450px; float: right; }
+    #main_player { width: 100%; max-width: 35.6%; min-width: 450px; float: right; }
 
     /* Buttons fix */
     #main-room .left_section #main_player .play-song-link {
