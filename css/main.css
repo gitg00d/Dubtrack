@@ -127,11 +127,19 @@ img.emoji.twitch-emoji[alt="angelthump"], img.emoji.twitch-emoji[alt="taxibro"] 
     border-bottom: 15px solid white;
 }
 
+/* Chat system messages fix */
+#chat .chat-main .system, #chat .chat-main li[class^="chat-system-"] { color: #0090cc !important; }
+#chat .chat-container .chat-messages .chat-main li.chat-system-grabbed { color: #d026d0 !important; }
+#chat .chat-container .chat-messages .chat-main li.chat-system-grabbed,
+#chat .chat-container .chat-messages .chat-main li.chat-system-joined,
+#chat .chat-container .chat-messages .chat-main li.chat-system-left
+{ text-align: center; font-style: normal; }
+
 /* Other fixes */
 .ps-container .ps-scrollbar-x, .ps-container .ps-scrollbar-y, .ps-container .ps-scrollbar-x-rail:hover .ps-scrollbar-x, .ps-container .ps-scrollbar-y-rail:hover .ps-scrollbar-y { background-color: #B1B1B1 } /* Scrollbars more visible */
 #main-menu-left { top: 58px; height: calc(100% - 58px); padding-top: 3rem; } /* Left menu height fix */
 #chat .chat-container .chat-messages .chat-main li:not([class^="user-"]) { padding-bottom: .5rem; min-height: initial; } /* No user messages height fix */
-#chat .chat-container .chat-messages .chat-main li .activity-row .text img { display: block; } /* Chat images in new bar */
+#chat .chat-container .chat-messages .chat-main li .activity-row .text img { display: block; } /* Chat images in new line */
 #chat .chat-options .chat-option-buttons span { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; } /* No selection on chat options buttons */
 @media screen and (min-width: 72em) {
     /* Fixed "Your playlists" title on browser */
@@ -151,7 +159,6 @@ time.timeago { /* Time ago on messages not selectable */
     user-select: none;
 }
 #avatar-list p.dubs span { font-family: monospace; font-size: 1.2rem } /* User list dubs num position fix */
-#chat .chat-main .system, #chat .chat-main .chat-system-loading { color: #0090CC !important; } /* Chat system message color fix */
 img.emoji.twitch-emoji[alt="facepalm"] { background-color: white; } /* Facepalm coloring fix */
 #chat .chat-container li.isDefault.current-chat-user a.username { color: gold !important; } /* Gold color on user if it's pleb */
 body.no-song-playing #player-controller .infoContainerInner:after { display: none; } /* Progress bar not visible when no song is playing fix */
@@ -171,7 +178,7 @@ body.no-song-playing #player-controller .infoContainerInner:after { display: non
 #main-room .left_section #main_player .play-song-link { border-radius: .5rem; } /* Less border radius on "Queue a Song" button */
 #room-main-player-container-soundcloud .playerElement.soundcloud .redirect-link { font-size: 3.5rem !important; line-height: 1; } /* Soundcloud redirect icon size fix */
 
-/* Other fixes in phone mode */
+/* Other fixes Phone Mode */
 @media screen and (max-width: 72em) {
     #browser .browser-content .browser-content-main .nano .loading { z-index: 1; } /* Loading not overlapping with buttons */
     #addToPlaylistFloatContainer { border-radius: 0; padding: .5rem 0; background: rgba(84, 86 , 85, .9); } /* Add to playlist fixes */

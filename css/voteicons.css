@@ -1,5 +1,6 @@
 /* COMPLEMENTARY FILE, should be imported into another .css file */
 
+/* Main function */
 #player-controller .right ul li .dub-counter,
 #player-controller .right ul li .grab-counter
 { position: relative; top: -.4em; }
@@ -10,3 +11,11 @@
 
 /* ↓ Thanks to @hebgbs for the fixed position ↓ */
 #player-controller .right ul li:nth-child(n+2):nth-child(n-5){ position: relative; top: -4px !Important; }
+
+/* Grab message icon */
+#chat .chat-container .chat-messages .chat-main li.chat-system-grabbed::after {
+    content: url('http://nightbloo.github.io/plug/icons/grab.png');
+    display: inline;
+    position: absolute;
+    bottom: -2px;
+}
