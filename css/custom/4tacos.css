@@ -23,6 +23,10 @@
 #chat .chat-container .chat-messages .chat-main li { background-color: rgba(0,0,0,0) !important; }
 #main-room #chat .chat-container .chat-messages { background-color: rgba(30,41,66,.80) !important }
 
+/* Static/Forced Background */
+.medium, .backstretch > img { display: none !important; }
+.backstretch { background: url("http://i.imgur.com/y1b4FVk.jpg") no-repeat; background-size: cover; }
+
 /* Other fixes */
 #player-controller .right ul li a { padding: 1rem 0; } /* Footer vote icons fix */
 #private-messages .search-results:before { height: 3.5rem; } /* Private messages fix */
