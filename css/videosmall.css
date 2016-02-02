@@ -7,15 +7,10 @@
     #main_player { width: 100%; max-width: 35.6%; min-width: 450px; float: right; }
 
     /* Buttons fix */
-    #main-room .left_section #main_player .play-song-link {
-        width: auto;
-        font-size: .8rem;
-        padding: .75rem 1.5rem;
-        bottom: -3rem;
-    }
+    #main-room .left_section #main_player .play-song-link-container { bottom: -3rem; }
+    #main-room .left_section #main_player .play-song-link-container > div { border-radius: .5rem; }
+    #main-room .left_section #main_player .play-song-link-container > div { width: auto; font-size: .8rem; padding: .75rem 1.5rem; }
     #main-room .left_section #main_player { padding-bottom: .5rem; }
-    #main-room .left_section #main_player .play-song-link .queue-info { padding-top: .1rem; }
-    #main-room .left_section #main_player .play-song-link i { position: relative; top: .125rem; }
     #main-room .left_section #main_player .player_sharing span { font-size: 1.25rem; }
     #main_player .player_header {
         width: 73px;
