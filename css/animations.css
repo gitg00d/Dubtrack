@@ -11,7 +11,7 @@
 }
 
 /* Share buttons coloring on hover */
-.icon-facebook, .icon-twitter { transition: color .5s linear; }
+.icon-facebook, .icon-twitter { transition: color .25s linear; }
 a.facebook:hover, a.facebook:focus, .icon-facebook:hover { color: #3a5795; }
 a.twitter:hover, a.twitter:focus, .icon-twitter:hover { color: #55acee; }
 
