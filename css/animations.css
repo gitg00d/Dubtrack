@@ -25,13 +25,15 @@ a.twitter:hover, a.twitter:focus, .icon-twitter:hover { color: #55acee; }
     100% { -webkit-transform: translate(1px); }
 }
 @keyframes shaking {
-    0% { transform: translate(-1px); }
-    100% { transform: translate(1px); }
+    0% { transform: translate(-2px); }
+    33.33% { transform: translate(1px); }
+    66.66% { transform: translate(-1px); }
+    100% { transform: translate(2px); }
 }
-#main_player .player_sharing .mute .icon-sound-alt::before {
-    -moz-animation: shaking .075s 5;
-    -webkit-animation: shaking .075s 5;
-    animation: shaking .075s 5;
+#main_player .player_sharing .mute .icon-sound-alt {
+    -moz-animation: shaking .125s 5 linear;
+    -webkit-animation: shaking .125s 5 linear;
+    animation: shaking .125s 5 linear;
 }
 
 /* HD toggle glow effect on hover */
