@@ -3,13 +3,15 @@ COMPLEMENTARY FILE, should be imported into another .css file
 
 Contact Netux in case you want your BOT added to the list:
 netuxbot: 561da9e034c45e0e0087b6d0
-nb3bot: 56216481426d191300e5bfef
+nb3bot (deprecated): 56216481426d191300e5bfef
+nightbluebot: 56b2054200550001019554c8
 dubtrack_bot: 565aa52e6fe207830052f57f
 chilloutroomba: 56208ef772fbd14400119c64
 */
 
 #chat .chat-main li.user-561da9e034c45e0e0087b6d0 .image_row,
 #chat .chat-main li.user-56216481426d191300e5bfef .image_row,
+#chat .chat-main li.user-56b2054200550001019554c8 .image_row,
 #chat .chat-main li.user-565aa52e6fe207830052f57f .image_row,
 #chat .chat-main li.user-56208ef772fbd14400119c64 .image_row {
     opacity: 0;
@@ -20,6 +22,7 @@ chilloutroomba: 56208ef772fbd14400119c64
 }
 #chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row,
 #chat .chat-main li.user-56216481426d191300e5bfef .activity-row,
+#chat .chat-main li.user-56b2054200550001019554c8 .activity-row,
 #chat .chat-main li.user-565aa52e6fe207830052f57f .activity-row,
 #chat .chat-main li.user-56208ef772fbd14400119c64 .activity-row {
     width: 100% !important;
@@ -28,6 +31,7 @@ chilloutroomba: 56208ef772fbd14400119c64
 
 #chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row .text .username,
 #chat .chat-main li.user-56216481426d191300e5bfef .activity-row .text .username,
+#chat .chat-main li.user-56b2054200550001019554c8 .activity-row .text .username,
 #chat .chat-main li.user-565aa52e6fe207830052f57f .activity-row .text .username,
 #chat .chat-main li.user-56208ef772fbd14400119c64 .activity-row .text .username {
     opacity: 0;
@@ -39,6 +43,7 @@ chilloutroomba: 56208ef772fbd14400119c64
 }
 #chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row .text p:first-of-type:before,
 #chat .chat-main li.user-56216481426d191300e5bfef .activity-row .text p:first-of-type:before,
+#chat .chat-main li.user-56b2054200550001019554c8 .activity-row .text p:first-of-type:before,
 #chat .chat-main li.user-565aa52e6fe207830052f57f .activity-row .text p:first-of-type:before,
 #chat .chat-main li.user-56208ef772fbd14400119c64 .activity-row .text p:first-of-type:before {
     text-transform: uppercase;
@@ -50,21 +55,25 @@ chilloutroomba: 56208ef772fbd14400119c64
 }
 #chat .chat-main li.user-561da9e034c45e0e0087b6d0:hover .activity-row .meta-info::before,
 #chat .chat-main li.user-56216481426d191300e5bfef:hover .activity-row .meta-info::before,
+#chat .chat-main li.user-56b2054200550001019554c8:hover .activity-row .meta-info::before,
 #chat .chat-main li.user-565aa52e6fe207830052f57f:hover .activity-row .meta-info::before,
 #chat .chat-main li.user-56208ef772fbd14400119c64:hover .activity-row .meta-info::before {
     position: absolute;
     color: #878c8e;
     font-weight: 700;
     font-size: 12px;
+    bottom: .2rem;
 }
 
 #chat .chat-main li.user-561da9e034c45e0e0087b6d0:hover .activity-row .meta-info::before { content: "Lonely BOT without Room :("; }
-#chat .chat-main li.user-56216481426d191300e5bfef:hover .activity-row .meta-info::before { content: "Nightblue3 Room BOT"; }
+#chat .chat-main li.user-56216481426d191300e5bfef:hover .activity-row .meta-info::before { content: "Nightblue3 Room BOT (deprecated)"; }
+#chat .chat-main li.user-56b2054200550001019554c8:hover .activity-row .meta-info::before { content: "Lurker Nightblue3 Room BOT"; }
 #chat .chat-main li.user-565aa52e6fe207830052f57f:hover .activity-row .meta-info::before { content: "Dubtrack Official BOT"; }
 #chat .chat-main li.user-56208ef772fbd14400119c64:hover .activity-row .meta-info::before { content: "Chillout Music Room BOT"; }
 
 #chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row .text p:first-of-type:before,
 #chat .chat-main li.user-56216481426d191300e5bfef .activity-row .text p:first-of-type:before,
+#chat .chat-main li.user-56b2054200550001019554c8 .activity-row .text p:first-of-type:before,
 #chat .chat-main li.user-565aa52e6fe207830052f57f .activity-row .text p:first-of-type:before,
 #chat .chat-main li.user-56208ef772fbd14400119c64 .activity-row .text p:first-of-type:before {
     background: no-repeat left top;
@@ -74,6 +83,7 @@ chilloutroomba: 56208ef772fbd14400119c64
 
 ul.avatar-list li.user-netuxbot p.dubs:before,
 ul.avatar-list li.user-nb3bot p.dubs:before,
+ul.avatar-list li.user-nightbluebot p.dubs:before,
 ul.avatar-list li.user-dubtrack_bot p.dubs:before,
 ul.avatar-list li.user-chilloutroomba p.dubs:before {
     content: "known BOT - ";
@@ -84,6 +94,7 @@ ul.avatar-list li.user-chilloutroomba p.dubs:before {
 /* Fix for @matt christmas stylesheet */
 #chat > div.chat-container > div.chat-messages.ps-container ul li.user-561da9e034c45e0e0087b6d0 div.stream-item-content::before,
 #chat > div.chat-container > div.chat-messages.ps-container ul li.user-56216481426d191300e5bfef div.stream-item-content::before,
+#chat > div.chat-container > div.chat-messages.ps-container ul li.user-56b2054200550001019554c8 div.stream-item-content::before,
 #chat > div.chat-container > div.chat-messages.ps-container ul li.user-565aa52e6fe207830052f57f div.stream-item-content::before,
 #chat > div.chat-container > div.chat-messages.ps-container ul li.user-56208ef772fbd14400119c64 div.stream-item-content::before {
     transform: scale(.4,.5);
@@ -94,42 +105,55 @@ ul.avatar-list li.user-chilloutroomba p.dubs:before {
 /* netuxbot */
 #chat .chat-main li.user-561da9e034c45e0e0087b6d0 .activity-row .text p:first-of-type:before {
     content: "netux bot";
-    color: #C3FF00 !important;
+    color: #c3ff00 !important;
     font-size: .75rem;
     padding-left: 0;
 }
-ul.avatar-list li.user-netuxbot p.username { color: #C3FF00 !important; }
+ul.avatar-list li.user-netuxbot p.username { color: #c3ff00 !important; }
 ul.avatar-list li.user-netuxbot p.dubs:before {
-    color: #C3FF00 !important;
+    color: #c3ff00 !important;
     content: "known BOT & Cyborg - "
 }
 
-/* nb3bot */
+/* nb3bot (deprecated) */
 #chat .chat-main li.user-56216481426d191300e5bfef .activity-row .text p:first-of-type:before {
     content: "nightblue bot";
-    color: #7EC0EE !important;
+    color: #7ec0ee !important;
     font-size: .75rem;
     background-image: url("http://i.imgur.com/tvPrbnV.png");
 }
-ul.avatar-list li.user-nb3bot p.username { color: #7EC0EE !important; }
-ul.avatar-list li.user-nb3bot p.dubs:before { color: #7EC0EE !important; }
+ul.avatar-list li.user-nb3bot p.username { color: #7ec0ee !important; }
+ul.avatar-list li.user-nb3bot p.dubs:before { color: #7ec0ee !important; }
+
+/* nightbluebot */
+#chat .chat-main li.user-56b2054200550001019554c8 .activity-row .text p:first-of-type:before {
+    content: "lurking nightblue bot";
+    color: #7ec0ee !important;
+    font-size: .75rem;
+    background-image: url("https://d3byct92ei5n7c.cloudfront.net/hhberclba/image/upload/c_fill,h_200,q_75,w_200/pkisglp94deagijlag51.png");
+}
+ul.avatar-list li.user-nightbluebot p.username { color: #7ec0ee !important; }
+ul.avatar-list li.user-nightbluebot p.dubs:before {
+    color: #7ec0ee !important;
+    content: "known lurker BOT - "
+}
 
 /* dubtrack_bot */
 #chat .chat-main li.user-565aa52e6fe207830052f57f .activity-row .text p:first-of-type:before {
     content: "dubtrack bot";
-    color: #FF0097 !important;
+    color: #ff0097 !important;
     font-size: .75rem;
     background-image: url("http://i.imgur.com/Q0wghn3.png");
 }
-ul.avatar-list li.user-dubtrack_bot p.username { color: #FF0097 !important; }
-ul.avatar-list li.user-dubtrack_bot p.dubs:before { color: #FF0097 !important; }
+ul.avatar-list li.user-dubtrack_bot p.username { color: #ff0097 !important; }
+ul.avatar-list li.user-dubtrack_bot p.dubs:before { color: #ff0097 !important; }
 
 /* chilloutroomba */
 #chat .chat-main li.user-56208ef772fbd14400119c64 .activity-row .text p:first-of-type:before {
     content: "chillout roomba";
-    color: #CC5A93;
+    color: #cc5a93;
     font-size: .75rem;
     background-image: url("https://i.imgur.com/eFwtMHk.gif");
 }
-ul.avatar-list li.user-chilloutroomba p.username { color: #CC5A93 !important; }
-ul.avatar-list li.user-chilloutroomba p.dubs:before { color: #CC5A93 !important; }
+ul.avatar-list li.user-chilloutroomba p.username { color: #cc5a93 !important; }
+ul.avatar-list li.user-chilloutroomba p.dubs:before { color: #cc5a93 !important; }
