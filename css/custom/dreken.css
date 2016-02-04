@@ -1,0 +1,7 @@
+/* Imports */
+@import url("https://krdemoz.github.io/Dubtrack/css/BG-Free/main_blue.css");
+
+/* Hide Skip button */
+#main_player .player_header span.skip-el { display: none; }
+
+/* Requested by @dreken */
