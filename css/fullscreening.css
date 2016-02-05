@@ -1,0 +1,151 @@
+/* Imports */
+@import url("https://netox005.github.io/Dubtrack/css/chatright.css"); /* Chat completly to the right */
+@import url("https://netox005.github.io/Dubtrack/css/animations.css"); /* Pack of animations */
+@import url("https://netox005.github.io/Dubtrack/css/browserbetter.css"); /* Modified Browser */
+@import url("https://netox005.github.io/Dubtrack/css/skynet.css"); /* Better recognizeable Room BOTs */
+
+/* Main function */
+#main-room .main-room-wrapper { min-height: initial; }
+#main-room .left_section {
+    display: flex !important;
+    padding: 0 450px 0 0 !important;
+    margin: 0 !important;
+}
+#main-room .left_section .main-player-wrapper {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: rgba(0,0,0,.7);
+    padding: 3.1rem 0 3.56rem;
+}
+#main_player {
+    padding: 0;
+    border-radius: 0;
+    height: inherit;
+    background-color: rgba(0,0,0,0);
+    border-top: 1px solid #878c8e;
+}
+#main_player .player_container #room-main-player-container .playerElement.soundcloud .artwork:not([src="https://d3byct92ei5n7c.cloudfront.net/hhberclba/image/upload/c_fill,h_460,w_900/tiqxlzynh3rxrkwvzeak.jpg"]) {
+    top: initial;
+    left: 50%;
+    transform: translateX(-50%);
+    width: initial;
+    height: 100%;
+}
+#main_player #mods-controllers,
+#main_player #room-info-display,
+#main_player .player_container {
+    padding: 0;
+    height: inherit;
+}
+#main_player #mods-controllers,
+#main_player #room-info-display .room-info-display-wrapper {
+    padding: 0 1rem;
+}
+#main_player #mods-controllers,
+#mods-controllers .mods-controllers-main-wrapper {
+    position: relative;
+}
+#main_player #mods-controllers { padding-right: 0; }
+#main_player .player_header {
+    top: -3rem;
+    height: 2.9rem;
+    display: flex;
+}
+#main_player .player_header span {
+    width: 100%;
+    height: 100%;
+    line-height: 1;
+    border-radius: 0;
+    margin: 0;
+    padding: 1rem 0;
+    color: #878c8e;
+    opacity: 1;
+    background-color: rgba(0,0,0,0) !important;
+}
+#main_player .player_header span:hover,
+#main_player .player_header span.active {
+    color: #fff;
+}
+#main_player .player_header span.active { border-bottom: 2px solid #fff; }
+#main_player .player_header span.edit-room i {
+    position: initial;
+    line-height: .4;
+}
+#main_player .player_header span.skip-el,
+#main_player .player_header span.skip-el:hover {
+    color: #f00;
+}
+#main_player .player_sharing {
+    padding: 1rem 1rem 0;
+    margin: 0;
+    border-top: 1px solid #878C8E;
+    height: 3.55rem;
+}
+
+@media screen and (max-width: 72em) { .diplay-chat #main_player *:not(.play-song-link-container) { display: none; } }
+
+/* Play song links on right footer */
+#player-controller { z-index: 0; }
+#main_player .play-song-link-container {
+    position: fixed;
+    left: initial;
+    right: 33.33%;
+    bottom: 0;
+    transform: none;
+    z-index: 5;
+    width: 16.66%;
+    display: flex !important;
+}
+.not-logged-in #main_player .play-song-link-container { width: 25%; right: 25%; }
+#main_player .play-song-link-container .play-song-link,
+#main_player .play-song-link-container .play-song-link-browser {
+    width: 50%;
+    display: inline-block;
+    overflow: hidden;
+    height: 3.6rem;
+    border-radius: 0;
+    background-color: rgba(0,0,0,0);
+    padding: 1rem 0;
+    transform: translateY(100%);
+}
+#main_player .play-song-link-container .play-song-link-browser { margin: 0; }
+#main_player .play-song-link-container .play-song-link::before,
+#main_player .play-song-link-container .play-song-link-browser::before {
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0;
+    font-weight: 700;
+}
+#main_player .play-song-link-container .play-song-link:hover::before,
+#main_player .play-song-link-container .play-song-link-browser:hover::before {
+    color: #0ff;
+}
+#main_player .play-song-link-container .play-song-link::before { content: "Join Queue"; }
+#main_player .play-song-link-container .play-song-link.leave-button::before { content: "Leave Queue"; }
+#main_player .play-song-link-container .play-song-link-browser::before { content: "Open Queue"; }
+
+#player-controller .left, .not-logged-in #player-controller .left { width: 50%; padding-right: 0; }
+#player-controller .right { width: 50%; }
+#player-controller .right ul {
+    width: 66.66%;
+    float: right;
+}
+.not-logged-in #player-controller .right ul { width: 50%; }
+
+@media screen and (max-width: 72em) {
+    #main-room .left_section { padding-right: 0 !important; min-height: initial; }
+    #player-controller .left, .not-logged-in #player-controller .left { width: 100%; }
+    #main_player .play-song-link-container { right: initial; left: 0; }
+    #player-controller .right { width: 100%; }
+    #main_player .play-song-link-container { width: 33.33%; }
+    .not-logged-in #main_player .play-song-link-container { width: 50%; }
+}
+
+/* Miscellaneous */
+#main_player .player_header span.display-queue::before { content: "Room "; }
+#chat .chat-container .chat-messages .chat-main li .activity-row .text img { display: block; }
+#player-controller .right ul li a { padding: 1rem 0; }
