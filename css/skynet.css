@@ -67,7 +67,7 @@ chilloutroomba: 56208ef772fbd14400119c64
 
 #chat .chat-main li.user-561da9e034c45e0e0087b6d0:hover .activity-row .meta-info::before { content: "Lonely BOT without Room :("; }
 #chat .chat-main li.user-56216481426d191300e5bfef:hover .activity-row .meta-info::before { content: "Nightblue3 Room BOT (deprecated)"; }
-#chat .chat-main li.user-56b2054200550001019554c8:hover .activity-row .meta-info::before { content: "Lurker Nightblue3 Room BOT"; }
+#chat .chat-main li.user-56b2054200550001019554c8:hover .activity-row .meta-info::before { content: "Nightblue3 Room BOT"; }
 #chat .chat-main li.user-565aa52e6fe207830052f57f:hover .activity-row .meta-info::before { content: "Dubtrack Official BOT"; }
 #chat .chat-main li.user-56208ef772fbd14400119c64:hover .activity-row .meta-info::before { content: "Chillout Music Room BOT"; }
 
@@ -127,7 +127,7 @@ ul.avatar-list li.user-nb3bot p.dubs:before { color: #7ec0ee !important; }
 
 /* nightbluebot */
 #chat .chat-main li.user-56b2054200550001019554c8 .activity-row .text p:first-of-type:before {
-    content: "lurking nightblue bot";
+    content: "nightblue bot";
     color: #7ec0ee !important;
     font-size: .75rem;
     background-image: url("https://d3byct92ei5n7c.cloudfront.net/hhberclba/image/upload/c_fill,h_200,q_75,w_200/pkisglp94deagijlag51.png");
@@ -135,7 +135,7 @@ ul.avatar-list li.user-nb3bot p.dubs:before { color: #7ec0ee !important; }
 ul.avatar-list li.user-nightbluebot p.username { color: #7ec0ee !important; }
 ul.avatar-list li.user-nightbluebot p.dubs:before {
     color: #7ec0ee !important;
-    content: "known lurker BOT - "
+    content: "known BOT - "
 }
 
 /* dubtrack_bot */
