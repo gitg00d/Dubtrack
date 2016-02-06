@@ -154,6 +154,7 @@ body.no-song-playing #player-controller .infoContainerInner:after { display: non
 #main-room .left_section #main_player .play-song-link { border-radius: .5rem; } /* Less border radius on "Queue a Song" button */
 #room-main-player-container-soundcloud .playerElement.soundcloud .redirect-link { font-size: 3.5rem !important; line-height: 1; } /* Soundcloud redirect icon size fix */
 #main_player .player_header span.display-queue::before { content: "Room "; } /* Better explained queue button on header */
+#player-controller .left ul li.infoContainer .infoContainerInner span { text-overflow: ellipsis; } /* Song title overflow ellipsis */
 
 /* Phone Mode Fixes */
 @media screen and (max-width: 72em) {
