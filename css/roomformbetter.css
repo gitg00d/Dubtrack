@@ -1,0 +1,16 @@
+/* COMPLEMENTARY FILE, should be imported into another .css file */
+
+#roomFormUpdate { top: 58px; width: 70rem; margin: 0; padding-right: 1px; border-radius: 0; }
+#roomFormUpdate .modal-header h3 { margin: 0; text-align: center; }
+#roomFormUpdate .modal-header, #roomFormUpdate .modal-footer { background: rgba(84,86,85,0.8); }
+
+#roomFormUpdate .closebtn { color: white; top: .75rem; }
+#roomFormUpdate .closebtn:hover::before { color: cyan; }
+
+#roomFormUpdate .mid { overflow-y: scroll; height: calc(100vh - 58px - 56px - 83px); }
+
+#roomFormUpdate .modal-footer { margin-top: 0; padding: .25rem 1rem; }
+#roomFormUpdate .modal-footer button.btn { border: 2px solid #878c8e !important; padding: .5rem .75rem !important; line-height: 1; }
+
+#roomFormUpdate .mid select { padding: 0; }
+#roomFormUpdate .mid select option:not(selected) { color: black; }
