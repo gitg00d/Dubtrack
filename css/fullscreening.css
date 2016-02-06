@@ -1,10 +1,12 @@
 /* Imports */
 @import url("https://netox005.github.io/Dubtrack/css/chatright.css"); /* Chat completly to the right */
 @import url("https://netox005.github.io/Dubtrack/css/animations.css"); /* Pack of animations */
-@import url("https://netox005.github.io/Dubtrack/css/browserbetter.css"); /* Modified Browser */
 @import url("https://netox005.github.io/Dubtrack/css/skynet.css"); /* Better recognizeable Room BOTs */
 @import url("https://netox005.github.io/Dubtrack/css/voteicons.css"); /* NB3 Vote Icons */
+@import url("https://netox005.github.io/Dubtrack/css/browserbetter.css"); /* Modified Browser */
 @import url("https://netox005.github.io/Dubtrack/css/lobbybetter.css"); /* Modified Lobby */
+@import url("https://netox005.github.io/Dubtrack/css/roomformbetter.css"); /* Modified Room Form */
+@import url("https://netox005.github.io/Dubtrack/css/fixesnetux.css"); /* Netux Fixes */
 
 /* Main function */
 #main-room .main-room-wrapper { min-height: initial; }
@@ -91,7 +93,7 @@
 @media screen and (max-width: 72em) { .diplay-chat #main_player *:not(.play-song-link-container) { display: none; } }
 
 /* Play song links on right footer */
-#player-controller { z-index: 0; }
+#player-controller { z-index: 0 !important; }
 #main_player .play-song-link-container {
     position: fixed;
     left: initial;
@@ -152,8 +154,3 @@
     #main_player .play-song-link-container { width: 33.33%; }
     .not-logged-in #main_player .play-song-link-container { width: 50%; }
 }
-
-/* Miscellaneous */
-#main_player .player_header span.display-queue::before { content: "Room "; }
-#chat .chat-container .chat-messages .chat-main li .activity-row .text img { display: block; }
-#player-controller .right ul li a { padding: 1rem 0; }

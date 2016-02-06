@@ -40,3 +40,6 @@ Thanks to @Larry1123 for showing me the counter function, counter-reset and coun
     text-align: center;
     line-height: 1;
 }
+
+/* Footer on top */
+#player-controller { z-index: 6; }
