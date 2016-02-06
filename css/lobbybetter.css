@@ -1,0 +1,9 @@
+/* COMPLEMENTARY FILE, should be imported into another .css file */
+
+#room-list #container-room-list .room-item { border-radius: 0; cursor: pointer; }
+#room-list #container-room-list .room-item header .description .name,
+#room-list #container-room-list .room-item header .user-info .room-user { cursor: text; }
+#room-list #container-room-list .room-item header .user-info .room-user a { color: cyan; font-weight: normal; }
+#room-list #container-room-list .room-item { border: 2px solid transparent; box-shadow: 0 0 15px 1px black; }
+#room-list #container-room-list .room-item.userRoom { border-color: #5f9ea0; box-shadow: 0 0 5px 2px #5f9ea0; }
+#room-list #container-room-list .room-item:not(:hover) .current-song { text-align: center; }

@@ -4,11 +4,12 @@
 @import url("https://netox005.github.io/Dubtrack/css/voteicons.css"); /* NB3 Vote Icons */
 @import url("https://netox005.github.io/Dubtrack/css/chatright.css"); /* Chat completely to the right */
 @import url("https://netox005.github.io/Dubtrack/css/videosmall.css"); /* Small video */
-@import url("https://netox005.github.io/Dubtrack/css/skynet.css"); /* @netuxbot custom chat */
+@import url("https://netox005.github.io/Dubtrack/css/skynet.css"); /* Better recognizeable Room BOTs */
 @import url("https://netox005.github.io/Dubtrack/css/phonefix.css"); /* Phone Fixes */
-@import url("https://netox005.github.io/Dubtrack/css/animations.css"); /* Animations */
+@import url("https://netox005.github.io/Dubtrack/css/animations.css"); /* Pack of animations */
 @import url("https://hebgbs.github.io/rainbowNB3.css"); /* Rainbowstuff (Progress bar and volume bar) */
-@import url("https://netox005.github.io/Dubtrack/css/browserbetter.css"); /* Better Browser */
+@import url("https://netox005.github.io/Dubtrack/css/browserbetter.css"); /* Modified Browser */
+@import url("https://netox005.github.io/Dubtrack/css/lobbybetter.css"); /* Modified Lobby */
 
 /* Video next to chat */
 @media screen and (min-width: 72em) {
@@ -105,15 +106,6 @@ img.emoji.twitch-emoji[alt="angelthump"], img.emoji.twitch-emoji[alt="taxibro"] 
 /* Soundcloud player fixes */
 #room-main-player-container-soundcloud { background-color: #111111; cursor: default; }
 #main_player .player_container #room-main-player-container .playerElement.soundcloud img { pointer-events: none; }
-
-/* Room Item fixes */
-#room-list #container-room-list .room-item { border-radius: 0; cursor: pointer; }
-#room-list #container-room-list .room-item header .description .name,
-#room-list #container-room-list .room-item header .user-info .room-user { cursor: text; }
-#room-list #container-room-list .room-item header .user-info .room-user a { color: cyan; font-weight: normal; }
-#room-list #container-room-list .room-item { border: 2px solid transparent; box-shadow: 0 0 15px 1px black; }
-#room-list #container-room-list .room-item.userRoom { border-color: #5f9ea0; box-shadow: 0 0 5px 2px #5f9ea0; }
-#room-list #container-room-list .room-item:not(:hover) .current-song { text-align: center; }
 
 /* ETA fixes (DubX) */
 .eta_tooltip { border-top-right-radius: 0 !important; transform: translateX(-7px); }

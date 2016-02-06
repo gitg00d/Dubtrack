@@ -3,6 +3,8 @@
 @import url("https://netox005.github.io/Dubtrack/css/animations.css"); /* Pack of animations */
 @import url("https://netox005.github.io/Dubtrack/css/browserbetter.css"); /* Modified Browser */
 @import url("https://netox005.github.io/Dubtrack/css/skynet.css"); /* Better recognizeable Room BOTs */
+@import url("https://netox005.github.io/Dubtrack/css/voteicons.css"); /* NB3 Vote Icons */
+@import url("https://netox005.github.io/Dubtrack/css/lobbybetter.css"); /* Modified Lobby */
 
 /* Main function */
 #main-room .main-room-wrapper { min-height: initial; }
@@ -62,6 +64,9 @@
     color: #878c8e;
     opacity: 1;
     background-color: rgba(0,0,0,0) !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 #main_player .player_header span:hover,
 #main_player .player_header span.active {
@@ -119,6 +124,9 @@
     height: 100%;
     padding: 1rem 0;
     font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 #main_player .play-song-link-container .play-song-link:hover::before,
 #main_player .play-song-link-container .play-song-link-browser:hover::before {
