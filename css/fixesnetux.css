@@ -98,6 +98,7 @@ img.emoji.twitch-emoji[alt="angelthump"], img.emoji.twitch-emoji[alt="taxibro"] 
     color: #878c8e;
 }
 #chat .chat-main li.user-560b4a33d9057a0300cc2fa0.current-chat-user .activity-row .text p:first-of-type:before { color: gold; }
+#chat .chat-container .chat-messages .chat-main li .chatDelete { z-index: 2; }
 
 /* Other fixes */
 .ps-container .ps-scrollbar-x,
