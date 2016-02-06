@@ -26,3 +26,6 @@
 
 /* Room size fix */
 @media screen and (min-width: 72em) { #main-room .main-room-wrapper { min-height: 0; margin-bottom: 0; } }
+
+/* Miscellaneous */
+#main_player .player_header span.display-queue::before { content: initial; }
