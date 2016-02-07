@@ -92,7 +92,7 @@
 }
 
 @media screen and (max-width: 72em) { .diplay-chat #main_player *:not(.play-song-link-container) { display: none; } }
-@media screen and (min-width: 72em) { #main-room .right_section, #main-menu-right { width: 33.33% } }
+@media screen and (min-width: 72em) { #main-room .right_section, #main-menu-right { width: 33.33% !important; } }
 
 /* Play song links on right footer */
 #player-controller { z-index: 0 !important; }
