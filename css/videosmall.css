@@ -15,7 +15,7 @@
     #main_player .player_header {
         width: 73px;
         top: 8px !important;
-        height: 19.1vw;
+        height: 81.25%;
         left: -73px;
     }
     #main_player .player_header span {
