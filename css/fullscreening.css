@@ -10,6 +10,7 @@
 
 /* Main function */
 #main-room .main-room-wrapper { min-height: initial; }
+#main-room .right_section, #main-menu-right { width: 33.33% }
 #main-room .left_section {
     display: flex !important;
     padding: 0 450px 0 0 !important;
@@ -82,6 +83,7 @@
 #main_player .player_header span.skip-el,
 #main_player .player_header span.skip-el:hover {
     color: #f00;
+    width: 25%;
 }
 #main_player .player_sharing {
     padding: 1rem 1rem 0;
