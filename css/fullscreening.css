@@ -13,7 +13,7 @@
 #main-room .right_section, #main-menu-right { width: 33.33% }
 #main-room .left_section {
     display: flex !important;
-    padding: 0 450px 0 0 !important;
+    padding: 0 33.33% 0 0 !important;
     margin: 0 !important;
 }
 #main-room .left_section .main-player-wrapper {
