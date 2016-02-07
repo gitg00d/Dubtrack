@@ -17,7 +17,7 @@
 @media screen and (min-width: 72em) {
     #main-room .left_section {
         left: initial;
-        right: 449px;
+        right: 450px;
         padding-right: 0 !important;
         margin-left: 0 !important;
     }
@@ -26,6 +26,19 @@
 
 /* Room size fix */
 @media screen and (min-width: 72em) { #main-room .main-room-wrapper { min-height: 0; margin-bottom: 0; } }
+
+/* Skip animation */
+@keyframes hidding-skip {
+    0% { right: 0; }
+    75%, 100% { right: -100%; visibility: hidden; }
+}
+@media screen and (min-width: 72em) {
+    #main_player .player_header { overflow-x: hidden; }
+    #main_player .player_header span.skip-el[style="display: none;"] {
+        animation: hidding-skip .15s linear forwards;
+        display: block !important;
+    }
+}
 
 /* Miscellaneous */
 #main_player .player_header span.display-queue::before { content: initial; }
