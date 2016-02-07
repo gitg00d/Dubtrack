@@ -156,3 +156,14 @@
     #main_player .play-song-link-container { width: 33.33%; }
     .not-logged-in #main_player .play-song-link-container { width: 50%; }
 }
+
+/* ETA (DubX) fix */
+.eta_tooltip {
+    border-top-right-radius: 1.5rem !important;
+    transform: translate(calc(100% + 2.5rem), -100%);
+}
+.eta_tooltip::before {
+    left: -17px;
+    bottom: calc(50% - 11px);
+    transform: rotate(-90deg);
+}
