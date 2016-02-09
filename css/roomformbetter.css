@@ -1,5 +1,6 @@
 /* COMPLEMENTARY FILE, should be imported into another .css file */
 
+/* Main function */
 #roomFormUpdate { top: 58px; width: 70rem; margin: 0; padding-right: 1px; border-radius: 0; }
 #roomFormUpdate .modal-header h3 { margin: 0; text-align: center; }
 #roomFormUpdate .modal-header, #roomFormUpdate .modal-footer { background: rgba(84,86,85,0.8); }
@@ -14,3 +15,14 @@
 
 #roomFormUpdate .mid select { padding: 0; }
 #roomFormUpdate .mid select option:not(selected) { color: black; }
+
+/* Scrollbar */
+#roomFormUpdate::-webkit-scrollbar, #roomFormUpdate *::-webkit-scrollbar {
+    width: 12px;
+    background-color: #f1f1f1;
+}
+#roomFormUpdate::-webkit-scrollbar-thumb, #roomFormUpdate *::-webkit-scrollbar-thumb {
+    background-color: #bcbcbc;
+    border: 1px solid #a8a8a8;
+    background-clip: content-box;
+}
