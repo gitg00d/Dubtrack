@@ -11,7 +11,6 @@
 /* Main function */
 #main-room .main-room-wrapper { min-height: initial; }
 #main-room .left_section {
-    display: flex !important;
     padding: 0 33.33% 0 0 !important;
     margin: 0 !important;
 }
@@ -78,10 +77,12 @@
     width: 25%;
 }
 #main_player .player_sharing {
+    position: absolute;
+    width: 100%;
+    height: 3.55rem;
     padding: 1rem 1rem 0;
     margin: 0;
     border-top: 1px solid #878C8E;
-    height: 3.55rem;
 }
 
 @media screen and (max-width: 72em) { .diplay-chat #main_player > *:not(.play-song-link-container) { display: none; } }
