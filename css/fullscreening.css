@@ -86,7 +86,7 @@
 }
 
 @media screen and (max-width: 72em) { .diplay-chat #main_player > *:not(.play-song-link-container) { display: none; } }
-@media screen and (min-width: 72em) {
+@media screen and (min-width: 48em) {
     #main-room .right_section,
     #main-menu-right {
         width: 33.33% !important;
