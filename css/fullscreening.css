@@ -29,13 +29,6 @@
     background-color: rgba(0,0,0,0);
     border-top: 1px solid #878c8e;
 }
-#main_player .player_container #room-main-player-container .playerElement.soundcloud .artwork:not([src="https://d3byct92ei5n7c.cloudfront.net/hhberclba/image/upload/c_fill,h_460,w_900/tiqxlzynh3rxrkwvzeak.jpg"]) {
-    top: initial;
-    left: 50%;
-    transform: translateX(-50%);
-    width: initial;
-    height: 100%;
-}
 #main_player #mods-controllers,
 #main_player #room-info-display,
 #main_player .player_container {
@@ -149,7 +142,7 @@
 .not-logged-in #player-controller .right ul { width: 50%; }
 
 @media screen and (max-width: 72em) {
-    #main-room .left_section { padding-right: 0 !important; min-height: initial; }
+    #main-room .left_section { padding-right: 0 !important; min-height: initial; background-color: rgba(0,0,0,.7); }
     #player-controller .left, .not-logged-in #player-controller .left { width: 100%; }
     #main_player .play-song-link-container { right: initial; left: 0; }
     #player-controller .right { width: 100%; }
@@ -166,4 +159,17 @@
     left: -17px;
     bottom: calc(50% - 11px);
     transform: rotate(-90deg);
+}
+
+/* Soundcloud artwork fix */
+#main_player .player_container #room-main-player-container .playerElement.soundcloud .artwork {
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#main_player .player_container #room-main-player-container .playerElement.soundcloud .artwork[src="https://d3byct92ei5n7c.cloudfront.net/hhberclba/image/upload/c_fill,h_460,w_900/tiqxlzynh3rxrkwvzeak.jpg"] {
+    width: 55vmin;
+}
+#main_player .player_container #room-main-player-container .playerElement.soundcloud .artwork:not([src="https://d3byct92ei5n7c.cloudfront.net/hhberclba/image/upload/c_fill,h_460,w_900/tiqxlzynh3rxrkwvzeak.jpg"]) {
+    width: initial;
+    height: 90%;
 }
