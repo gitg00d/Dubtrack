@@ -163,14 +163,15 @@
 }
 
 /* Soundcloud artwork fix */
-#main_player .player_container #room-main-player-container .playerElement.soundcloud .artwork {
-    left: 50%;
+#main_player .player_container #room-main-player-container .playerElement.soundcloud > div {
+    width: 60% !important;
+    height: auto !important;
+    top: 50% !important;
+    left: 50% !important;
     transform: translate(-50%,-50%);
+    display: flex;
 }
-#main_player .player_container #room-main-player-container .playerElement.soundcloud .artwork[src="https://d3byct92ei5n7c.cloudfront.net/hhberclba/image/upload/c_fill,h_460,w_900/tiqxlzynh3rxrkwvzeak.jpg"] {
-    width: 55vmin;
-}
-#main_player .player_container #room-main-player-container .playerElement.soundcloud .artwork:not([src="https://d3byct92ei5n7c.cloudfront.net/hhberclba/image/upload/c_fill,h_460,w_900/tiqxlzynh3rxrkwvzeak.jpg"]) {
-    width: initial;
-    height: 90%;
+#main_player .player_container #room-main-player-container .playerElement.soundcloud .artwork {
+    transform: none;
+    margin: auto;
 }
