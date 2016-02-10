@@ -155,6 +155,7 @@ body.no-song-playing #player-controller .infoContainerInner:after { display: non
 #room-main-player-container-soundcloud .playerElement.soundcloud .redirect-link { font-size: 3.5rem !important; line-height: 1; } /* Soundcloud redirect icon size fix */
 #main_player .player_header span.display-queue::before { content: "Room "; } /* Better explained queue button on header */
 #player-controller .left ul li.infoContainer .infoContainerInner span { text-overflow: ellipsis; } /* Song title overflow ellipsis */
+body.no-song-playing #main_player .player_container #room-main-player-container:before { content: none; } /* Don't displaying video hidden icon when no song is playing */
 
 /* Phone Mode Fixes */
 @media screen and (max-width: 72em) {
