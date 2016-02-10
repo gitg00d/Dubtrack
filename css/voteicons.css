@@ -14,8 +14,11 @@
 
 /* Grab message icon */
 #chat .chat-container .chat-messages .chat-main li.chat-system-grabbed::after {
-    content: url('http://nightbloo.github.io/plug/icons/grab.png');
+    background-image: url('http://nightbloo.github.io/plug/icons/grab.png');
     display: inline;
     position: absolute;
-    bottom: -2px;
+    bottom: 5px;
+    background-size: cover;
+    width: 1.5rem;
+    height: 1.5rem;
 }
