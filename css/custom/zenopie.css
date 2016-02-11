@@ -1,44 +1,35 @@
 /* Imports */
-@import url("https://netox005.github.io/Dubtrack/css/chatright.css"); /* Chat completely to the right */
+@import url("https://netox005.github.io/Dubtrack/css/fullscreening.css");
 
-/* Remove "Queue a song" buttons */
-#main_player .play-song-link { display: none; }
-
-@media screen and (min-width: 72em) {
-    #main-room .left_section { padding-right: 450px; margin-top: 0; }
-    #main-room .left_section .main-player-wrapper { display: initial; }
-    #main_player { border-radius: 0; padding: .5vh 0; position: initial; }
-    #main_player .player_header, #main_player .player_sharing {
-        width: calc(50% - 450px / 2);
-        z-index: 6;
-        bottom: .5vh;
-        opacity: 0;
-        transition: opacity 0s;
-    }
-    #main_player .player_sharing {
-        line-height: 0;
-        padding: 1.2vh 1rem;
-        position: absolute;
-        right: 450px;
-        background-color: rgba(0,0,0,.7);
-        margin: 0;
-        display: table;
-    }
-    #main_player .player_header {
-        top: initial;
-        left: 0;
-    }
-    #main_player .player_header span {
-        display: table-cell !important;
-        border-radius: 0;
-        float: initial !important;
-        width: calc(100% / 6);
-        padding: 1.5vh 0;
-    }
-    #main_player .player_header span.edit-room i { line-height: .7; width: 100%; text-align: center; }
-    #main_player:hover .player_header, #main_player:hover .player_sharing { opacity: 1; }
-    #main_player:hover .player_sharing { display: block; }
+/* Main function */
+#main-room .left_section .main-player-wrapper { padding: 0; }
+#main_player, #main_player .player_sharing { border-top: none; }
+#main_player .player_header,
+#main_player .player_sharing {
+    z-index: 6;
+    bottom: 0;
+    width: 50%;
+    height: initial;
+    padding: 0;
+    background-color: rgba(0,0,0,.7);
+    opacity: 0;
+    transition: opacity .1s linear;
+    height: 3rem;
 }
+#main_player:hover .player_header,
+#main_player:hover .player_sharing {
+    opacity: 1;
+}
+#main_player .player_header {
+    top: initial;
+    left: 0;
+}
+#main_player .player_header span.active { border-bottom: none; }
+#main_player .player_sharing {
+    right: 0;
+    padding: .8rem .5rem;
+}
+#main_player .player_sharing > * { font-size: 1.2rem !important; }
+#main_player .player_sharing .player-controller-container .volume-controller-container { margin-top: .45rem; }
 
 /* Requested by zenopie */
-/* Intended to be used on Mozilla Firefox, maximized on a resolution of 1336x768 */
