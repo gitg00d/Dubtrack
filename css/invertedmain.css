@@ -1,0 +1,43 @@
+/* Main file (NB3 room) */
+
+/* Imports */
+@import url("https://netox005.github.io/Dubtrack/css/voteicons.css"); /* NB3 Vote Icons */
+@import url("https://netox005.github.io/Dubtrack/css/chatright.css"); /* Chat completely to the right */
+@import url("https://netox005.github.io/Dubtrack/css/invertedvideosmall.css"); /* Small video */
+@import url("https://netox005.github.io/Dubtrack/css/skynet.css"); /* Better recognizeable Room BOTs */
+@import url("https://netox005.github.io/Dubtrack/css/phonefix.css"); /* Phone Fixes */
+@import url("https://netox005.github.io/Dubtrack/css/animations.css"); /* Pack of animations */
+@import url("https://hebgbs.github.io/rainbowNB3.css"); /* Rainbowstuff (Progress bar and volume bar) */
+@import url("https://netox005.github.io/Dubtrack/css/browserbetter.css"); /* Modified Browser */
+@import url("https://netox005.github.io/Dubtrack/css/lobbybetter.css"); /* Modified Lobby */
+@import url("https://netox005.github.io/Dubtrack/css/roomformbetter.css"); /* Modified Room Form */
+@import url("https://netox005.github.io/Dubtrack/css/fixesnetux.css"); /* Netux Fixes */
+
+/* Video next to chat */
+@media screen and (min-width: 72em) {
+    #main-room .left_section {
+        left: 0;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+    }
+    #main-room .left_section #main_player { border-radius: 0 0 1rem 0; }
+}
+
+/* Room size fix */
+@media screen and (min-width: 72em) { #main-room .main-room-wrapper { min-height: 0; margin-bottom: 0; } }
+
+/* Skip animation */
+@keyframes hidding-skip {
+    0% { right: 0; }
+    75%, 100% { right: -100%; visibility: hidden; }
+}
+@media screen and (min-width: 72em) {
+    #main_player .player_header { overflow-x: hidden; }
+    #main_player .player_header span.skip-el[style="display: none;"] {
+        animation: hidding-skip .15s linear forwards;
+        display: block !important;
+    }
+}
+
+/* Miscellaneous */
+#main_player .player_header span.display-queue::before { content: initial; }
