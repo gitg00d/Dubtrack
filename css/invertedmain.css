@@ -1,13 +1,19 @@
-/* Main file (NB3 room) */
+/*
+Inverted version of main.css Ɛ>.
+
+Features chat to the right, small video player to the left of the page with header buttons to the right, NB3 vote icons,
+recognizable room BOTs in chat, a pack of animations, an improvement on the lobby, the browser and the room edit room,
+netux's fixes (including mobile view) and Heebee's Rainbow progress bar
+*/
 
 /* Imports */
 @import url("https://netox005.github.io/Dubtrack/css/voteicons.css"); /* NB3 Vote Icons */
 @import url("https://netox005.github.io/Dubtrack/css/chatright.css"); /* Chat completely to the right */
 @import url("https://netox005.github.io/Dubtrack/css/invertedvideosmall.css"); /* Small video */
-@import url("https://netox005.github.io/Dubtrack/css/skynet.css"); /* Better recognizeable Room BOTs */
+@import url("https://netox005.github.io/Dubtrack/css/skynet.css"); /* Better recognizable Room BOTs */
 @import url("https://netox005.github.io/Dubtrack/css/phonefix.css"); /* Phone Fixes */
 @import url("https://netox005.github.io/Dubtrack/css/animations.css"); /* Pack of animations */
-@import url("https://hebgbs.github.io/rainbowNB3.css"); /* Rainbowstuff (Progress bar and volume bar) */
+@import url("https://hebgbs.github.io/rainbowNB3.css"); /* Rainbow video progress bar */
 @import url("https://netox005.github.io/Dubtrack/css/browserbetter.css"); /* Modified Browser */
 @import url("https://netox005.github.io/Dubtrack/css/lobbybetter.css"); /* Modified Lobby */
 @import url("https://netox005.github.io/Dubtrack/css/roomformbetter.css"); /* Modified Room Form */
