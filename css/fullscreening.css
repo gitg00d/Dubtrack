@@ -86,11 +86,9 @@
 }
 
 @media screen and (max-width: 72em) { .diplay-chat #main_player > *:not(.play-song-link-container) { display: none; } }
+@media screen and (min-width: 72em) { #main-room .right_section { width: 33.33% !important; } }
 @media screen and (min-width: 48em) {
-    #main-room .right_section,
-    #main-menu-right {
-        width: 33.33% !important;
-    }
+    #main-menu-right { width: 33.33% !important; }
     #main-menu-right { right: calc(-33.33% - 2rem); }
     .menu-right-in #main-menu-right { transform: translateX(calc(-100% - 2rem)); }
 }
