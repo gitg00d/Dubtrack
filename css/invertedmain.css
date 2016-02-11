@@ -1,9 +1,18 @@
 /*
 Inverted version of main.css Ɛ>.
 
-Features chat to the right, small video player to the left of the page with header buttons to the right, NB3 vote icons,
-recognizable room BOTs in chat, a pack of animations, an improvement on the lobby, the browser and the room edit room,
-netux's fixes (including mobile view) and Heebee's Rainbow progress bar.
+Features:
+- chat to the right
+- video player to the left of the page
+
+Imports:
+- small video with header buttons to the right
+- NB3 vote icons,
+- recognizable room BOTs in chat
+- a pack of animations
+- an improvement on the lobby, the browser and the room edit room
+- netux's fixes (including mobile view)
+- Heebee's Rainbow progress bar.
 */
 
 /* Imports */
@@ -34,8 +43,8 @@ netux's fixes (including mobile view) and Heebee's Rainbow progress bar.
 
 /* Skip animation */
 @keyframes hidding-skip {
-    0% { right: 0; }
-    75%, 100% { right: -100%; visibility: hidden; }
+    0% { left: 0; }
+    75%, 100% { left: -100%; visibility: hidden; }
 }
 @media screen and (min-width: 72em) {
     #main_player .player_header { overflow-x: hidden; }

@@ -1,9 +1,18 @@
 /*
 Enjoy Dubtrack in full screen!.
 
-Features chat to the right, video player without padding filling the space left, NB3 vote icons, recognizable room BOTs
-in chat, a pack of animations, an improvement on the lobby, the browser and the room edit room and netux's fixes
-(including mobile view) and Heebee's Rainbow progress bar.
+Features:
+- chat to the right
+- video player without padding filling the space left
+- queue buttons below video on the page footer
+
+Imports:
+- NB3 vote icons
+- recognizable room BOTs in chat
+- a pack of animations
+- an improvement on the lobby, the browser and the room edit room
+- netux's fixes (including mobile view)
+- Heebee's Rainbow progress bar.
 */
 
 /* Imports */
