@@ -54,6 +54,7 @@ img.emoji.twitch-emoji[alt="angelthump"], img.emoji.twitch-emoji[alt="taxibro"] 
 #chat .chat-container .chat-messages .chat-main li.deleted-message .stream-item-content .image_row > img { opacity: .01; }
 #chat .chat-container .chat-messages .chat-main li.deleted-message .stream-item-content .image_row::before {
     content: "X";
+    font-family: cursive, Arial, sans-serif;
     position: absolute;
     top: 3px;
     left: 13px;
