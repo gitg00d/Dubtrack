@@ -159,6 +159,7 @@ body.no-song-playing #player-controller .infoContainerInner:after { display: non
 #player-controller .left ul li.infoContainer .infoContainerInner span { text-overflow: ellipsis; } /* Song title overflow ellipsis */
 body.no-song-playing #main_player .player_container #room-main-player-container:before { content: none; } /* Don't displaying video hidden icon when no song is playing */
 #main_player .placeholder h5 { cursor: pointer; } /* No song playing text with pointer cursor */
+#user_popover[style*="left: 0"] { border-radius: 0 1rem 0 0; } /* DJ User Popover border radius fix */
 
 /* Phone Mode Fixes */
 @media screen and (max-width: 72em) {
