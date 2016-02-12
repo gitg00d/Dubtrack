@@ -16,7 +16,6 @@
 
 /* Add to playlist fixes */
 #addToPlaylistFloatContainer .create-playlist-header .icon-close { position: absolute; top: 15px; right: 15px; }
-#addToPlaylistFloatContainer .create-playlist-header .icon-close:hover { color: cyan; }
 #addToPlaylistFloatContainer .create-playlist-input { background: #666A6B; border-bottom: 2px solid #878c8e; }
 #addToPlaylistFloatContainer .create-playlist-input .playlist-input {
     width: calc(100% - 2.75rem);
