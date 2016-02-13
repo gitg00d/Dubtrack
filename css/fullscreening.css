@@ -187,17 +187,19 @@ Imports:
 
 /* Soundcloud artwork fix */
 #main_player .player_container #room-main-player-container .playerElement.soundcloud > div {
-    height: auto !important;
+    position: relative !important;
+    width: auto !important;
+    height: 90% !important;
     top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%,-50%);
-    display: flex;
+    transform: translateY(-50%);
 }
 #main_player .player_container #room-main-player-container .playerElement.soundcloud .artwork {
-    transform: none;
-    margin: auto;
+    position: absolute;
     height: 100%;
     width: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 #main_player .player_container #room-main-player-container .playerElement.soundcloud .artwork[src="https://d3byct92ei5n7c.cloudfront.net/hhberclba/image/upload/c_fill,h_460,w_900/tiqxlzynh3rxrkwvzeak.jpg"] {
     width: 50%;
