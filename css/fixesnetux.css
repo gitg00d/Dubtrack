@@ -101,6 +101,22 @@ img.emoji.twitch-emoji[alt="angelthump"], img.emoji.twitch-emoji[alt="taxibro"] 
 #chat .chat-main li.user-560b4a33d9057a0300cc2fa0.current-chat-user .activity-row .text p:first-of-type:before { color: gold; }
 #chat .chat-container .chat-messages .chat-main li .chatDelete { z-index: 2; }
 
+/* Long live Olatnip, king kappa */
+#chat .chat-container .chat-messages .chat-main li.user-561d4abb00939732008b68bf .activity-row .text a.username {
+    padding-left: 1.25em;
+    position: relative;
+}
+#chat .chat-container .chat-messages .chat-main li.user-561d4abb00939732008b68bf .activity-row .text a.username::before {
+    content: "";
+    background: url("https://raw.githubusercontent.com/sinfulBA/DubX-Script/master/emotes/misc/147.png") no-repeat left center;
+    background-size: cover;
+    width: 1em;
+    height: 1.5em;
+    position: absolute;
+    left: 0;
+    top: -.5em;
+}
+
 /* Other fixes */
 .ps-container .ps-scrollbar-x,
 .ps-container .ps-scrollbar-y,
