@@ -47,7 +47,7 @@ chilloutroomba: 56208ef772fbd14400119c64
 #chat .chat-main li.user-565aa52e6fe207830052f57f .activity-row .text p:first-of-type:before,
 #chat .chat-main li.user-56208ef772fbd14400119c64 .activity-row .text p:first-of-type:before {
     text-transform: uppercase;
-    font-weight: 600;
+    text-shadow: 0 -1px 0 !important;
     font-size: .75em;
     cursor: pointer;
     text-align: initial;
@@ -87,7 +87,7 @@ ul.avatar-list li.user-nightbluebot p.dubs:before,
 ul.avatar-list li.user-dubtrack_bot p.dubs:before,
 ul.avatar-list li.user-chilloutroomba p.dubs:before {
     content: "known BOT - ";
-    font-weight: bold;
+    text-shadow: 0 -1px 0 !important;
     color: #8751B7 !important;
 }
 
