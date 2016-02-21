@@ -147,7 +147,7 @@ time.timeago { /* Time ago on messages not selectable */
 }
 #avatar-list p.dubs span { font-family: monospace; font-size: 1.2rem } /* User list dubs num position fix */
 img.emoji.twitch-emoji[alt="facepalm"] { background-color: white; } /* Facepalm coloring fix */
-#chat .chat-container li.isDefault.current-chat-user a.username { color: gold !important; } /* Gold color on user if it's pleb */
+#chat .chat-container li.isDefault.current-chat-user a.username, #chat .chat-container li.isDj.current-chat-user a.username { color: gold !important; } /* Gold color on user if it's pleb */
 body.no-song-playing #player-controller .infoContainerInner:after { display: none; } /* Progress bar not visible when no song is playing fix */
 #main-loading { background: transparent linear-gradient(to bottom, transparent 66px, #0ff 66px, #0ff 100%) !important; } /* Cyan loading message poping out of header fix, thanks @Hebgbs */
 #player-controller .right ul li .dubdown.voted { background-color: #f0a; } /* Different grab and downdub colors */
