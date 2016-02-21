@@ -182,7 +182,7 @@ body.no-song-playing #main_player .player_container #room-main-player-container:
 #main_avatar_room #main-user-list-room #avatar-list li .username,
 #main_avatar_room #main-user-list-room #avatar-list li .username::after,
 #main_avatar_room #main-user-list-room #avatar-list li .dubs::before { /* Bold in chat fix */
-    font-weight: 400;
+    font-weight: 400 !important;
     text-shadow: 0 -1px 0 !important;
 }
 
