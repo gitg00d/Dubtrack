@@ -67,8 +67,8 @@ img.emoji.twitch-emoji[alt="angelthump"], img.emoji.twitch-emoji[alt="taxibro"] 
 #main_player .player_container #room-main-player-container .playerElement.soundcloud img { pointer-events: none; }
 
 /* ETA fixes (DubX) */
-.eta_tooltip { border-top-right-radius: 0 !important; transform: translateX(-7px); }
-.eta_tooltip::before {
+.eta_tooltip, .snooze_tooltip { border-top-right-radius: 0 !important; transform: translateX(-7px); }
+.eta_tooltip::before, .snooze_tooltip::before {
     content: "";
     position: absolute;
     left: calc(100% - 8px);
