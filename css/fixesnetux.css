@@ -89,7 +89,7 @@ img.emoji.twitch-emoji[alt="angelthump"], img.emoji.twitch-emoji[alt="taxibro"] 
 }
 
 /* Netux username */
-#chat .chat-container .chat-messages .chat-main li.user-560b4a33d9057a0300cc2fa0 .activity-row .text a.username { visibility: hidden; }
+#chat .chat-container .chat-messages .chat-main li.user-560b4a33d9057a0300cc2fa0 .activity-row .text a.username { opacity: 0; }
 #chat .chat-main li.user-560b4a33d9057a0300cc2fa0:not(.deleted-message) .activity-row .text p:first-of-type:before {
     content: "ŋetux";
     position: absolute;
