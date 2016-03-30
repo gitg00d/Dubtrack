@@ -32,4 +32,17 @@
     #main_player .player_header span.edit-room { padding: 1px 0 0 4px; float: right; width: initial; }
     #main_player .player_header span.edit-room i { position: initial; }
     #main_player .player_header span.skip-el { position: absolute; bottom: 0; right: initial; float: left; }
+
+    /* Topbanner Advertisement fix */
+    #main_player .player_header #topbanner {
+        position: absolute;
+        top: -8px;
+        right: 74px;
+        width: initial;
+        height: 3rem;
+        max-width: 35.6%;
+        min-width: 450px;
+        padding: 0 1rem;
+    }
+    #main_player { padding-top: 4rem; }
 }

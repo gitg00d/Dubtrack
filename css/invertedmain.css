@@ -56,3 +56,4 @@ Imports:
 
 /* Miscellaneous */
 #main_player .player_header span.display-queue::before { content: initial; }
+#main_player .player_header #topbanner { max-width: calc(35.6% + 2rem); min-width: calc(450px + 2rem); } /* Topbanner Advertisement fix */

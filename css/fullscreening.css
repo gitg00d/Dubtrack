@@ -29,7 +29,7 @@ Imports:
 /* Main function */
 #main-room .main-room-wrapper { min-height: initial; }
 #main-room .left_section {
-    padding: 0 33.33% 0 0 !important;
+    padding: 6rem 33.33% 0 0 !important;
     margin: 0 !important;
 }
 #main-room .left_section .main-player-wrapper {
@@ -166,7 +166,11 @@ Imports:
 .not-logged-in #player-controller .right ul { width: 50%; }
 
 @media screen and (max-width: 72em) {
-    #main-room .left_section { padding-right: 0 !important; min-height: initial; background-color: rgba(0,0,0,.7); }
+    #main-room .left_section {
+        padding-right: 0 !important;
+        min-height: initial;
+        background-color: rgba(0,0,0,.7);
+    }
     #player-controller .left, .not-logged-in #player-controller .left { width: 100%; }
     #main_player .play-song-link-container { right: initial; left: 0; }
     #player-controller .right { width: 100%; }
@@ -205,4 +209,11 @@ Imports:
 #main_player .player_container #room-main-player-container .playerElement.soundcloud .artwork[src="https://res.cloudinary.com/hhberclba/image/upload/c_fill,h_460,w_900/tiqxlzynh3rxrkwvzeak.jpg"] {
     width: 50%;
     height: auto;
+}
+
+/* Topbanner advertisement fix */
+#main_player .player_header #topbanner {
+    position: absolute;
+    top: -6.1rem;
+    background-color: rgba(0,0,0,.7);
 }
