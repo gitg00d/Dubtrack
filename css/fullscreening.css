@@ -133,29 +133,29 @@ Imports:
     border-radius: 0;
     background-color: rgba(0,0,0,0);
     padding: 1rem 0;
-    transform: translateY(100%);
+    visibility: hidden;
 }
 #main_player .play-song-link-container .play-song-link-browser { margin: 0; }
 #main_player .play-song-link-container .play-song-link::before,
 #main_player .play-song-link-container .play-song-link-browser::before {
     position: absolute;
-    left: 0;
-    bottom: 100%;
-    width: 100%;
+    bottom: 0;
+    width: 50%;
     height: 100%;
     padding: 1rem 0;
     font-weight: 700;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    visibility: visible;
 }
 #main_player .play-song-link-container .play-song-link:hover::before,
 #main_player .play-song-link-container .play-song-link-browser:hover::before {
     color: #0ff;
 }
-#main_player .play-song-link-container .play-song-link::before { content: "Join Queue"; }
+#main_player .play-song-link-container .play-song-link::before { content: "Join Queue"; right: 0; }
 #main_player .play-song-link-container .play-song-link.leave-button::before { content: "Leave Queue"; }
-#main_player .play-song-link-container .play-song-link-browser::before { content: "Open Queue"; }
+#main_player .play-song-link-container .play-song-link-browser::before { content: "Open Queue"; left: 0; }
 
 #player-controller .left, .not-logged-in #player-controller .left { width: 50%; padding-right: 0; }
 #player-controller .right { width: 50%; }
