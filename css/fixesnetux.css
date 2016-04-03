@@ -186,6 +186,11 @@ body.no-song-playing #main_player .player_container #room-main-player-container:
     font-weight: 400 !important;
     text-shadow: 0 -1px 0 !important;
 }
+#chat .chat-container .chat-messages .chat-main li:not(.deleted-message) .stream-item-content .image_row { /* Alternative Chat image */
+    background: url("/assets/images/media/pic_notfound.jpg") center no-repeat;
+    background-size: 75%;
+}
+#chat .chat-container .chat-messages .chat-main li .stream-item-content .image_row > img[src="/assets/images/media/chat_image_load_error.png"] { opacity: .01; } /* Hide those ugly error images */
 
 /* Phone Mode Fixes */
 @media screen and (max-width: 72em) {
