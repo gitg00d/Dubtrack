@@ -212,10 +212,3 @@ Imports:
     width: 50%;
     height: auto;
 }
-
-/* Topbanner advertisement fix */
-#main_player .player_header #topbanner {
-    position: absolute;
-    top: -6.1rem;
-    background-color: rgba(0,0,0,.7);
-}
