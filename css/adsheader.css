@@ -1,0 +1,15 @@
+/* COMPLEMENTARY FILE, should be imported into another .css file */
+
+@media screen and (max-height: 30em) {
+    #main-room .left_section { margin-top: 4rem; }
+}
+#main_player .player_header { top: -3rem; }
+#main_player .player_header #topbanner {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    max-width: 50vw;
+    height: 3.6rem;
+}

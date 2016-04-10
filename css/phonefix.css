@@ -4,9 +4,6 @@
 @media screen and (max-width: 72em) {
     #main-room { padding: 92px 0 112px 0; max-width: 87vh; }
     #main-room .right_section { border-radius: 0; }
-    #main-room .left_section { min-height: 0; margin: 3rem 0 0; }
     #main_player { border-radius: 0; }
     #main_player .player_header { top: -2.75rem; }
-    #main_player .play-song-link-container { padding: 0 1rem }
-    #topbanner { display: none; } /* Hide it until a find a way of displaying it */
 }

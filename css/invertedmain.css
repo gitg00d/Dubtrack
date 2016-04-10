@@ -13,6 +13,7 @@ Imports:
 - an improvement on the lobby, the browser and the room edit room
 - netux's fixes (including mobile view)
 - Heebee's Rainbow progress bar.
+- Ads on the header instead that on top of the video.
 */
 
 /* Imports */
@@ -27,6 +28,7 @@ Imports:
 @import url("https://netox005.github.io/Dubtrack/css/lobbybetter.css"); /* Modified Lobby */
 @import url("https://netox005.github.io/Dubtrack/css/roomformbetter.css"); /* Modified Room Form */
 @import url("https://netox005.github.io/Dubtrack/css/fixesnetux.css"); /* Netux Fixes */
+@import url("https://netox005.github.io/Dubtrack/css/adsheader.css"); /* Header advertisements */
 
 /* Video next to chat */
 @media screen and (min-width: 72em) {
@@ -56,4 +58,3 @@ Imports:
 
 /* Miscellaneous */
 #main_player .player_header span.display-queue::before { content: initial; }
-#main_player .player_header #topbanner { max-width: calc(35.6% + 2rem); min-width: calc(450px + 2rem); } /* Topbanner Advertisement fix */

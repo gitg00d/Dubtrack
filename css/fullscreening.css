@@ -13,6 +13,7 @@ Imports:
 - an improvement on the lobby, the browser and the room edit room
 - netux's fixes (including mobile view)
 - Heebee's Rainbow progress bar.
+- Ads on the header instead that on top of the video.
 */
 
 /* Imports */
@@ -25,11 +26,12 @@ Imports:
 @import url("https://netox005.github.io/Dubtrack/css/roomformbetter.css"); /* Modified Room Form */
 @import url("https://hebgbs.github.io/rainbowNB3.css"); /* Rainbow video progress bar */
 @import url("https://netox005.github.io/Dubtrack/css/fixesnetux.css"); /* Netux Fixes */
+@import url("https://netox005.github.io/Dubtrack/css/adsheader.css"); /* Header advertisements */
 
 /* Main function */
 #main-room .main-room-wrapper { min-height: initial; }
 #main-room .left_section {
-    padding: 6rem 33.33% 0 0 !important;
+    padding: 0 33.33% 0 0 !important;
     margin: 0 !important;
 }
 #main-room .left_section .main-player-wrapper {
