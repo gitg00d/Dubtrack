@@ -97,11 +97,17 @@ body:not(.no-song-playing) #player-controller .left ul li.infoContainer .infoCon
 
 /* Message counter bounce and blink */
 @keyframes you-got-mail {
-    0% { transform: translateY(0); visibility: visible; }
-    6.25% { transform: translateY(-3px); visibility: visible; }
-    12.5% { transform: translateY(0); visibility: visible;  }
-    18.75% { transform: translateY(-3px); visibility: visible;  }
-    25% { transform: translateY(0); visibility: visible;  }
-    50%, 95.5% { transform: translateY(0); visibility: hidden;  }
+    0% { transform: translateY(-3px); }
+    6.25% { transform: translateY(0); }
+    12.5% { transform: translateY(-3px); }
+    18.75% { transform: translateY(0);  }
+    25% { transform: translateY(-3px);  }
+    31.25%, 100% { transform: translateY(0);  }
 }
-#header-global .header-right-navigation .user-messages .message-counter { animation: you-got-mail 1.5s linear infinite; }
+@keyframes blink {
+    0%, 31.25% { opacity: .33; }
+    32%, 100% { opacity: 1; }
+}
+#header-global .header-right-navigation .user-messages .message-counter {
+    animation: you-got-mail 1.5s linear infinite, blink 1.5s linear infinite;
+}
