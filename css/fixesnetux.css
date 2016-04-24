@@ -191,6 +191,7 @@ body.no-song-playing #main_player .player_container #room-main-player-container:
     background-size: 75%;
 }
 #chat .chat-container .chat-messages .chat-main li .stream-item-content .image_row > img[src="/assets/images/media/chat_image_load_error.png"] { opacity: .01; } /* Hide those ugly error images */
+#player-controller .left ul li.imgEl { cursor: pointer; } /* Cursor pointer on DJ avatar */
 
 /* Phone Mode Fixes */
 @media screen and (max-width: 72em) {
