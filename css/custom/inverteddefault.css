@@ -1,0 +1,7 @@
+/* Main function */
+@media screen and (min-width: 72em) { /* If not mobile view */
+    #main-room .left_section { padding: 0 0 0 32rem; }
+    #main-room .right_section { right: initial; left: 0; }
+}
+
+/* Requested by Pikachu */
