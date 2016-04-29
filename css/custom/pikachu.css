@@ -1,6 +1,9 @@
+/* Imports */
+@import url("https://netox005.github.io/Dubtrack/css/chatright.css"); /* Chat completly to the right */
+
 /* Main function */
 @media screen and (min-width: 72em) { /* If not mobile view */
-    #main-room .left_section { padding: 0 5% 0 calc(450px + 5%); }
+    #main-room .left_section { padding: 0 0 0 32rem; }
     #main-room .right_section { right: initial; left: 0; }
 }
 
