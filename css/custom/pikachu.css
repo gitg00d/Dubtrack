@@ -1,14 +1,9 @@
 /* Main function */
-@media screen and (min-width: 72em) { /* If not mobile view */
+@media screen and (min-width: 72em) {
     #main-room .left_section { padding: 0 0 0 32rem; }
     #main-room .right_section { right: initial; left: 0; }
-    #header-global #header_login, #header-global .header-right-navigation {
-        padding-right: 50%;
-    }
-    #main-menu-right .close-menu {
-        left: initial;
-        right: -2.2rem;
-    }
+    #header-global #header_login, #header-global .header-right-navigation { padding-right: 50%; }
+    #main-menu-right .close-menu { left: initial; right: -2.2rem; }
 }
 
 @media screen and (min-width: 48em) {
