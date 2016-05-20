@@ -4,9 +4,9 @@ Enjoy Dubtrack in full screen!.
 Features:
 - chat to the right
 - video player without padding filling the space left
-- queue buttons below video on the page footer
 
 Imports:
+- Queue buttons below video on the right part of the footer
 - NB3 vote icons
 - recognizable room BOTs in chat
 - a pack of animations
@@ -18,6 +18,7 @@ Imports:
 
 /* Imports */
 @import url("https://netox005.github.io/Dubtrack/css/chatright.css"); /* Chat completly to the right */
+@import url("https://netox005.github.io/Dubtrack/css/queuetofooter.css"); /* Queue buttons on right footer */
 @import url("https://netox005.github.io/Dubtrack/css/animations.css"); /* Pack of animations */
 @import url("https://netox005.github.io/Dubtrack/css/skynet.css"); /* Better recognizable Room BOTs */
 @import url("https://netox005.github.io/Dubtrack/css/voteicons.css"); /* NB3 Vote Icons */
@@ -112,60 +113,6 @@ Imports:
     #main-menu-right { right: calc(-33.33% - 2rem); }
     .menu-right-in #main-menu-right { transform: translateX(calc(-100% - 2rem)); }
 }
-
-/* Play song links on right footer */
-#player-controller { z-index: 0 !important; }
-#main_player .play-song-link-container {
-    position: fixed;
-    left: initial;
-    right: 33.33%;
-    bottom: 0;
-    transform: none;
-    z-index: 5;
-    width: 16.66%;
-    display: flex !important;
-}
-.not-logged-in #main_player .play-song-link-container { width: 25%; right: 25%; }
-#main_player .play-song-link-container .play-song-link,
-#main_player .play-song-link-container .play-song-link-browser {
-    width: 50%;
-    display: inline-block;
-    overflow: hidden;
-    height: 3.6rem;
-    border-radius: 0;
-    background-color: rgba(0,0,0,0);
-    padding: 1rem 0;
-    visibility: hidden;
-}
-#main_player .play-song-link-container .play-song-link-browser { margin: 0; }
-#main_player .play-song-link-container .play-song-link::before,
-#main_player .play-song-link-container .play-song-link-browser::before {
-    position: absolute;
-    bottom: 0;
-    width: 50%;
-    height: 100%;
-    padding: 1rem 0;
-    font-weight: 700;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    visibility: visible;
-}
-#main_player .play-song-link-container .play-song-link:hover::before,
-#main_player .play-song-link-container .play-song-link-browser:hover::before {
-    color: #0ff;
-}
-#main_player .play-song-link-container .play-song-link::before { content: "Join Queue"; right: 0; }
-#main_player .play-song-link-container .play-song-link.leave-button::before { content: "Leave Queue"; }
-#main_player .play-song-link-container .play-song-link-browser::before { content: "Open Queue"; left: 0; }
-
-#player-controller .left, .not-logged-in #player-controller .left { width: 50%; padding-right: 0; }
-#player-controller .right { width: 50%; }
-#player-controller .right ul {
-    width: 66.66%;
-    float: right;
-}
-.not-logged-in #player-controller .right ul { width: 50%; }
 
 @media screen and (max-width: 72em) {
     #main-room .left_section {

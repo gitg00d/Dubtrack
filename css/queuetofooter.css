@@ -1,0 +1,55 @@
+/* COMPLEMENTARY FILE, should be imported into another .css file */
+
+/* Main function */
+#player-controller { z-index: 0 !important; }
+#main_player .play-song-link-container {
+    position: fixed;
+    left: initial;
+    right: 33.33%;
+    bottom: 0;
+    transform: none;
+    z-index: 5;
+    width: 16.66%;
+    display: flex !important;
+}
+.not-logged-in #main_player .play-song-link-container { width: 25%; right: 25%; }
+#main_player .play-song-link-container .play-song-link,
+#main_player .play-song-link-container .play-song-link-browser {
+    width: 50%;
+    display: inline-block;
+    overflow: hidden;
+    height: 3.6rem;
+    border-radius: 0;
+    background-color: rgba(0,0,0,0);
+    padding: 1rem 0;
+    visibility: hidden;
+}
+#main_player .play-song-link-container .play-song-link-browser { margin: 0; }
+#main_player .play-song-link-container .play-song-link::before,
+#main_player .play-song-link-container .play-song-link-browser::before {
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    padding: 1rem 0;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    visibility: visible;
+}
+#main_player .play-song-link-container .play-song-link:hover::before,
+#main_player .play-song-link-container .play-song-link-browser:hover::before {
+    color: #0ff;
+}
+#main_player .play-song-link-container .play-song-link::before { content: "Join Queue"; right: 0; }
+#main_player .play-song-link-container .play-song-link.leave-button::before { content: "Leave Queue"; }
+#main_player .play-song-link-container .play-song-link-browser::before { content: "Open Queue"; left: 0; }
+
+#player-controller .left, .not-logged-in #player-controller .left { width: 50%; padding-right: 0; }
+#player-controller .right { width: 50%; }
+#player-controller .right ul {
+    width: 66.66%;
+    float: right;
+}
+.not-logged-in #player-controller .right ul { width: 50%; }
