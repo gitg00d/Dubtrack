@@ -32,7 +32,7 @@ Imports:
 /* Main function */
 #main-room .main-room-wrapper { min-height: initial; }
 #main-room .left_section {
-    padding: 0 33.33% 0 0 !important;
+    padding: 0 33.334% 0 0 !important;
     margin: 0 !important;
 }
 #main-room .left_section .main-player-wrapper {
@@ -70,7 +70,8 @@ Imports:
     display: flex;
 }
 #main_player .player_header span {
-    width: 100%;
+    flex: 1;
+    order: 0;
     height: 100%;
     line-height: 1;
     border-radius: 0;
@@ -95,7 +96,12 @@ Imports:
 #main_player .player_header span.skip-el,
 #main_player .player_header span.skip-el:hover {
     color: #f00;
-    width: 25%;
+    flex: .33;
+    order: 1;
+    transition: text-shadow .1s linear;
+}
+#main_player .player_header span.skip-el:hover {
+    text-shadow: 0 0 .05rem red
 }
 #main_player .player_sharing {
     position: absolute;
@@ -104,6 +110,15 @@ Imports:
     padding: 1rem 1rem 0;
     margin: 0;
     border-top: 1px solid #878C8E;
+}
+
+/* Make chat tools equal with player header buttons */
+#chat .chat_tools { display: inline-flex; }
+#chat .chat_tools span {
+    width: initial;
+    float: initial;
+    display: inline-block;
+    flex: 1;
 }
 
 @media screen and (max-width: 72em) { .diplay-chat #main_player > *:not(.play-song-link-container) { display: none; } }
