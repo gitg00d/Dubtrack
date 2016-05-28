@@ -79,7 +79,6 @@ img.emoji.twitch-emoji[alt="angelthump"], img.emoji.twitch-emoji[alt="taxibro"] 
 }
 
 /* Chat system messages fix */
-#chat .chat-main .system, #chat .chat-main li[class^="chat-system-"] { color: #0090cc !important; }
 #chat .chat-container .chat-messages .chat-main li.chat-system-grabbed { color: #d026d0 !important; }
 #chat .chat-container .chat-messages .chat-main li.chat-system-grabbed,
 #chat .chat-container .chat-messages .chat-main li.chat-system-joined,
@@ -118,6 +117,17 @@ img.emoji.twitch-emoji[alt="angelthump"], img.emoji.twitch-emoji[alt="taxibro"] 
     top: -.5em;
 }
 
+/* Images fix */
+#chat .chat-container .chat-messages .chat-main li .activity-row .text img {
+    display: block;
+    max-height: 35vh;
+}
+#private-messages .message-details ul.message-list li.message-item .message-content img {
+    display: block;
+    width: auto;
+    max-height: 10vh;
+}
+
 /* Other fixes */
 .ps-container .ps-scrollbar-x,
 .ps-container .ps-scrollbar-y,
@@ -127,7 +137,6 @@ img.emoji.twitch-emoji[alt="angelthump"], img.emoji.twitch-emoji[alt="taxibro"] 
 }
 #main-menu-left { top: 58px; height: calc(100% - 58px); padding-top: 3rem; } /* Left menu height fix */
 #chat .chat-container .chat-messages .chat-main li:not([class^="user-"]) { padding-bottom: .5rem; min-height: initial; } /* No user messages height fix */
-#chat .chat-container .chat-messages .chat-main li .activity-row .text img { display: block; max-height: 35vh; } /* Chat images in new line, with max heigth */
 #chat .chat-options .chat-option-buttons span { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; } /* No selection on chat options buttons */
 @media screen and (min-width: 72em) {
     /* Fixed "Your playlists" title on browser */
