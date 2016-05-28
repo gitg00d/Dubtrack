@@ -117,17 +117,6 @@ img.emoji.twitch-emoji[alt="angelthump"], img.emoji.twitch-emoji[alt="taxibro"] 
     top: -.5em;
 }
 
-/* Images fix */
-#chat .chat-container .chat-messages .chat-main li .activity-row .text img {
-    display: block;
-    max-height: 35vh;
-}
-#private-messages .message-details ul.message-list li.message-item .message-content img {
-    display: block;
-    width: auto;
-    max-height: 10vh;
-}
-
 /* Other fixes */
 .ps-container .ps-scrollbar-x,
 .ps-container .ps-scrollbar-y,
@@ -197,6 +186,12 @@ body.no-song-playing #main_player .player_container #room-main-player-container:
     text-shadow: 0 -1px 0 !important;
 }
 #player-controller .left ul li.imgEl { cursor: pointer; } /* Cursor pointer on DJ avatar */
+#chat .chat-container .chat-messages .chat-main li .activity-row .text img,
+#private-messages .message-details ul.message-list li.message-item .message-content img { /* Images fix */
+    display: block;
+    width: auto;
+    max-height: 35vh;
+}
 
 /* Phone Mode Fixes */
 @media screen and (max-width: 72em) {
