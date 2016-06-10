@@ -92,7 +92,7 @@ img.emoji.twitch-emoji[alt="angelthump"], img.emoji.twitch-emoji[alt="taxibro"] 
 #chat .chat-main li.user-560b4a33d9057a0300cc2fa0:not(.deleted-message) .activity-row .text p:first-of-type:before {
     content: "ŋetux";
     position: absolute;
-    text-shadow: 0 -1px 0 !important;
+    font-weight: 700;
     line-height: 1.2;
     color: #878c8e;
     padding-top: 3px;
@@ -175,16 +175,6 @@ body.no-song-playing #main_player .player_container #room-main-player-container:
 #main_player .placeholder h5 { cursor: pointer; } /* No song playing text with pointer cursor */
 #user_popover[style*="left: 0"] { border-radius: 0 1rem 0 0; } /* DJ User Popover border radius fix */
 #private-messages .message-details ul.message-list li.message-item .message-content p { word-wrap: break-word; } /* Don't overflow long private messages */
-#chat .chat-container .chat-messages .chat-main li.system,
-#chat .chat-container .chat-messages .chat-main li .activity-row .text a.username,
-#chat .chat-container .chat-messages .chat-main li .activity-row .text .username-handle,
-#chat .chat-container .chat-messages .chat-main li .activity-row .text p a,
-#main_avatar_room #main-user-list-room #avatar-list li .username,
-#main_avatar_room #main-user-list-room #avatar-list li .username::after,
-#main_avatar_room #main-user-list-room #avatar-list li .dubs::before { /* Bold in chat fix */
-    font-weight: 400 !important;
-    text-shadow: 0 -1px 0 !important;
-}
 #player-controller .left ul li.imgEl { cursor: pointer; } /* Cursor pointer on DJ avatar */
 #chat .chat-container .chat-messages .chat-main li .activity-row .text img,
 #private-messages .message-details ul.message-list li.message-item .message-content img { /* Images fix */
