@@ -17,17 +17,17 @@ Imports:
 */
 
 /* Imports */
-@import url("https://gitg00d.github.io/Dubtrack/css/chatright.css"); /* Chat completly to the right */
-@import url("https://gitg00d.github.io/Dubtrack/css/queuetofooter.css"); /* Queue buttons on right footer */
-@import url("https://gitg00d.github.io/Dubtrack/css/animations.css"); /* Pack of animations */
-@import url("https://gitg00d.github.io/Dubtrack/css/skynet.css"); /* Better recognizable Room BOTs */
-@import url("https://gitg00d.github.io/Dubtrack/css/voteicons.css"); /* NB3 Vote Icons */
-@import url("https://gitg00d.github.io/Dubtrack/css/browserbetter.css"); /* Modified Browser */
-@import url("https://gitg00d.github.io/Dubtrack/css/lobbybetter.css"); /* Modified Lobby */
-@import url("https://gitg00d.github.io/Dubtrack/css/roomformbetter.css"); /* Modified Room Form */
+@import url("https://gitg00d.github.io/Dubtrack-1/css/chatright.css"); /* Chat completly to the right */
+@import url("https://gitg00d.github.io/Dubtrack-1/css/queuetofooter.css"); /* Queue buttons on right footer */
+@import url("https://gitg00d.github.io/Dubtrack-1/css/animations.css"); /* Pack of animations */
+@import url("https://gitg00d.github.io/Dubtrack-1/css/skynet.css"); /* Better recognizable Room BOTs */
+@import url("https://gitg00d.github.io/Dubtrack-1/css/voteicons.css"); /* NB3 Vote Icons */
+@import url("https://gitg00d.github.io/Dubtrack-1/css/browserbetter.css"); /* Modified Browser */
+@import url("https://gitg00d.github.io/Dubtrack-1/css/lobbybetter.css"); /* Modified Lobby */
+@import url("https://gitg00d.github.io/Dubtrack-1/css/roomformbetter.css"); /* Modified Room Form */
 @import url("https://hebgbs.github.io/rainbowNB3.css"); /* Rainbow video progress bar */
-@import url("https://gitg00d.github.io/Dubtrack/css/fixesnetux.css"); /* Netux Fixes */
-@import url("https://gitg00d.github.io/Dubtrack/css/adsheader.css"); /* Header advertisements */
+@import url("https://gitg00d.github.io/Dubtrack-1/css/fixesnetux.css"); /* Netux Fixes */
+@import url("https://gitg00d.github.io/Dubtrack-1/css/adsheader.css"); /* Header advertisements */
 
 /* Main function */
 #main-room .main-room-wrapper { min-height: initial; }
